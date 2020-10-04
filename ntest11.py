@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 import networkx as nx
 from networkx.drawing.nx_agraph import write_dot, graphviz_layout
 import matplotlib.pyplot as plt
@@ -22,4 +24,5 @@ write_dot(G,'test.dot')
 plt.title('draw_networkx')
 pos =graphviz_layout(G, prog='dot')
 nx.draw(G, pos, with_labels=False, arrows=True)
-plt.savefig('nx_test.png')
+# plt.savefig('nx_test.png')
+plt.show()
