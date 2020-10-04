@@ -1,0 +1,7 @@
+strict digraph "" {
+	"TEST 2" -> "TEST 4";
+	"TEST 1" -> "TEST 3";
+	"TEST 4" -> "TEST 5";
+	ROOT -> "TEST 2";
+	ROOT -> "TEST 1";
+}
