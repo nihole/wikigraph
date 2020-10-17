@@ -1,0 +1,492 @@
+statements:
+- id: '++0++'
+  wave: '+'
+  text: "Дездемона изменила Отелло"
+  wiki_link:
+  direct_contradictions:
+  - id: '--2--'
+  - id: '--1--'
+  indirect_contradictions:
+  - id: '--3--'
+  complement:
+  - id: '--0--'
+- id: '++1++'
+  wave: '+'
+  text: "Дездемона не любит Отелло"
+  wiki_link:
+  direct_contradictions:
+  - id: 
+  indirect_contradictions:
+  - id: '--5--'
+  - id: '--17--'
+  complement:
+  - id:
+- id: '++2++'
+  wave: '+'
+  text: "Дездемона не любит Отелло"
+  wiki_link:
+  direct_contradictions:
+  - id: '--3--'
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: '--18--'
+- id: '++3++'
+  wave: '+'
+  text: "Разговор Яго с Кассио, где Кассио говорил о связи с Дездемоной"
+  wiki_link:
+  direct_contradictions:
+  - id: '--4--'
+  - id: '--6--'
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++4++'
+  wave: '+'
+  text: "Кассио говорит правду"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++5++'
+  wave: '+'
+  text: "Разговор Кассио во сне"
+  wiki_link:
+  direct_contradictions:
+  - id: '--7--'
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++6++'
+  wave: '+'
+  text: "Дездемона подарила платок Кассио"
+  wiki_link:
+  direct_contradictions:
+  - id: '--8--'
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++7++'
+  wave: '+'
+  text: "Дездемона обрадовалась повышению Кассио"
+  wiki_link:
+  direct_contradictions:
+  - id: '--9--'
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++8++'
+  wave: '+'
+  text: "Кассио молод, имеет хорошие манеры и нравится женщинам"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++9++'
+  wave: '+'
+  text: "Она просит за Кассио"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id: '--10--'
+  complement:
+  - id:
+- id: '++10++'
+  wave: '+'
+  text: "Дездемона лжет"
+  wiki_link:
+  direct_contradictions:
+  - id: '--11--'
+  indirect_contradictions:
+  - id: '--10--'
+  complement:
+  - id: '--12--'
+- id: '++10++'
+  wave: '+'
+  text: "Дездемона лжет"
+  wiki_link:
+  direct_contradictions:
+  - id: '--11--'
+  indirect_contradictions:
+  - id: '--10--'
+  complement:
+  - id: '--12--'
+- id: '++11++'
+  wave: '+'
+  text: "Эмилия не знает правды"
+  wiki_link:
+  direct_contradictions:
+  - id: 
+  indirect_contradictions:
+  - id: 
+  complement:
+  - id:
+- id: '++11++'
+  wave: '+'
+  text: "Эмилия не знает правды"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++12++'
+  wave: '+'
+  text: "Эмилия лжет"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: '--13--'
+- id: '++13++'
+  wave: '+'
+  text: "Там был Яго, который подтвердил факт измены"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: '--14--'
+- id: '++14++'
+  wave: '+'
+  text: "Источник информации Яго - он честен и предан"
+  wiki_link:
+  direct_contradictions:
+  - id: '--14--'
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++15++'
+  wave: '+'
+  text: "Яго подтвердил, что это платок Дездеморы, и что она передала его"
+  wiki_link:
+  direct_contradictions:
+  - id: '--14--'
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: '--13--'
+- id: '++16++'
+  wave: '+'
+  text: "Дездемона порочна"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++17++'
+  wave: '+'
+  text: "Дездемона умеет лгать. Она уже солгала отцу, убежав к Отелло"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++18++'
+  wave: '+'
+  text: "Ветренность венецианских девушек - им нельзя верить"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++19++'
+  wave: '+'
+  text: "Эмилия хочет выгородить Дездемону"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++20++'
+  wave: '+'
+  text: "У Яго нет мотива обманывать Отелло"
+  wiki_link:
+  direct_contradictions:
+  - id: '--15--'
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: 
+- id: '++21++'
+  wave: '+'
+  text: "Яго не обижен тем, что не он а Кассио стал заместителем Отелло"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id: '--19--'
+  complement:
+  - id: 
+- id: '++22++'
+  wave: '+'
+  text: "Это был платок, подаеренный Дездемоной"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: '--13--'
+- id: '++23++'
+  wave: '+'
+  text: "Яго говорит правду"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '++24++'
+  wave: '+'
+  text: "Яго хороший и честный человек"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: '--19--'
+- id: '++25++'
+  wave: '+'
+  text: "Отелло все правильно понял"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+
+- id: '--0--'
+  wave: '-'
+  text: "Дездемона не изменяла Отелло"
+  wiki_link:
+  direct_contradictions:
+  - id: "++3++"
+  indirect_contradictions:
+  - id: "++6++"
+  - id: "++5++"
+  complement:
+  - id:
+- id: '--1--'
+  wave: '-'
+  text: "Эмилия говорит, что не изменяла"
+  wiki_link:
+  direct_contradictions:
+  - id: "++11++"
+  - id: "++12++"
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '--2--'
+  wave: '-'
+  text: "Дездемона говорит, что не изменяла"
+  wiki_link:
+  direct_contradictions:
+  - id: "++10++"
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '--3--'
+  wave: '-'
+  text: "Дездемона любит Отелло"
+  wiki_link:
+  direct_contradictions:
+  - id: "++5++"
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: "++1++"
+- id: '--4--'
+  wave: '-'
+  text: "Кассио лжет"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id: "++6++"
+  - id: "++5++"
+  complement:
+  - id: "++4++"
+- id: '--5--'
+  wave: '-'
+  text: "Эмилия говорит, что Дездемона любит Отелло"
+  wiki_link:
+  direct_contradictions:
+  - id: "++12++"
+  indirect_contradictions:
+  - id: "++11++"
+  complement:
+  - id:
+- id: '--6--'
+  wave: '-'
+  text: "Отелло слышал только часть диалога и неправильно его интерпретировал. Речь шла о другом"
+  wiki_link:
+  direct_contradictions:
+  - id: "++13++"
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: "++25++"
+- id: '--7--'
+  wave: '-'
+  text: "Это ложь, не было этого разговора"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id: "++14++"
+  complement:
+  - id:
+- id: '--8--'
+  wave: '-'
+  text: "Это был другой платок или платок, потерянный случайно или украденный и подкинутый"
+  wiki_link:
+  direct_contradictions:
+  - id: "++15++"
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: "++22++"
+- id: '--9--'
+  wave: '-'
+  text: "Дездемона обрадовалась возвращению в Венецию"
+  wiki_link:
+  direct_contradictions:
+  - id: "++7++"
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '--10--'
+  wave: '-'
+  text: "У Дездемоны добрая и чистая душа"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: "++16++"
+- id: '--11--'
+  wave: '-'
+  text: "Дездемона не умеет лгать"
+  wiki_link:
+  direct_contradictions:
+  - id: "++17++"
+  indirect_contradictions:
+  - id: "++18++"
+  complement:
+  - id:
+- id: '--12--'
+  wave: '-'
+  text: "Дездемона говорит правду"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '--13--'
+  wave: '-'
+  text: "Эмилия говорит правду"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id: "++18++"
+  - id: "++19++"
+  complement:
+  - id:
+- id: '--14--'
+  wave: '-'
+  text: "Яго лжет"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id: "++20++"
+  complement:
+  - id: "++23++"
+- id: '--15--'
+  wave: '-'
+  text: "Яго обижен, что не он, а Кассио стал заместителем Отелло"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id: "++21++"
+- id: '--16--'
+  wave: '-'
+  text: "У Яго есть мотив совершить преступление"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+- id: '--17--'
+  wave: '-'
+  text: "Дездемона говорит, что любит Отелло"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id: "++10++"
+  complement:
+  - id:
+- id: '--18--'
+  wave: '-'
+  text: "Дездемона не любит Кассио"
+  wiki_link:
+  direct_contradictions:
+  - id: "++6++"
+  indirect_contradictions:
+  - id: "++7++"
+  - id: "++8++"
+  - id: "++9++"
+  complement:
+  - id:
+- id: '--19--'
+  wave: '-'
+  text: "Яго - злой и порочный человек"
+  wiki_link:
+  direct_contradictions:
+  - id:
+  indirect_contradictions:
+  - id:
+  complement:
+  - id:
+
