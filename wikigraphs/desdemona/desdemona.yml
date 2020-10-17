@@ -112,16 +112,6 @@ statements:
   - id: '--10--'
   complement:
   - id: '--12--'
-- id: '++10++'
-  wave: '+'
-  text: "Дездемона лжет"
-  wiki_link:
-  direct_contradictions:
-  - id: '--11--'
-  indirect_contradictions:
-  - id: '--10--'
-  complement:
-  - id: '--12--'
 - id: '++11++'
   wave: '+'
   text: "Эмилия не знает правды"
@@ -231,7 +221,7 @@ statements:
   indirect_contradictions:
   - id:
   complement:
-  - id: 
+  - id: "--16--"
 - id: '++21++'
   wave: '+'
   text: "Яго не обижен тем, что не он а Кассио стал заместителем Отелло"
