@@ -23,7 +23,7 @@ statements:
   - id:
 - id: '++2++'
   wave: '+'
-  text: "Дездемона не любит Отелло"
+  text: "Дездемона любит Кассио"
   wiki_link:
   direct_contradictions:
   - id: '--3--'
@@ -310,7 +310,7 @@ statements:
   text: "Дездемона любит Отелло"
   wiki_link:
   direct_contradictions:
-  - id: "++5++"
+  - id: "++2++"
   indirect_contradictions:
   - id:
   complement:
