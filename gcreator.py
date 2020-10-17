@@ -49,13 +49,16 @@ for record in yaml_data['statements']:
     m2 = re.match('-', record['wave'])
     if m1:
         g.attr('node', color='red')
-        g.node(record['id'], label = record['id'] + '\n' + format.format(record['text']))
+        label = record['id'] + '\n' + format.format(record['text'])
+        g.node(record['id'], label)
     elif m2:
         g.attr('node', color='blue')
-        g.node(record['id'], label = record['id'] + '\n' + format.format(record['text']))
+        label = record['id'] + '\n' + format.format(record['text'])
+        g.node(record['id'], label)
     else:
         g.attr('node', color='none')
-        g.node(record['id'], label = record['id'] + '\n' + format.format(record['text']))
+        label = record['id'] + '\n' + format.format(record['text'])
+        g.node(record['id'], label)
 
 ### Edge creation
 
