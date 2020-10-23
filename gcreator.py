@@ -42,8 +42,8 @@ else:
 #label_list.append("+++ 0 +++\n" + format.format("Дездемона изменила Отелло").decode('utf-8'))
 #label_list.append("+++ 1 +++\n" + format.format("Дездемона не\nизменяла Отелло").decode('utf-8'))
 
-#g = Digraph('G', filename=graph_file, format='svg')
-g = Digraph('G', filename=graph_file)
+g = Digraph('G', filename=graph_file, format='svg')
+#g = Digraph('G', filename=graph_file)
 
 
 for record in yaml_data['statements']:
@@ -51,12 +51,12 @@ for record in yaml_data['statements']:
     m2 = re.match('-', record['wave'])
     if m1:
         lbl = record['id'] + '\n' + format.format(record['text'])
-        g.attr('node', color='red', URL='www.ru')
-        g.node(record['id'], label=lbl, URL='www.ru')
+        g.attr('node', color='red')
+        g.node(record['id'], label=lbl, URL='https://www.ru')
     elif m2:
         lbl = record['id'] + '\n' + format.format(record['text'])
-        g.attr('node', color='blue', href='www.ru')
-        g.attr('node', href='www.ru')
+        g.attr('node', color='blue', href='https://www.ru')
+        g.attr('node')
         g.node(record['id'], label=lbl)
     else:
         lbl = record['id'] + '\n' + format.format(record['text'])
@@ -77,4 +77,4 @@ for record in yaml_data['statements']:
 #            g.attr['edge',  color='red']
             g.edge(record['id'], edge['id'], color='red', dir="both")
 
-g.view()
+#g.view()
