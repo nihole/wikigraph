@@ -77,5 +77,5 @@ for record in yaml_data['statements']:
 #            g.attr['edge',  color='red']
             g.edge(record['id'], edge['id'], color='red', dir="both")
 
-g.save()
+g.render(view=False)  
 #g.view()
