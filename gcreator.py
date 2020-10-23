@@ -42,23 +42,25 @@ else:
 #label_list.append("+++ 0 +++\n" + format.format("Дездемона изменила Отелло").decode('utf-8'))
 #label_list.append("+++ 1 +++\n" + format.format("Дездемона не\nизменяла Отелло").decode('utf-8'))
 
+#g = Digraph('G', filename=graph_file, format='svg')
 g = Digraph('G', filename=graph_file)
+
 
 for record in yaml_data['statements']:
     m1 = re.match('\+', record['wave'])
     m2 = re.match('-', record['wave'])
     if m1:
-        g.attr('node', color='red', URL="http://www.apple.com")
-
         lbl = record['id'] + '\n' + format.format(record['text'])
-        g.node(record['id'], label=lbl)
+        g.attr('node', color='red', URL='www.ru')
+        g.node(record['id'], label=lbl, URL='www.ru')
     elif m2:
-        g.attr('node', color='blue')
         lbl = record['id'] + '\n' + format.format(record['text'])
+        g.attr('node', color='blue', href='www.ru')
+        g.attr('node', href='www.ru')
         g.node(record['id'], label=lbl)
     else:
-        g.attr('node', color='none')
         lbl = record['id'] + '\n' + format.format(record['text'])
+        g.attr('node', color='none')
         g.node(record['id'], label=lbl)
 
 ### Edge creation
