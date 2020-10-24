@@ -16,15 +16,17 @@ def deadend(yml_data):
             flag_dc = 0
 
         if len(record['indirect_contradictions'])==1:
-            if record['indirect_contradictions'][0]['id'] == '':
+            if not record['indirect_contradictions'][0]['id']:
                 flag_ic = 1
+            else:
+                flag_ic = 0
         elif len(record['indirect_contradictions'])==0:
             flag_ic == 1
         else:
             flag_ic = 0
 
                 
-        if flag_dc:
+        if flag_dc and flag_ic:
             deadends.append((i, record['id']))
     return (deadends)
         
