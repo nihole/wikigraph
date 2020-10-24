@@ -122,16 +122,6 @@ statements:
   - id: 
   complement:
   - id:
-- id: '++11++'
-  wave: '+'
-  text: "Эмилия не знает правды"
-  wiki_link:
-  direct_contradictions:
-  - id:
-  indirect_contradictions:
-  - id:
-  complement:
-  - id:
 - id: '++12++'
   wave: '+'
   text: "Эмилия лжет"
@@ -147,11 +137,11 @@ statements:
   text: "Там был Яго, который подтвердил факт измены"
   wiki_link:
   direct_contradictions:
-  - id:
+  - id: '--14--'
   indirect_contradictions:
   - id:
   complement:
-  - id: '--14--'
+  - id: 
 - id: '++14++'
   wave: '+'
   text: "Источник информации Яго - он честен и предан"
@@ -171,7 +161,7 @@ statements:
   indirect_contradictions:
   - id:
   complement:
-  - id: '--13--'
+  - id: 
 - id: '++16++'
   wave: '+'
   text: "Дездемона порочна"
@@ -218,6 +208,7 @@ statements:
   wiki_link:
   direct_contradictions:
   - id: '--15--'
+  - id: '--19--'
   indirect_contradictions:
   - id:
   complement:
@@ -241,7 +232,7 @@ statements:
   indirect_contradictions:
   - id:
   complement:
-  - id: '--13--'
+  - id: 
 - id: '++23++'
   wave: '+'
   text: "Яго говорит правду"
@@ -437,7 +428,7 @@ statements:
   - id:
   complement:
   - id: "++21++"
-- id: '--16--'
+- id: '-        -16--'
   wave: '-'
   text: "У Яго есть мотив совершить преступление"
   wiki_link:
