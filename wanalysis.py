@@ -109,6 +109,54 @@ def recurs_dict (yml_data):
                 reverse_rdict[rnode]['complement'].append(dnode)
     return (rdict, reverse_rdict) 
 
+def path_check (id_, rdict,  reverse_rdict, status_dict):
+    dnode = ''
+    inode = ''
+    cnode = ''
+    if len(rdict[id_]['direct']) == 1:
+        status_dict[rdict[id_]['direct'][0]]=-1
+        dnode = rdict[id_]['direct'][0] 
+    if len(rdict[id_]['indirect']) == 1:
+        status_dict[rdict[id_]['indirect'][0]]=-1
+        inode = rdict[id_]['indirect'][0]
+    if len(rdict[id_]['complement']) == 1:
+        status_dict[rdict[id_]['complement'][0]]=-1
+        cnode = rdict[id_]['complement'][0]
+    return (dnode, inode, cnode, status_dict)
+
+def recurse_path_check (id_, rdict,  reverse_rdict, status_dict):
+        (dnode, inode, cnode, status_dict) = path_check(id_, rdict,  reverse_rdict, status_dict)
+        i = 0
+        while not ((dnode == '') and  (inode == '') and  (cnode == '')):
+            (dnode, inode, cnode, status_dict) = path_check(id_, rdict,  reverse_rdict, status_dict)
+            i++
+            if i>1000:
+                print ('Infinitive cicle!!')
+                break
+        return status_dict
+
+def node_resolving (id_, rdict, reverse_rdict, status_dict):
+    if key in status_dict.keys():
+        if status_dict[id_] == -1
+            continue
+        elif if not status_dict[id_] == 1:
+            return {id_:777}
+    else:
+        status_dict[id_] = 1
+        status_dict = recurse_path_check (id_, rdict,  reverse_rdict, status_dict)
+
+    for dnode in reverse_rdict['direct']:
+        if status_dict[dnode] == -1
+            continue
+        elif key in status_dict.keys():
+            if not status_dict[dnode] == 0:
+                return {dnode:777}
+        else:
+            status_dict[dnode] = 0
+            status_dict = recurse_path_check (id_, rdict,  reverse_rdict, status_dict)
+    return status_dict
+    
+
 
 import sys
 import yaml
