@@ -4,8 +4,8 @@
 
 
 def check_direct_contr(record):
-### Check if there are a direct contradoctioans in the record related to node (statemenet)
-### Returns 1 if there are 
+    ### Check if there are direct contradoctioans in the record related to the node (statemenet)
+    ### Returns 1 if there are 
     if len(record['direct_contradictions'])==1:
         if not record['direct_contradictions'][0]['id']:
             flag_dc = 1
@@ -18,8 +18,8 @@ def check_direct_contr(record):
     return flag_dc
 
 def check_indirect_contr(record):
-### Check if there are an indirect contradoctioans in the record related to node (statemenet)
-### Returns 1 if there are
+    ### Check if there are indirect contradoctioans in the record related to the node (statemenet)
+    ### Returns 1 if there are
     if len(record['indirect_contradictions'])==1:
         if not record['indirect_contradictions'][0]['id']:
             flag_ic = 1
@@ -32,8 +32,8 @@ def check_indirect_contr(record):
     return flag_ic
 
 def check_complement(record):
-### Check if there are an indirect contradoctioans in the record related to node (statemenet)
-### Returns 1 if there are
+    ### Check if there are complement statements in the record related to the node (statemenet)
+    ### Returns 1 if there are
     if len(record['complement'])==1:
         if not record['complement'][0]['id']:
             flag_c = 1
@@ -46,8 +46,8 @@ def check_complement(record):
     return flag_c
 
 def deadend(yml_data):
-### Returns a list of dead-ends
-### Dead-end is a statement without contradictions, direct or indirect
+    ### Returns a list of dead-ends
+    ### Dead-end is a statement without contradictions, direct or indirect
     deadends = []
     for i in range(len(yml_data['statements'])):
         record = yml_data['statements'][i]
@@ -57,6 +57,7 @@ def deadend(yml_data):
     return (deadends)
 
 def find_seq_id(yml_data, id_):
+    ### Return seq number of list element with id = id_
     seq = -1
     for i in range(len(yml_data["statements"])):
         m = re.match(id_, yml_data["statements"][i]["id"])
@@ -66,8 +67,9 @@ def find_seq_id(yml_data, id_):
     return seq
 
 def recurs_dict (yml_data):
-### Returns recursive dictionaries. 
-### rdict - recursion from root towards ends, and reverse_rdict - recursion towards root 
+    ### Returns recursive dictionaries. 
+    ### rdict - recursion from root towards ends, and reverse_rdict - recursion towards root 
+    ### the structure of them is {node_id:{'direct':[node_ids],'indirect':[node_ids],'complement':[node_ids]}, ...}
     rdict = {}
     reverse_rdict = {}
     for record in yml_data['statements']:
@@ -110,25 +112,44 @@ def recurs_dict (yml_data):
     return (rdict, reverse_rdict) 
 
 def path_check (id_, rdict,  reverse_rdict, status_dict):
-    dnode = ''
-    inode = ''
-    cnode = ''
-    if len(rdict[id_]['direct']) == 1:
-        status_dict[rdict[id_]['direct'][0]]=-1
-        dnode = rdict[id_]['direct'][0] 
-    if len(rdict[id_]['indirect']) == 1:
-        status_dict[rdict[id_]['indirect'][0]]=-1
-        inode = rdict[id_]['indirect'][0]
-    if len(rdict[id_]['complement']) == 1:
-        status_dict[rdict[id_]['complement'][0]]=-1
-        cnode = rdict[id_]['complement'][0]
-    return (dnode, inode, cnode, status_dict)
+    ### If know status of node with id = id_ (1 - true, 0 - false, -1 - deleted)
+    ### then next step downstream nodes with only one reverse path to root via this
+    ### node (id = id_) should be marked as deleted (-1)
+    
+    ### initiation of lists with such nodes for direct, inderect, complement edges:
+    dnode_list = []
+    inode_list = []
+    cnode_list = []
+    for dnode_ in rdict[id_]['direct']:
+        if len(reverse_rdict[dnode_]['direct']) == 1:
+            # if only one direct reverse path
+            status_dict[dnode_]=-1
+            dnode_list.append(dnode_)
+    for inode_ in rdict[id_]['indirect']:
+        if len(reverse_rdict[inode_]['indirect']) == 1:
+            # if only one indirect reverse path
+            status_dict[inode_]=-1
+            inode_list.append(inode_)
+    for cnode_ in rdict[id_]['complement']:
+        if len(reverse_rdict[cnode_]['complement']) == 1:
+            # if only one complement reverse path
+            status_dict[cnode_]=-1
+            cnode_list.append(cnode_)
+
+    return (dnode_list + inode_list + cnode_list, status_dict)
 
 def recurse_path_check (id_, rdict,  reverse_rdict, status_dict):
-        (dnode, inode, cnode, status_dict) = path_check(id_, rdict,  reverse_rdict, status_dict)
-        i = 0
-        while not ((dnode == '') and  (inode == '') and  (cnode == '')):
-            (dnode, inode, cnode, status_dict) = path_check(id_, rdict,  reverse_rdict, status_dict)
+    ### using step by step recursion (path_check) marks as deleted all downstram nodes
+    ### having a single path to root via the node with id = id_
+        node_list = [id_]
+        i = 0 # for infinitive cicle avoiding
+        while len(node_list) > 0:
+        ### this will be commulative node list
+            node_lst = []
+            for node in node_l:
+                (node_l, status_dict) = path_check(id_, rdict,  reverse_rdict, status_dict)
+                node_lst = node_lst + node_l
+            node_list = node_lst.copy()
             i++
             if i>1000:
                 print ('Infinitive cicle!!')
@@ -136,27 +157,32 @@ def recurse_path_check (id_, rdict,  reverse_rdict, status_dict):
         return status_dict
 
 def node_resolving (id_, rdict, reverse_rdict, status_dict):
-    if key in status_dict.keys():
-        if status_dict[id_] == -1
-            continue
-        elif if not status_dict[id_] == 1:
-            return {id_:777}
-    else:
-        status_dict[id_] = 1
-        status_dict = recurse_path_check (id_, rdict,  reverse_rdict, status_dict)
+    ### return dictionary ststus_dict. Keys - ids of nodes (statements), values - 1,2,3. 
+    ### 1 means true, 0 - false, -1 - lost path to the root. 777 is used to label a conflict (true/false) 
+    
+    ### we always start with the element we believe the truth
+    status_dict[id_] = 1
+    ### mark as deleted (-1) all downstreem nodes (for all types of edge) 
+    ### if they have path to root only via this node
+    status_dict = recurse_path_check(id_, rdict,  reverse_rdict, status_dict)
 
     for dnode in reverse_rdict['direct']:
+        ### if this statement is truth then statements for which this one is direct controdition are fale
+        ### first check wheher these direct upstream statements already marked as 1,0,-1
         if status_dict[dnode] == -1
             continue
         elif key in status_dict.keys():
             if not status_dict[dnode] == 0:
+                ### this means conflict
                 return {dnode:777}
         else:
             status_dict[dnode] = 0
             status_dict = recurse_path_check (id_, rdict,  reverse_rdict, status_dict)
     return status_dict
     
-
+def deadends_resolving():
+    def graph_resolving():
+    
 
 import sys
 import yaml
