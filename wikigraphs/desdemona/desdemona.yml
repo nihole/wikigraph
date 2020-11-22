@@ -428,7 +428,7 @@ statements:
   - id:
   complement:
   - id: "++21++"
-- id: '-        -16--'
+- id: '--16--'
   wave: '-'
   text: "У Яго есть мотив совершить преступление"
   wiki_link:

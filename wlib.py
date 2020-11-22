@@ -47,14 +47,27 @@ def check_complement(record):
         flag_c = 1
     return flag_c
 
-def deadend(yml_data):
+def deadend(yml_data, status_dict):
 ### Returns a list of dead-endsdirect contradictioansof graf repesented ib yml_data
 ### Dead-end is a statement without contradictions, direct or indirect
     deadends = []
+    
     for i in range(len(yml_data['statements'])):
+        flag = 0
         record = yml_data['statements'][i]
-                
-        if (check_direct_contr(record) and check_indirect_contr(record)):
+        (rdict, reverse_rdict) = recurs_dict (yml_data)
+        if check_complement(record):
+            flag = 1
+        elif len(reverse_rdict[record['id']]['complement']):
+            flag = 1
+        elif check_direct_contr(record):
+            direct_contr_list = rdict[record['id']]['direct']
+            if len(direct_contr_list):
+                for dcid in direct_contr_list:
+                    if ((dcid not in status_dict.keys()) or (not status_dict[dcid]==-1) or (not status_dict[dcid]==-0)):
+                        flag = 1
+                        break
+        if not flag:
             deadends.append((i, record['id']))
     return (deadends)
 
@@ -232,6 +245,7 @@ else:
     yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
 
 (dict1, dict2) = recurs_dict(yaml_data)
+dd = deadend(yaml_data, {})
 status_dict_ = node_resolving(id_dep, dict1, dict2, {})
 
-print (status_dict_)
+print (dd)
