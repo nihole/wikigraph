@@ -9,7 +9,7 @@ from graphviz import Digraph
 
 
 ## Graph creation
-def wgraph(yaml_data, status_dict):
+def wgraph(yaml_data, status_dict, graph_file):
 
     g = Digraph('G', filename=graph_file, format='svg')
     #g = Digraph('G', filename=graph_file)
@@ -53,7 +53,6 @@ def wgraph(yaml_data, status_dict):
     for record in yaml_data['statements']:
         for edge in record['direct_contradictions']:
             if edge['id']:
-                print edge['id']
                 if not (edge['id'] in status_dict.keys()):
                     g.edge(record['id'], edge['id'])
                 else:
@@ -63,7 +62,6 @@ def wgraph(yaml_data, status_dict):
                         g.edge(record['id'], edge['id'])
         for edge in record['indirect_contradictions']:
             if edge['id']:
-                print edge['id']
                 if not (edge['id'] in status_dict.keys()):
                     g.edge(record['id'], edge['id'], style='dotted')
                 else:
@@ -73,7 +71,6 @@ def wgraph(yaml_data, status_dict):
                         g.edge(record['id'], edge['id'], style='dotted')
         for edge in record['complement']:
             if edge['id']:
-                print edge['id']
                 if not (edge['id'] in status_dict.keys()):
                     g.edge(record['id'], edge['id'], color='red', dir="both")
                 else:
@@ -85,32 +82,34 @@ def wgraph(yaml_data, status_dict):
     g.render(view=False)  
 #   g.view()
 
+if __name__ == "__main__":
+
     ######### get file's names from the command line ####################
-if (len(sys.argv)==3):
-    yaml_file = sys.argv[1]
-    graph_file = sys.argv[2]
-else:
-    print ("   ######################################################\n")
-    print ("   Syntax is:\n")
-    print ("   python3 ../../wgraph.py desdemona.yml desdemona.gv\n")
-    print ("   ######################################################\n")
-    quit()
+    if (len(sys.argv)==3):
+        yaml_file = sys.argv[1]
+        graph_file = sys.argv[2]
+    else:
+        print ("   ######################################################\n")
+        print ("   Syntax is:\n")
+        print ("   python3 ../../wgraph.py desdemona.yml desdemona.gv\n")
+        print ("   ######################################################\n")
+        quit()
 
 
    ######### take data from YAML file ####################
 
-my_config=''
-f = open( "%s" % yaml_file )
-data1 = f.read()
-f.close()
+    my_config=''
+    f = open( "%s" % yaml_file )
+    data1 = f.read()
+    f.close()
 
-yaml_version = yaml.__version__
-m = re.match('(\d(\.\d)?)', yaml_version)
-yaml_ver = m.group(1)
+    yaml_version = yaml.__version__
+    m = re.match('(\d(\.\d)?)', yaml_version)
+    yaml_ver = m.group(1)
 
-if (float(yaml_ver) < 5.1):
-    yaml_data = yaml.load(data1)
-else:
-    yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
+    if (float(yaml_ver) < 5.1):
+        yaml_data = yaml.load(data1)
+    else:
+        yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
 
-wgraph(yaml_data, {})
+    wgraph(yaml_data, {}, graph_file)

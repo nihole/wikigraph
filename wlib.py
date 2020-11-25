@@ -213,6 +213,7 @@ def node_resolving (id_, rdict, reverse_rdict, status_dict):
 import sys
 import yaml
 import re
+import wgraph
 
 ## For test purpose we consider node with id '--14--' as truth (dead-end node)
 
@@ -249,3 +250,4 @@ dd = deadend(yaml_data, {})
 status_dict_ = node_resolving(id_dep, dict1, dict2, {})
 
 print (dd)
+wgraph.wgraph(yaml_data, status_dict_, 'desdemona')
