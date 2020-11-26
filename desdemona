@@ -57,16 +57,16 @@ digraph G {
 	"++12++" [label="++12++
 Эмилия
 лжет" URL="https://www.ru"]
-	node [color=red]
+	node [color=gray90 fontcolor=gray90]
 	"++13++" [label="++13++
 Там был Яго, который
 подтвердил факт
 измены" URL="https://www.ru"]
-	node [color=red]
+	node [color=gray90 fontcolor=gray90]
 	"++14++" [label="++14++
 Источник информации
 Яго - он честен" URL="https://www.ru"]
-	node [color=red]
+	node [color=gray90 fontcolor=gray90]
 	"++15++" [label="++15++
 Яго подтвердил,
 что это платок Дездемоны,
@@ -246,10 +246,10 @@ digraph G {
 	"--4--" -> "++4++" [color=red dir=both]
 	"--5--" -> "++12++"
 	"--5--" -> "++11++" [style=dotted]
-	"--6--" -> "++13++"
+	"--6--" -> "++13++" [color=gray90]
 	"--6--" -> "++25++" [color=red dir=both]
-	"--7--" -> "++14++" [style=dotted]
-	"--8--" -> "++15++"
+	"--7--" -> "++14++" [color=gray90 style=dotted]
+	"--8--" -> "++15++" [color=gray90]
 	"--8--" -> "++22++" [color=red dir=both]
 	"--9--" -> "++7++"
 	"--10--" -> "++16++" [color=red dir=both]

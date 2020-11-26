@@ -24,7 +24,7 @@ def wgraph(yaml_data, status_dict, graph_file):
                 g.attr('node', color='red')
                 g.node(record['id'], label=lbl, URL='https://www.ru')
             else:
-                if (status_dict[record['id']] == -1):
+                if (status_dict[record['id']] == -1) or (status_dict[record['id']] == 0):
                     g.attr('node', color='gray90', fontcolor = 'gray90')
                     g.node(record['id'], label=lbl, URL='https://www.ru')
 
@@ -37,7 +37,7 @@ def wgraph(yaml_data, status_dict, graph_file):
                 g.attr('node', color='blue', href='https://www.ru')
                 g.node(record['id'], label=lbl)
             else:
-                if (status_dict[record['id']] == -1):
+                if (status_dict[record['id']] == -1) or (status_dict[record['id']] == 0):
                     g.attr('node', color='gray90', fontcolor = 'gray90')
                     g.node(record['id'], label=lbl, URL='https://www.ru')
                 else:
@@ -56,7 +56,7 @@ def wgraph(yaml_data, status_dict, graph_file):
                 if not (edge['id'] in status_dict.keys()):
                     g.edge(record['id'], edge['id'])
                 else:
-                    if (status_dict[edge['id']] == -1):
+                    if (status_dict[edge['id']] == -1) or  (status_dict[edge['id']] == 0):
                         g.edge(record['id'], edge['id'], color='gray90')
                     else:
                         g.edge(record['id'], edge['id'])
@@ -65,7 +65,7 @@ def wgraph(yaml_data, status_dict, graph_file):
                 if not (edge['id'] in status_dict.keys()):
                     g.edge(record['id'], edge['id'], style='dotted')
                 else:
-                    if (status_dict[edge['id']] == -1):
+                    if (status_dict[edge['id']] == -1) or  (status_dict[edge['id']] == 0):
                         g.edge(record['id'], edge['id'], color='gray90',style='dotted')
                     else:
                         g.edge(record['id'], edge['id'], style='dotted')
@@ -74,7 +74,7 @@ def wgraph(yaml_data, status_dict, graph_file):
                 if not (edge['id'] in status_dict.keys()):
                     g.edge(record['id'], edge['id'], color='red', dir="both")
                 else:
-                    if (status_dict[edge['id']] == -1):
+                    if (status_dict[edge['id']] == -1) or  (status_dict[edge['id']] == 0):
                         g.edge(record['id'], edge['id'], color='gray90', dir="both")
                     else:
                         g.edge(record['id'], edge['id'], color='red', dir="both")
