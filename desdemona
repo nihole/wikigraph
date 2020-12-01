@@ -96,7 +96,7 @@ digraph G {
 У Яго нет мотива
 обманывать
 Отелло" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+	node [color=gray90 fontcolor=gray90]
 	"++21++" [label="++21++
 Яго не обижен тем,
 что не он, а Кассио
@@ -191,10 +191,10 @@ digraph G {
 не он, а Кассио
 стал заместителем
 Отелло" URL="https://www.ru"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+	node [color=gray90 fontcolor=gray90]
 	"--16--" [label="--16--
 У Яго есть мотив
-совершить преступление"]
+совершить преступление" URL="https://www.ru"]
 	node [color=blue fontcolor=black href="https://www.ru"]
 	"--17--" [label="--17--
 Дездемона говорит,
@@ -230,7 +230,7 @@ digraph G {
 	"++15++" -> "--14--" [color=gray90]
 	"++20++" -> "--15--" [color=gray90]
 	"++20++" -> "--19--" [color=gray90]
-	"++20++" -> "--16--" [color=red dir=both]
+	"++20++" -> "--16--" [color=gray90 dir=both]
 	"++21++" -> "--19--" [color=gray90 style=dotted]
 	"++24++" -> "--19--" [color=gray90 dir=both]
 	"--0--" -> "++3++"
@@ -259,7 +259,7 @@ digraph G {
 	"--13--" -> "++19++" [style=dotted]
 	"--14--" -> "++20++" [color=gray90 style=dotted]
 	"--14--" -> "++23++" [color=gray90 dir=both]
-	"--15--" -> "++21++" [color=red dir=both]
+	"--15--" -> "++21++" [color=gray90 dir=both]
 	"--17--" -> "++10++" [style=dotted]
 	"--18--" -> "++6++"
 	"--18--" -> "++7++" [style=dotted]

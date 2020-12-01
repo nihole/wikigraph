@@ -87,32 +87,30 @@ def recurs_dict (yml_data):
 ### the structure of them is {node_id:{'direct':[node_ids],'indirect':[node_ids],'complement':[node_ids]}, ...}
     rdict = {}
     reverse_rdict = {}
+    ### Initiation
+    for record_ in yml_data['statements']:
+        node = record_['id']
+        if node not in rdict.keys():
+            rdict[node] = {}
+            rdict[node]['direct'] = []
+            rdict[node]['indirect'] = []
+            rdict[node]['complement'] = []
+        if node not in reverse_rdict.keys():
+            reverse_rdict[node] = {}
+            reverse_rdict[node]['direct'] = []
+            reverse_rdict[node]['indirect'] = []
+            reverse_rdict[node]['complement'] = []
     for record in yml_data['statements']:
         dnode = record['id']
-        if record['id'] not in rdict.keys():
-            rdict[dnode] = {}
-            rdict[dnode]['direct'] = []
-            rdict[dnode]['indirect'] = []
-            rdict[dnode]['complement'] = []
         if check_direct_contr(record):
             for element in record['direct_contradictions']:
-                rdict[dnode]['direct'].append(element['id'])
                 rnode = element['id']
-                if element['id'] not in reverse_rdict.keys():
-                    reverse_rdict[rnode] = {}
-                    reverse_rdict[rnode]['direct'] = []
-                    reverse_rdict[rnode]['indirect'] = []
-                    reverse_rdict[rnode]['complement'] = []
+                rdict[dnode]['direct'].append(rnode)
                 reverse_rdict[rnode]['direct'].append(dnode)
         if check_indirect_contr(record):
             for element in record['indirect_contradictions']:
-                rdict[dnode]['indirect'].append(element['id'])
                 rnode = element['id']
-                if element['id'] not in reverse_rdict.keys():
-                    reverse_rdict[rnode] = {}
-                    reverse_rdict[rnode]['direct'] = []
-                    reverse_rdict[rnode]['indirect'] = []
-                    reverse_rdict[rnode]['complement'] = []
+                rdict[dnode]['indirect'].append(rnode)
                 reverse_rdict[rnode]['indirect'].append(dnode)
         if check_complement(record):
             if len(record['complement']) > 1:
@@ -121,23 +119,9 @@ def recurs_dict (yml_data):
                 [element] = record['complement']
                 rnode = element['id']
                 rdict[dnode]['complement'] = [rnode]
-                if rnode not in rdict.keys():
-                    rdict[rnode] = {}
-                    rdict[rnode]['direct'] = []
-                    rdict[rnode]['indirect'] = []
-                    rdict[rnode]['complement'] = []
                 rdict[rnode]['complement'] = [dnode]
-                if rnode not in reverse_rdict.keys():
-                    reverse_rdict[rnode] = {}
-                    reverse_rdict[rnode]['direct'] = []
-                    reverse_rdict[rnode]['indirect'] = []
-                    reverse_rdict[rnode]['complement'] = []
-                if dnode not in reverse_rdict.keys():
-                    reverse_rdict[dnode] = {}
-                    reverse_rdict[dnode]['direct'] = []
-                    reverse_rdict[dnode]['indirect'] = []
-                    reverse_rdict[dnode]['complement'] = []
                 reverse_rdict[dnode]['complement'] = [rnode]
+                reverse_rdict[rnode]['complement'] = [dnode]
     return (rdict, reverse_rdict) 
 
 def path_check (id_, rdict,  reverse_rdict, status_dict):
