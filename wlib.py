@@ -203,46 +203,48 @@ def node_resolving (id_, rdict, reverse_rdict, status_dict):
     
 #def deadends_resolving():
  #   def graph_resolving():
-    
 
-import sys
-import yaml
-import re
-import wgraph
 
-## For test purpose we consider node with id '--14--' as truth (dead-end node)
+if __name__ == "__main__":
 
-id_dep = '--14--'
+    import sys
+    import yaml
+    import re
+    import wgraph
 
-######### get file's names from the command line ####################
-if (len(sys.argv)==2):
-    yaml_file = sys.argv[1]
-else:
-    print ("   ######################################################\n")
-    print ("   Syntax is:\n")
-    print ("   python3 ../../wlib.py desdemona.yml \n")
-    print ("   ######################################################\n")
-    quit()
+    ## For test purpose we consider node with id '--14--' as truth (dead-end node)
+
+    id_dep = '--14--'
+
+    ######### get file's names from the command line ####################
+    if (len(sys.argv)==2):
+        yaml_file = sys.argv[1]
+    else:
+        print ("   ######################################################\n")
+        print ("   Syntax is:\n")
+        print ("   python3 ../../wlib.py desdemona.yml \n")
+        print ("   ######################################################\n")
+        quit()
 
 
    ######### take data from YAML file ####################
-my_config=''
-f = open( "%s" % yaml_file )
-data1 = f.read()
-f.close()
+    my_config=''
+    f = open( "%s" % yaml_file )
+    data1 = f.read()
+    f.close()
 
-yaml_version = yaml.__version__
-m = re.match('(\d(\.\d)?)', yaml_version)
-yaml_ver = m.group(1)
+    yaml_version = yaml.__version__
+    m = re.match('(\d(\.\d)?)', yaml_version)
+    yaml_ver = m.group(1)
 
-if (float(yaml_ver) < 5.1):
-    yaml_data = yaml.load(data1)
-else:
-    yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
+    if (float(yaml_ver) < 5.1):
+        yaml_data = yaml.load(data1)
+    else:
+        yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
 
-(dict1, dict2) = recurs_dict(yaml_data)
-dd = deadend(yaml_data, {})
-status_dict_ = node_resolving(id_dep, dict1, dict2, {})
-print status_dict_
+    (dict1, dict2) = recurs_dict(yaml_data)
+    dd = deadend(yaml_data, {})
+    status_dict_ = node_resolving(id_dep, dict1, dict2, {})
+    print status_dict_
 
-wgraph.wgraph(yaml_data, status_dict_, 'desdemona')
+    wgraph.wgraph(yaml_data, status_dict_, 'desdemona')
