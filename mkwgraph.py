@@ -10,9 +10,8 @@ def single_wcicle(id_dep_lst, dict1, dict2, status_dict):
             if status_dict[id_dep] == -1:
                 print "Err: dead point is false"
                 break
-            else:
-                status_dict[id_dep] = 1
-                status_dict = wlib.node_resolving(id_dep, dict1, dict2, status_dict)
+        status_dict[id_dep] = 1
+        status_dict = wlib.node_resolving(id_dep, dict1, dict2, status_dict)
 
     return status_dict
 
@@ -27,6 +26,7 @@ def wcicles (ref_points_lst, yaml_data):
         status_dict = single_wcicle(dd, dict1, dict2, status_dict)
         file_name = 'desdemona_' + str(i) 
         wgraph.wgraph(yaml_data, status_dict, file_name)
+        dead_ends_lst = wlib.deadend(yaml_data, status_dict)
         ref_points_lst = []
         i = i + 1
         if i > 10:

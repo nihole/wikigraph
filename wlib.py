@@ -68,7 +68,7 @@ def deadend(yml_data, status_dict):
                         flag = 1
                         break
         if not flag:
-            deadends.append((i, record['id']))
+            deadends.append(record['id'])
     return (deadends)
 
 def find_seq_id(yml_data, id_):
@@ -186,7 +186,9 @@ def node_resolving (id_, rdict, reverse_rdict, status_dict):
     ### mark as deleted (-1) all downstreem nodes (for all types of edge) 
     ### if they have path to root only via this node
     status_dict = recurse_path_check(id_, rdict,  reverse_rdict, status_dict)
-    
+
+    print reverse_rdict['++11++']
+    print id_ 
     reverse_direct_and_complement = reverse_rdict[id_]['direct']+reverse_rdict[id_]['complement']
     for dnode in reverse_direct_and_complement:
         ### if this statement is truth then statements for which this one is direct controdition are false
