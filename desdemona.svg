@@ -598,19 +598,19 @@
 <g id="node43" class="node">
 <title>&#45;&#45;16&#45;&#45;</title>
 <g id="a_node43"><a xlink:href="https://www.ru" xlink:title="&#45;&#45;16&#45;&#45;&#10;У Яго есть мотив&#10;совершить преступление">
-<ellipse fill="none" stroke="#e5e5e5" cx="408.4802" cy="-323.0229" rx="115.0173" ry="37.4533"/>
-<text text-anchor="middle" x="408.4802" y="-334.3229" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">&#45;&#45;16&#45;&#45;</text>
-<text text-anchor="middle" x="408.4802" y="-319.3229" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">У Яго есть мотив</text>
-<text text-anchor="middle" x="408.4802" y="-304.3229" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">совершить преступление</text>
+<ellipse fill="none" stroke="#0000ff" cx="408.4802" cy="-323.0229" rx="115.0173" ry="37.4533"/>
+<text text-anchor="middle" x="408.4802" y="-334.3229" font-family="Times,serif" font-size="14.00" fill="#000000">&#45;&#45;16&#45;&#45;</text>
+<text text-anchor="middle" x="408.4802" y="-319.3229" font-family="Times,serif" font-size="14.00" fill="#000000">У Яго есть мотив</text>
+<text text-anchor="middle" x="408.4802" y="-304.3229" font-family="Times,serif" font-size="14.00" fill="#000000">совершить преступление</text>
 </a>
 </g>
 </g>
 <!-- ++20++&#45;&gt;&#45;&#45;16&#45;&#45; -->
 <g id="edge24" class="edge">
 <title>++20++&#45;&gt;&#45;&#45;16&#45;&#45;</title>
-<path fill="none" stroke="#e5e5e5" d="M251.1169,-423.7729C281.5287,-404.3021 317.4535,-381.3017 347.2943,-362.1965"/>
-<polygon fill="#e5e5e5" stroke="#e5e5e5" points="248.8642,-421.0593 242.3295,-429.3989 252.6386,-426.9546 248.8642,-421.0593"/>
-<polygon fill="#e5e5e5" stroke="#e5e5e5" points="349.4077,-364.9994 355.9423,-356.6597 345.6333,-359.1041 349.4077,-364.9994"/>
+<path fill="none" stroke="#ff0000" d="M251.1169,-423.7729C281.5287,-404.3021 317.4535,-381.3017 347.2943,-362.1965"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="248.8642,-421.0593 242.3295,-429.3989 252.6386,-426.9546 248.8642,-421.0593"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="349.4077,-364.9994 355.9423,-356.6597 345.6333,-359.1041 349.4077,-364.9994"/>
 </g>
 <!-- &#45;&#45;19&#45;&#45; -->
 <g id="node46" class="node">
@@ -633,12 +633,12 @@
 <g id="node22" class="node">
 <title>++21++</title>
 <g id="a_node22"><a xlink:href="https://www.ru" xlink:title="++21++&#10;Яго не обижен тем,&#10;что не он, а Кассио&#10;стал заместителем&#10;Отелло">
-<ellipse fill="none" stroke="#e5e5e5" cx="187.4802" cy="-169.6432" rx="92.7622" ry="58.8803"/>
-<text text-anchor="middle" x="187.4802" y="-195.9432" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">++21++</text>
-<text text-anchor="middle" x="187.4802" y="-180.9432" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">Яго не обижен тем,</text>
-<text text-anchor="middle" x="187.4802" y="-165.9432" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">что не он, а Кассио</text>
-<text text-anchor="middle" x="187.4802" y="-150.9432" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">стал заместителем</text>
-<text text-anchor="middle" x="187.4802" y="-135.9432" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">Отелло</text>
+<ellipse fill="none" stroke="#ff0000" cx="187.4802" cy="-169.6432" rx="92.7622" ry="58.8803"/>
+<text text-anchor="middle" x="187.4802" y="-195.9432" font-family="Times,serif" font-size="14.00" fill="#000000">++21++</text>
+<text text-anchor="middle" x="187.4802" y="-180.9432" font-family="Times,serif" font-size="14.00" fill="#000000">Яго не обижен тем,</text>
+<text text-anchor="middle" x="187.4802" y="-165.9432" font-family="Times,serif" font-size="14.00" fill="#000000">что не он, а Кассио</text>
+<text text-anchor="middle" x="187.4802" y="-150.9432" font-family="Times,serif" font-size="14.00" fill="#000000">стал заместителем</text>
+<text text-anchor="middle" x="187.4802" y="-135.9432" font-family="Times,serif" font-size="14.00" fill="#000000">Отелло</text>
 </a>
 </g>
 </g>
@@ -675,10 +675,10 @@
 <g id="node25" class="node">
 <title>++24++</title>
 <g id="a_node25"><a xlink:href="https://www.ru" xlink:title="++24++&#10;Яго хороший&#10;и честный человек">
-<ellipse fill="none" stroke="#ff0000" cx="387.4802" cy="-169.6432" rx="89.191" ry="37.4533"/>
-<text text-anchor="middle" x="387.4802" y="-180.9432" font-family="Times,serif" font-size="14.00" fill="#000000">++24++</text>
-<text text-anchor="middle" x="387.4802" y="-165.9432" font-family="Times,serif" font-size="14.00" fill="#000000">Яго хороший</text>
-<text text-anchor="middle" x="387.4802" y="-150.9432" font-family="Times,serif" font-size="14.00" fill="#000000">и честный человек</text>
+<ellipse fill="none" stroke="#e5e5e5" cx="387.4802" cy="-169.6432" rx="89.191" ry="37.4533"/>
+<text text-anchor="middle" x="387.4802" y="-180.9432" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">++24++</text>
+<text text-anchor="middle" x="387.4802" y="-165.9432" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">Яго хороший</text>
+<text text-anchor="middle" x="387.4802" y="-150.9432" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">и честный человек</text>
 </a>
 </g>
 </g>
@@ -866,9 +866,9 @@
 <!-- &#45;&#45;15&#45;&#45;&#45;&gt;++21++ -->
 <g id="edge53" class="edge">
 <title>&#45;&#45;15&#45;&#45;&#45;&gt;++21++</title>
-<path fill="none" stroke="#e5e5e5" d="M186.3784,-254.1393C186.4469,-248.8917 186.5159,-243.5949 186.5843,-238.3485"/>
-<polygon fill="#e5e5e5" stroke="#e5e5e5" points="182.8785,-254.1161 186.2478,-264.161 189.8779,-254.2075 182.8785,-254.1161"/>
-<polygon fill="#e5e5e5" stroke="#e5e5e5" points="190.084,-238.3924 186.7148,-228.3476 183.0846,-238.3011 190.084,-238.3924"/>
+<path fill="none" stroke="#ff0000" d="M186.3784,-254.1393C186.4469,-248.8917 186.5159,-243.5949 186.5843,-238.3485"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="182.8785,-254.1161 186.2478,-264.161 189.8779,-254.2075 182.8785,-254.1161"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="190.084,-238.3924 186.7148,-228.3476 183.0846,-238.3011 190.084,-238.3924"/>
 </g>
 <!-- &#45;&#45;17&#45;&#45;&#45;&gt;++10++ -->
 <g id="edge54" class="edge">

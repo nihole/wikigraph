@@ -115,15 +115,29 @@ def recurs_dict (yml_data):
                     reverse_rdict[rnode]['complement'] = []
                 reverse_rdict[rnode]['indirect'].append(dnode)
         if check_complement(record):
-            for element in record['complement']:
-                rdict[dnode]['complement'].append(element['id'])
+            if len(record['complement']) > 1:
+                print "Only a single complement contradiction is possible!"
+            else: 
+                [element] = record['complement']
                 rnode = element['id']
-                if element['id'] not in reverse_rdict.keys():
+                rdict[dnode]['complement'] = [rnode]
+                if rnode not in rdict.keys():
+                    rdict[rnode] = {}
+                    rdict[rnode]['direct'] = []
+                    rdict[rnode]['indirect'] = []
+                    rdict[rnode]['complement'] = []
+                rdict[rnode]['complement'] = [dnode]
+                if rnode not in reverse_rdict.keys():
                     reverse_rdict[rnode] = {}
                     reverse_rdict[rnode]['direct'] = []
                     reverse_rdict[rnode]['indirect'] = []
                     reverse_rdict[rnode]['complement'] = []
-                reverse_rdict[rnode]['complement'].append(dnode)
+                if dnode not in reverse_rdict.keys():
+                    reverse_rdict[dnode] = {}
+                    reverse_rdict[dnode]['direct'] = []
+                    reverse_rdict[dnode]['indirect'] = []
+                    reverse_rdict[dnode]['complement'] = []
+                reverse_rdict[dnode]['complement'] = [rnode]
     return (rdict, reverse_rdict) 
 
 def path_check (id_, rdict,  reverse_rdict, status_dict):
@@ -165,14 +179,10 @@ def recurse_path_check (id_, rdict,  reverse_rdict, status_dict):
     i = 0 # for infinitive cicle avoiding
     while len(node_list) > 0:
         node_lst = []
-    ### this will be commulative node list
+        ### this will be commulative node list
         for node in node_list:
             node_l = []
             (node_l, status_dict) = path_check(node, rdict,  reverse_rdict, status_dict)
-#            for n_l in node_l:
-#                print (n_l)
-#                if n_l in status_dict.keys():
-#                    node_l.remove(n_l)
             node_lst = node_lst + node_l
             node_lst = list(dict.fromkeys(node_lst))
         node_list = copy.copy(node_lst)
@@ -184,7 +194,7 @@ def recurse_path_check (id_, rdict,  reverse_rdict, status_dict):
     return status_dict
 
 def node_resolving (id_, rdict, reverse_rdict, status_dict):
-## return dictionary ststus_dict. Keys - ids of nodes (statements), values - 1,2,3. 
+## return dictionary ststus_dict. Keys - ids of nodes (statements), values: 1,-1,0, 777 
 ### 1 means true, 0 - false, -1 - lost path to the root. 777 is used to label a conflict (true/false) 
     
     ### we always start with the element we believe the truth
@@ -192,8 +202,9 @@ def node_resolving (id_, rdict, reverse_rdict, status_dict):
     ### mark as deleted (-1) all downstreem nodes (for all types of edge) 
     ### if they have path to root only via this node
     status_dict = recurse_path_check(id_, rdict,  reverse_rdict, status_dict)
-
-    for dnode in reverse_rdict[id_]['direct']:
+    
+    reverse_direct_and_complement = reverse_rdict[id_]['direct']+reverse_rdict[id_]['complement']
+    for dnode in reverse_direct_and_complement:
         ### if this statement is truth then statements for which this one is direct controdition are false
         ### first check wheher these direct upstream statements already marked as 1,0,-1
         if dnode in status_dict.keys(): 
@@ -248,6 +259,6 @@ else:
 (dict1, dict2) = recurs_dict(yaml_data)
 dd = deadend(yaml_data, {})
 status_dict_ = node_resolving(id_dep, dict1, dict2, {})
+print status_dict_
 
-print (dd)
 wgraph.wgraph(yaml_data, status_dict_, 'desdemona')
