@@ -26,21 +26,20 @@ def single_wcicle(id_truth_lst, dict1, dict2, status_dict):
 def wcicles (ref_points_lst, yaml_data):
     status_dict = {}
     (dict1, dict2) = wlib.recurs_dict(yaml_data)
-#   In this approach we don't consder dead ends as truth. It means that for any statement we always have implicit indirect
-#   contradiction. For example, this statement may be like this: "There is no enough information for the decision making"
 
-#    dead_ends_lst = wlib.deadend(yaml_data, status_dict)
-    dead_ends_lst = []
+    dead_ends_lst = wlib.deadend(yaml_data, status_dict)
+#    dead_ends_lst = []
     i = 0
-    while len(dead_ends_lst) + len(ref_points_lst):
+    while (len(dead_ends_lst) + len(ref_points_lst) > 0):
         dd = list(dict.fromkeys(dead_ends_lst + ref_points_lst))
+        print (dd)
         status_dict = single_wcicle(dd, dict1, dict2, status_dict)
         file_name = 'desdemona_' + str(i) 
         wgraph.wgraph(yaml_data, status_dict, file_name)
         dead_ends_lst = wlib.deadend(yaml_data, status_dict)
         ref_points_lst = []
         i = i + 1
-        if i > 10:
+        if i > 100:
             print "Err: Infinitive cicle"
             break
         

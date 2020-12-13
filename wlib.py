@@ -1,4 +1,4 @@
-# hello.py - http://www.graphviz.org/content/hello
+ hello.py - http://www.graphviz.org/content/hello
 # -*- coding: utf-8 -*-
 
 ### The library for wave graf relolving
@@ -49,15 +49,17 @@ def check_complement(record):
 
 def deadend(yml_data, status_dict):
 ### Returns a list of dead-endsdirect contradictioansof graf repesented ib yml_data
-### Dead-end is a statement without contradictions, direct or indirect
+### Dead-end is a statement without any type of contradictions, direct, indirect or complement
     deadends = []
     
     for i in range(len(yml_data['statements'])):
         flag = 0
         record = yml_data['statements'][i]
         (rdict, reverse_rdict) = recurs_dict (yml_data)
-        if check_complement(record) or len(reverse_rdict[record['id']]['complement']):
-            flag = 1
+        if check_complement(record):
+            [cmpl] = rdict[record['id']]['complement']
+            if (( cmpl not in status_dict.keys()) or (not status_dict[cmpl]==-1) or (not status_dict[cmpl]==-0)):
+                flag = 1
         elif check_direct_contr(record):
             direct_contr_list = rdict[record['id']]['direct']
             if len(direct_contr_list):
@@ -193,8 +195,6 @@ def node_resolving (id_, rdict, reverse_rdict, status_dict):
     ### if they have path to root only via this node
     status_dict = recurse_path_check(id_, rdict,  reverse_rdict, status_dict)
 
-    print reverse_rdict['++11++']
-    print id_ 
     reverse_direct_and_complement = reverse_rdict[id_]['direct']+reverse_rdict[id_]['complement']
     for dnode in reverse_direct_and_complement:
         ### if this statement is truth then statements for which this one is direct controdition are false
