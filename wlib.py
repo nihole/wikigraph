@@ -1,4 +1,4 @@
- hello.py - http://www.graphviz.org/content/hello
+# hello.py - http://www.graphviz.org/content/hello
 # -*- coding: utf-8 -*-
 
 ### The library for wave graf relolving
@@ -143,18 +143,18 @@ def path_check (id_, rdict,  reverse_rdict, status_dict):
     cnode_list = []
     if id_ in rdict.keys():
         for dnode_ in rdict[id_]['direct']:
-            if len(reverse_rdict[dnode_]['direct']) == 1:
-                # if only one direct reverse path
+            if len(reverse_rdict[dnode_]['direct']) + len(reverse_rdict[dnode_]['indirect']) + len(reverse_rdict[dnode_]['complement']) == 1:
+                # if only one reverse path (via id_)
                 status_dict[dnode_]=-1
                 dnode_list.append(dnode_)
         for inode_ in rdict[id_]['indirect']:
-            if len(reverse_rdict[inode_]['indirect']) == 1:
-                # if only one indirect reverse path
+            if len(reverse_rdict[inode_]['direct']) + len(reverse_rdict[inode_]['indirect']) + len(reverse_rdict[inode_]['complement'])   == 1:
+                # if only one reverse path (via id_)
                 status_dict[inode_]=-1
                 inode_list.append(inode_)
         for cnode_ in rdict[id_]['complement']:
-            if len(reverse_rdict[cnode_]['complement']) == 1:
-                # if only one complement reverse path
+            if len(reverse_rdict[cnode_]['direct']) + len(reverse_rdict[cnode_]['indirect']) + len(reverse_rdict[cnode_]['complement']) == 1:
+                # if only one  reverse path (via id_)
                 status_dict[cnode_]=-1
                 cnode_list.append(cnode_)
     ### return the list of removed downstream nodes and new status_dict
@@ -170,6 +170,7 @@ def recurse_path_check (id_, rdict,  reverse_rdict, status_dict):
     node_list = [id_]
     i = 0 # for infinitive cicle avoiding
     while len(node_list) > 0:
+        print (node_list)
         node_lst = []
         ### this will be commulative node list
         for node in node_list:
@@ -180,7 +181,7 @@ def recurse_path_check (id_, rdict,  reverse_rdict, status_dict):
         node_list = copy.copy(node_lst)
         ### to avoid infinitive cicles
         i=i+1
-        if i>10000:
+        if i>100:
             print ('Infinitive cicle!!')
             break
     return status_dict
