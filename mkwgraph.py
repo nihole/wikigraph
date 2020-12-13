@@ -4,10 +4,18 @@ import re
 import wgraph
 import wlib
 
-def single_wcicle(id_dep_lst, dict1, dict2, status_dict):
-    for id_dep in id_dep_lst:
+def single_wcicle(id_truth_lst, dict1, dict2, status_dict):
+    # id_truth_lst - dead ends (without any contradicions) and reference points ( taken for truth )
+    # dict1 - recurse dictionary: 
+    # - dict1['statement_id']['direct'] = [list of ids of  direct contradictions]
+    # - dict1['statement_id']['indirect'] = [list of ids of indirect contradictions]
+    # - dict1['statement_id']['complementary'] = [list of ids of complementary contradictions]
+    # dict2 - reverse dictionary - the same as dict1 but in opposit direction
+
+    for id_dep in id_truth_lst:
         if id_dep in status_dict.keys():
             if status_dict[id_dep] == -1:
+                # The dead center must be true, and if this is a false, this means we have some inconsistency in the logic.
                 print "Err: dead point is false"
                 break
         status_dict[id_dep] = 1
@@ -18,10 +26,13 @@ def single_wcicle(id_dep_lst, dict1, dict2, status_dict):
 def wcicles (ref_points_lst, yaml_data):
     status_dict = {}
     (dict1, dict2) = wlib.recurs_dict(yaml_data)
-    dead_ends_lst = wlib.deadend(yaml_data, status_dict)
+#   In this approach we don't consder dead ends as truth. It means that for any statement we always have implicit indirect
+#   contradiction. For example, this statement may be like this: "There is no enough information for the decision making"
+
+#    dead_ends_lst = wlib.deadend(yaml_data, status_dict)
+    dead_ends_lst = []
     i = 0
     while len(dead_ends_lst) + len(ref_points_lst):
-        print dead_ends_lst
         dd = list(dict.fromkeys(dead_ends_lst + ref_points_lst))
         status_dict = single_wcicle(dd, dict1, dict2, status_dict)
         file_name = 'desdemona_' + str(i) 
@@ -49,7 +60,7 @@ if __name__ == "__main__":
     else:
         print ("   ######################################################\n")
         print ("   Syntax is:\n")
-        print ("   python3 ../../wlib.py desdemona.yml \n")
+        print ("   python mkwgraph.py wikigraphs/desdemona/desdemona.yml \n")
         print ("   ######################################################\n")
         quit()
 

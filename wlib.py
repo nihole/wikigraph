@@ -56,9 +56,7 @@ def deadend(yml_data, status_dict):
         flag = 0
         record = yml_data['statements'][i]
         (rdict, reverse_rdict) = recurs_dict (yml_data)
-        if check_complement(record):
-            flag = 1
-        elif len(reverse_rdict[record['id']]['complement']):
+        if check_complement(record) or len(reverse_rdict[record['id']]['complement']):
             flag = 1
         elif check_direct_contr(record):
             direct_contr_list = rdict[record['id']]['direct']
@@ -67,6 +65,14 @@ def deadend(yml_data, status_dict):
                     if ((dcid not in status_dict.keys()) or (not status_dict[dcid]==-1) or (not status_dict[dcid]==-0)):
                         flag = 1
                         break
+        elif check_indirect_contr(record):
+            indirect_contr_list = rdict[record['id']]['indirect']
+            if len(indirect_contr_list):
+                for indcid in indirect_contr_list:
+                    if ((indcid not in status_dict.keys()) or (not status_dict[indcid]==-1) or (not status_dict[indcid]==-0)):
+                        flag = 1
+                        break
+
         if not flag:
             deadends.append(record['id'])
     return (deadends)
