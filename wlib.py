@@ -142,21 +142,17 @@ def path_check (id_, rdict,  reverse_rdict, status_dict):
     inode_list = []
     cnode_list = []
     if id_ in rdict.keys():
-        for dnode_ in rdict[id_]['direct']:
-            if len(reverse_rdict[dnode_]['direct']) + len(reverse_rdict[dnode_]['indirect']) + len(reverse_rdict[dnode_]['complement']) == 1:
-                # if only one reverse path (via id_)
+        for dnode_ in list(set(rdict[id_]['direct'] + rdict[id_]['indirect'] + rdict[id_]['complement'])):
+            all_reverse_node = list(set(reverse_rdict[dnode_]['direct'] + reverse_rdict[dnode_]['indirect'] + reverse_rdict[dnode_]['complement']))
+            flag = 0
+            for reverse_node_ in all_reverse_node:
+                if (reverse_node_ in status_dict.keys()) and not ( status_dict[reverse_node_] == -1):
+                    flag = 1
+                    break
+
+            if not flag:
                 status_dict[dnode_]=-1
                 dnode_list.append(dnode_)
-        for inode_ in rdict[id_]['indirect']:
-            if len(reverse_rdict[inode_]['direct']) + len(reverse_rdict[inode_]['indirect']) + len(reverse_rdict[inode_]['complement'])   == 1:
-                # if only one reverse path (via id_)
-                status_dict[inode_]=-1
-                inode_list.append(inode_)
-        for cnode_ in rdict[id_]['complement']:
-            if len(reverse_rdict[cnode_]['direct']) + len(reverse_rdict[cnode_]['indirect']) + len(reverse_rdict[cnode_]['complement']) == 1:
-                # if only one  reverse path (via id_)
-                status_dict[cnode_]=-1
-                cnode_list.append(cnode_)
     ### return the list of removed downstream nodes and new status_dict
 
         return (dnode_list + inode_list + cnode_list, status_dict)
