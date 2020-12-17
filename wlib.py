@@ -138,11 +138,12 @@ def path_check (id_, rdict,  reverse_rdict, status_dict):
 ### node (id = id_) should be marked as deleted (-1)
     
     ### initiation of lists with such nodes for direct, inderect, complement edges:
+    status_dict[id_] = -1
     dnode_list = []
     inode_list = []
     cnode_list = []
-    if id_ in rdict.keys():
-        for dnode_ in list(set(rdict[id_]['direct'] + rdict[id_]['indirect'] + rdict[id_]['complement'])):
+    for dnode_ in list(set(rdict[id_]['direct'] + rdict[id_]['indirect'] + rdict[id_]['complement'])):
+        if (not dnode_ in status_dict.keys()) or ((dnode_ in status_dict.keys()) and not ( status_dict[dnode_] == -1)):
             all_reverse_node = list(set(reverse_rdict[dnode_]['direct'] + reverse_rdict[dnode_]['indirect'] + reverse_rdict[dnode_]['complement']))
             flag = 0
             for reverse_node_ in all_reverse_node:

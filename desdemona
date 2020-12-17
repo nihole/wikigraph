@@ -91,7 +91,7 @@ digraph G {
 Эмилия хочет
 выгородить
 Дездемону" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+	node [color=gray90 fontcolor=gray90]
 	"++20++" [label="++20++
 У Яго нет мотива
 обманывать
@@ -111,7 +111,7 @@ digraph G {
 	"++23++" [label="++23++
 Яго говорит
 правду" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+	node [color=gray90 fontcolor=gray90]
 	"++24++" [label="++24++
 Яго хороший
 и честный человек" URL="https://www.ru"]
@@ -203,10 +203,10 @@ digraph G {
 	"--18--" [label="--18--
 Дездемона
 не любит Кассио"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+	node [color=gray90 fontcolor=gray90]
 	"--19--" [label="--19--
 Яго - злой и
-порочный человек"]
+порочный человек" URL="https://www.ru"]
 	"++0++" -> "--2--"
 	"++0++" -> "--1--"
 	"++0++" -> "--3--" [style=dotted]
@@ -229,10 +229,10 @@ digraph G {
 	"++14++" -> "--14--" [color=gray90]
 	"++15++" -> "--14--" [color=gray90]
 	"++20++" -> "--15--"
-	"++20++" -> "--19--"
+	"++20++" -> "--19--" [color=gray90]
 	"++20++" -> "--16--" [color=red dir=both]
-	"++21++" -> "--19--" [style=dotted]
-	"++24++" -> "--19--" [color=red dir=both]
+	"++21++" -> "--19--" [color=gray90 style=dotted]
+	"++24++" -> "--19--" [color=gray90 dir=both]
 	"--0--" -> "++3++"
 	"--0--" -> "++6++" [style=dotted]
 	"--0--" -> "++5++" [style=dotted]
@@ -257,7 +257,7 @@ digraph G {
 	"--11--" -> "++18++" [style=dotted]
 	"--13--" -> "++18++" [style=dotted]
 	"--13--" -> "++19++" [style=dotted]
-	"--14--" -> "++20++" [style=dotted]
+	"--14--" -> "++20++" [color=gray90 style=dotted]
 	"--14--" -> "++23++" [color=gray90 dir=both]
 	"--15--" -> "++21++" [color=red dir=both]
 	"--17--" -> "++10++" [style=dotted]
