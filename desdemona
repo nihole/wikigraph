@@ -4,59 +4,59 @@ digraph G {
 Дездемона
 изменила
 Отелло" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++1++" [label="++1++
 Дездемона
-не любит Отелло" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+не любит Отелло"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++2++" [label="++2++
 Дездемона
-любит Кассио" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+любит Кассио"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++3++" [label="++3++
 Разговор Яго с Кассио,
 где Кассио говорил
-о связи с Дездемоной" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+о связи с Дездемоной"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++4++" [label="++4++
 Кассио говорит
-правду" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+правду"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++5++" [label="++5++
 Разговор
 Кассио во
-сне" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+сне"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++6++" [label="++6++
 Дездемона
 подарила платок
-Кассио" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+Кассио"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++7++" [label="++7++
 Дездемона обрадовалась
-повышению Кассио" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+повышению Кассио"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++8++" [label="++8++
 Кассио молод,
 имеет хорошие
 манеры и нравится
-женщинам" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+женщинам"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++9++" [label="++9++
 Она просит
-за Кассио" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+за Кассио"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++10++" [label="++10++
 Дездемона
-лжет" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+лжет"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++11++" [label="++11++
 Эмилия не
-знает правды" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+знает правды"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++12++" [label="++12++
 Эмилия
-лжет" URL="https://www.ru"]
+лжет"]
 	node [color=gray90 fontcolor=gray90]
 	"++13++" [label="++13++
 Там был Яго, который
@@ -72,25 +72,25 @@ digraph G {
 что это платок Дездемоны,
 и что она передала
 его" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++16++" [label="++16++
 Дездемона
-порочна" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+порочна"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++17++" [label="++17++
 Дездемона умеет
 лгать. Она уже солгала
-отцу, убежав к Отелло" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+отцу, убежав к Отелло"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++18++" [label="++18++
 Ветренность венецианских
 девушек - им нельзя
-верить" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+верить"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++19++" [label="++19++
 Эмилия хочет
 выгородить
-Дездемону" URL="https://www.ru"]
+Дездемону"]
 	node [color=gray90 fontcolor=gray90]
 	"++20++" [label="++20++
 У Яго нет мотива
@@ -102,11 +102,11 @@ digraph G {
 что не он, а Кассио
 стал заместителем
 Отелло" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++22++" [label="++22++
 Это был платок,
 подаеренный
-Дездемоной" URL="https://www.ru"]
+Дездемоной"]
 	node [color=gray90 fontcolor=gray90]
 	"++23++" [label="++23++
 Яго говорит
@@ -115,73 +115,73 @@ digraph G {
 	"++24++" [label="++24++
 Яго хороший
 и честный человек" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++25++" [label="++25++
 Отелло все
 правильно
-понял" URL="https://www.ru"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+понял"]
+	node [color=red fontcolor=black]
 	"--0--" [label="--0--
 Дездемона
 не изменяла
-Отелло"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+Отелло" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--1--" [label="--1--
 Эмилия говорит,
-что не изменяла"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+что не изменяла" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--2--" [label="--2--
 Дездемона говорит,
-что не изменяла"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+что не изменяла" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--3--" [label="--3--
 Дездемона
-любит Отелло"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+любит Отелло" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--4--" [label="--4--
 Кассио
-лжет"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+лжет" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--5--" [label="--5--
 Эмилия говорит,
 что Дездемона
-любит Отелло"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+любит Отелло" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--6--" [label="--6--
 Отелло слышал только
 часть диалога и неправильно
-его интерпретировал."]
-	node [color=blue fontcolor=black href="https://www.ru"]
+его интерпретировал." URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--7--" [label="--7--
 Это ложь, не
 было этого
-разговора"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+разговора" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--8--" [label="--8--
 Это был другой платок
 или платок, потерянный
-случайно или украденный"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+случайно или украденный" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--9--" [label="--9--
 Дездемона обрадовалась
-возвращению"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+возвращению" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--10--" [label="--10--
 У Дездемоны
 добрая и чистая
-душа"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+душа" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--11--" [label="--11--
 Дездемона
-не умеет лгать"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+не умеет лгать" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--12--" [label="--12--
 Дездемона
-говорит правду"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+говорит правду" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--13--" [label="--13--
 Эмилия говорит
-правду"]
+правду" URL="https://www.ru"]
 	node [color=gray90 fontcolor=gray90]
 	"--14--" [label="--14--
 Яго лжет" URL="https://www.ru"]
@@ -195,14 +195,14 @@ digraph G {
 	"--16--" [label="--16--
 У Яго есть мотив
 совершить преступление" URL="https://www.ru"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--17--" [label="--17--
 Дездемона говорит,
-что любит Отелло"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+что любит Отелло" URL="https://www.ru"]
+	node [color=red fontcolor=black]
 	"--18--" [label="--18--
 Дездемона
-не любит Кассио"]
+не любит Кассио" URL="https://www.ru"]
 	node [color=gray90 fontcolor=gray90]
 	"--19--" [label="--19--
 Яго - злой и

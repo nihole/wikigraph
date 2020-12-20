@@ -22,7 +22,7 @@ def check_structure(yaml_data):
         if not len(paths_list):
             quit("Node %s has no path to root" % statement['id'])
         # We take a first path to root and check is the number of elements in the path to the root (including node and root) is even or odd
-        # If the number is even then this is negativ phase (flag = 1), if odd - positive phase (flag = 0)
+        # If the number is even then this is negativ phase (flag = 0), if odd - positive phase (flag = 1)
         path= paths_list[0]
         indx = path.index(root_id)
         flag = indx & 1
@@ -34,7 +34,8 @@ def check_structure(yaml_data):
                 quit('Phase problem for node %s' % statement['id'])
         phase[statement['id']] = flag
         paths_dict[statement['id']] = paths_list
-    return (rdict, reverse_rdict, phase,  paths_dict)
+    phase[root_id] = 1
+    return (root_id, rdict, reverse_rdict, phase,  paths_dict)
 
 def check_direct_contr(record):
 ### Check if there are direct contradictioans in the record related to the node (statemenet)
@@ -190,7 +191,6 @@ def paths_to_root (id_, root_id,  rdict,  reverse_rdict):
         if j > 100:
             print ("Infinitive cicle")
             break
-    print (paths_to_root)
     return paths_to_root
 
 
@@ -303,14 +303,10 @@ if __name__ == "__main__":
     else:
         yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
 
-    (rdict, reverse_rdict, phase,  paths_dict) = check_structure (yaml_data)
+    (root_id, rdict, reverse_rdict, phase,  paths_dict) = check_structure (yaml_data)
 
-##    (dict1, dict2) = recurs_dict(yaml_data)
-##    dd = deadend(yaml_data, {})
+    dd = deadend(yaml_data, {})
 
-#    paths = paths_to_root ('--19--', '++0++', dict1, dict2)
-#    print (paths)
-##    status_dict_ = node_resolving(id_dep, '++0++', dict1, dict2, {})
-##    print status_dict_
+    status_dict_ = node_resolving(id_dep, root_id, rdict, reverse_rdict, {})
 
-##    wgraph.wgraph(yaml_data, status_dict_, 'desdemona')
+    wgraph.wgraph(yaml_data, status_dict_, phase, 'desdemona')

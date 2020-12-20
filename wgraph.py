@@ -9,16 +9,16 @@ from graphviz import Digraph
 
 
 ## Graph creation
-def wgraph(yaml_data, status_dict, graph_file):
+def wgraph(yaml_data, status_dict, phase, graph_file):
 
     g = Digraph('G', filename=graph_file, format='svg')
     #g = Digraph('G', filename=graph_file)
 
 
     for record in yaml_data['statements']:
-        m1 = re.match('\+', record['wave'])
-        m2 = re.match('-', record['wave'])
-        if m1:
+#        m1 = re.match('\+', record['wave'])
+#        m2 = re.match('-', record['wave'])
+        if phase[record['id']]:
             lbl = record['id'] + '\n' + format.format(record['text'])
             if not (record['id'] in status_dict.keys()):
                 g.attr('node', color='red', fontcolor = 'black')
@@ -27,7 +27,7 @@ def wgraph(yaml_data, status_dict, graph_file):
                 g.attr('node', color='gray90', fontcolor = 'gray90')
                 g.node(record['id'], label=lbl, URL='https://www.ru')
 
-        elif m2:
+        else:
             lbl = record['id'] + '\n' + format.format(record['text'])
             if not (record['id'] in status_dict.keys()): 
                 g.attr('node', color='blue', href='https://www.ru',  fontcolor = 'black')
