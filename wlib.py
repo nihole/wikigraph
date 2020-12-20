@@ -80,7 +80,7 @@ def check_complement(record):
     return flag_c
 
 def deadend(yml_data, status_dict):
-### Returns a list of dead-endsdirect contradictioansof graf repesented ib yml_data
+### Returns a list of dead-ends
 ### Dead-end is a statement without any type of contradictions, direct, indirect or complement
     deadends = []
     
@@ -88,27 +88,28 @@ def deadend(yml_data, status_dict):
         flag = 0
         record = yml_data['statements'][i]
         (rdict, reverse_rdict) = recurs_dict (yml_data)
-        if check_complement(record):
+        if len(rdict[record['id']]['complement']):
             [cmpl] = rdict[record['id']]['complement']
-            if (( cmpl not in status_dict.keys()) or (not status_dict[cmpl]==-1) or (not status_dict[cmpl]==-0)):
+            if (( cmpl not in status_dict.keys()) or ((not status_dict[cmpl]==-1) and (not status_dict[cmpl]==0))):
                 flag = 1
-        elif check_direct_contr(record):
+        if check_direct_contr(record):
             direct_contr_list = rdict[record['id']]['direct']
             if len(direct_contr_list):
                 for dcid in direct_contr_list:
-                    if ((dcid not in status_dict.keys()) or (not status_dict[dcid]==-1) or (not status_dict[dcid]==-0)):
+                    if ((dcid not in status_dict.keys()) or ((not status_dict[dcid]==-1) and (not status_dict[dcid]==0))):
                         flag = 1
                         break
         elif check_indirect_contr(record):
             indirect_contr_list = rdict[record['id']]['indirect']
             if len(indirect_contr_list):
                 for indcid in indirect_contr_list:
-                    if ((indcid not in status_dict.keys()) or (not status_dict[indcid]==-1) or (not status_dict[indcid]==-0)):
+                    if ((indcid not in status_dict.keys()) or ((not status_dict[indcid]==-1) and (not status_dict[indcid]==-0))):
                         flag = 1
                         break
 
         if not flag:
-            deadends.append(record['id'])
+            if ((record['id'] not in status_dict.keys()) or ((not status_dict[record['id']]==-1) and (not status_dict[record['id']]==-0))):
+                deadends.append(record['id'])
     return (deadends)
 
 def find_seq_id(yml_data, id_):
@@ -221,7 +222,6 @@ def recurse_path_check (id_, root_id, rdict,  reverse_rdict, status_dict, paths_
     node_list = [id_]
     i = 0 # for infinitive cicle avoiding
     while len(node_list) > 0:
-        print (node_list)
         node_lst = []
         ### this will be commulative node list
         for node in node_list:

@@ -4,42 +4,47 @@ import re
 import wgraph
 import wlib
 
-def single_wcicle(id_truth_lst, dict1, dict2, status_dict):
+def single_wcicle(id_truth_lst, root_id, dict1, dict2, status_dict, paths_dict):
     # id_truth_lst - dead ends (without any contradicions) and reference points ( taken for truth )
     # dict1 - recurse dictionary: 
     # - dict1['statement_id']['direct'] = [list of ids of  direct contradictions]
     # - dict1['statement_id']['indirect'] = [list of ids of indirect contradictions]
     # - dict1['statement_id']['complementary'] = [list of ids of complementary contradictions]
     # dict2 - reverse dictionary - the same as dict1 but in opposit direction
-
+    
     for id_dep in id_truth_lst:
+        print (id_dep)
+        print (status_dict)
         if id_dep in status_dict.keys():
-            if status_dict[id_dep] == -1:
+            print (id_dep)
+            print (status_dict[id_dep])
+            if status_dict[id_dep] == 0:
                 # The dead center must be true, and if this is a false, this means we have some inconsistency in the logic.
-                print "Err: dead point is false"
-                break
+                quit ("Err: dead point %s is false" % id_dep)
         status_dict[id_dep] = 1
-        status_dict = wlib.node_resolving(id_dep, dict1, dict2, status_dict)
+        status_dict = wlib.node_resolving(id_dep, root_id, dict1, dict2, status_dict, paths_dict)
 
     return status_dict
 
 def wcicles (ref_points_lst, yaml_data):
+    # Initiating and checkinf YAML configuration
     status_dict = {}
-    (dict1, dict2) = wlib.recurs_dict(yaml_data)
-
+    (root_id, rdict, reverse_rdict, phase,  paths_dict) = wlib.check_structure (yaml_data)
     dead_ends_lst = wlib.deadend(yaml_data, status_dict)
+
 #    dead_ends_lst = []
     i = 0
     while (len(dead_ends_lst) + len(ref_points_lst) > 0):
-        dd = list(dict.fromkeys(dead_ends_lst + ref_points_lst))
+        dd = list(set(dead_ends_lst + ref_points_lst))
         print (dd)
-        status_dict = single_wcicle(dd, dict1, dict2, status_dict)
+        status_dict = single_wcicle(dd, root_id, rdict, reverse_rdict, status_dict, paths_dict)
+
         file_name = 'desdemona_' + str(i) 
-        wgraph.wgraph(yaml_data, status_dict, file_name)
+        wgraph.wgraph(yaml_data, status_dict, phase, file_name)
         dead_ends_lst = wlib.deadend(yaml_data, status_dict)
         ref_points_lst = []
         i = i + 1
-        if i > 100:
+        if i > 10:
             print "Err: Infinitive cicle"
             break
         
