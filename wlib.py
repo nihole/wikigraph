@@ -4,6 +4,37 @@
 ### The library for wave graf relolving
 
 
+def check_structure(yaml_data):
+    statemnts_list = yaml_data['statements']
+    paths_list = []
+    # a single path to root is represened by a list, all paths to root for a node is a list of lists. Dictionary: key is node id, value is a list 
+    # of paths to root (list of lists)
+    paths_dict = {}
+    # phase determins if this is a positive or negative (relative to the root) statement
+    phase = {}
+    # First statement is always a root
+    root_id = statemnts_list[0]['id']
+    (rdict, reverse_rdict) = recurs_dict(yaml_data)
+    # Create chains towards root for each element except the first one which is a root
+    for statement in yaml_data['statements'][1:]:
+        paths_list = paths_to_root (statement['id'], root_id, rdict, reverse_rdict)
+        # If we don't have path to root then this is a mistake in our yaml file
+        if not len(paths_list):
+            quit("Node %s has no path to root" % statement['id'])
+        # We take a first path to root and check is the number of elements in the path to the root (including node and root) is even or odd
+        # If the number is even then this is negativ phase (flag = 1), if odd - positive phase (flag = 0)
+        path= paths_list[0]
+        indx = path.index(root_id)
+        flag = indx & 1
+        # Verify that for all paths we have the same value, Otherwise we have a mistake in YAML file
+        for path in paths_list[1:]:
+            indx = path.index(root_id)
+            flag_new = indx & 1
+            if not (flag_new == flag):
+                quit('Phase problem for node %s' % statement['id'])
+        phase[statement['id']] = flag
+        paths_dict[statement['id']] = paths_list
+    return (rdict, reverse_rdict, phase,  paths_dict)
 
 def check_direct_contr(record):
 ### Check if there are direct contradictioans in the record related to the node (statemenet)
@@ -140,7 +171,7 @@ def step_to_root (paths_list, paths_to_root, root_id, rdict,  reverse_rdict):
         new_path = []
         for new_node in list(set(reverse_rdict[path[-1]]['direct'] + reverse_rdict[path[-1]]['indirect'] + reverse_rdict[path[-1]]['complement'])):
             if new_node == root_id:
-                paths_to_root.append(path)
+                paths_to_root.append(path + [root_id])
                 flag = 1
             elif not new_node in path:
                 new_paths_list.append(path + [new_node])
@@ -272,12 +303,14 @@ if __name__ == "__main__":
     else:
         yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
 
-    (dict1, dict2) = recurs_dict(yaml_data)
-    dd = deadend(yaml_data, {})
+    (rdict, reverse_rdict, phase,  paths_dict) = check_structure (yaml_data)
+
+##    (dict1, dict2) = recurs_dict(yaml_data)
+##    dd = deadend(yaml_data, {})
 
 #    paths = paths_to_root ('--19--', '++0++', dict1, dict2)
 #    print (paths)
-    status_dict_ = node_resolving(id_dep, '++0++', dict1, dict2, {})
-    print status_dict_
+##    status_dict_ = node_resolving(id_dep, '++0++', dict1, dict2, {})
+##    print status_dict_
 
-    wgraph.wgraph(yaml_data, status_dict_, 'desdemona')
+##    wgraph.wgraph(yaml_data, status_dict_, 'desdemona')

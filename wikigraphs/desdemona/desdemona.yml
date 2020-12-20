@@ -1,4 +1,5 @@
 statements:
+# The first statement should be a root !!
 - id: '++0++'
   wave: '+'
   text: "Дездемона изменила Отелло"
