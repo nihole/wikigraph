@@ -132,6 +132,37 @@ def recurs_dict (yml_data):
                 reverse_rdict[rnode]['complement'] = [dnode]
     return (rdict, reverse_rdict) 
 
+
+def step_to_root (paths_list, paths_to_root, root_id, rdict,  reverse_rdict):
+    flag = 0
+    new_paths_list = []
+    for path in paths_list:
+        new_path = []
+        for new_node in list(set(reverse_rdict[path[-1]]['direct'] + reverse_rdict[path[-1]]['indirect'] + reverse_rdict[path[-1]]['complement'])):
+            if new_node == root_id:
+                paths_to_root.append(path)
+                flag = 1
+            elif not new_node in path:
+                new_paths_list.append(path + [new_node])
+                flag = 1
+    return (flag, paths_to_root, new_paths_list)
+
+def paths_to_root (id_, root_id,  rdict,  reverse_rdict):
+    paths_list = [[id_]]
+    new_paths_list = []
+    paths_to_root = []
+    flag = 1
+    j = 0
+    while flag:
+        (flag, paths_to_root, paths_list) = step_to_root (paths_list, paths_to_root, root_id, rdict,  reverse_rdict)
+        j = j + 1
+        if j > 100:
+            print ("Infinitive cicle")
+            break
+    print (paths_to_root)
+    return paths_to_root
+
+
 def path_check (id_, rdict,  reverse_rdict, status_dict):
 ### If we know the status of node with id = id_ (1 - true, 0 - false, -1 - deleted)
 ### then next step downstream nodes with only one reverse path to root via this
@@ -250,7 +281,10 @@ if __name__ == "__main__":
 
     (dict1, dict2) = recurs_dict(yaml_data)
     dd = deadend(yaml_data, {})
-    status_dict_ = node_resolving(id_dep, dict1, dict2, {})
-    print status_dict_
 
-    wgraph.wgraph(yaml_data, status_dict_, 'desdemona')
+    paths = paths_to_root ('--19--', '++0++', dict1, dict2)
+    print (paths)
+#    status_dict_ = node_resolving(id_dep, dict1, dict2, {})
+#    print status_dict_
+
+#    wgraph.wgraph(yaml_data, status_dict_, 'desdemona')
