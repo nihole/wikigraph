@@ -13,11 +13,7 @@ def single_wcicle(id_truth_lst, root_id, dict1, dict2, status_dict, paths_dict):
     # dict2 - reverse dictionary - the same as dict1 but in opposit direction
     
     for id_dep in id_truth_lst:
-        print (id_dep)
-        print (status_dict)
         if id_dep in status_dict.keys():
-            print (id_dep)
-            print (status_dict[id_dep])
             if status_dict[id_dep] == 0:
                 # The dead center must be true, and if this is a false, this means we have some inconsistency in the logic.
                 quit ("Err: dead point %s is false" % id_dep)
@@ -36,7 +32,6 @@ def wcicles (ref_points_lst, yaml_data):
     i = 0
     while (len(dead_ends_lst) + len(ref_points_lst) > 0):
         dd = list(set(dead_ends_lst + ref_points_lst))
-        print (dd)
         status_dict = single_wcicle(dd, root_id, rdict, reverse_rdict, status_dict, paths_dict)
 
         file_name = 'desdemona_' + str(i) 

@@ -171,13 +171,14 @@ def step_to_root (paths_list, paths_to_root, root_id, rdict,  reverse_rdict):
     new_paths_list = []
     for path in paths_list:
         new_path = []
-        for new_node in list(set(reverse_rdict[path[-1]]['direct'] + reverse_rdict[path[-1]]['indirect'] + reverse_rdict[path[-1]]['complement'])):
-            if new_node == root_id:
-                paths_to_root.append(path + [root_id])
-                flag = 1
-            elif not new_node in path:
-                new_paths_list.append(path + [new_node])
-                flag = 1
+        if not (path[-1] ==  root_id):
+            for new_node in list(set(reverse_rdict[path[-1]]['direct'] + reverse_rdict[path[-1]]['indirect'] + reverse_rdict[path[-1]]['complement'])):
+                if new_node == root_id:
+                    paths_to_root.append(path + [root_id])
+                    flag = 1
+                elif not new_node in path:
+                    new_paths_list.append(path + [new_node])
+                    flag = 1
     return (flag, paths_to_root, new_paths_list)
 
 def paths_to_root (id_, root_id,  rdict,  reverse_rdict):
@@ -188,6 +189,8 @@ def paths_to_root (id_, root_id,  rdict,  reverse_rdict):
     j = 0
     while flag:
         (flag, paths_to_root, paths_list) = step_to_root (paths_list, paths_to_root, root_id, rdict,  reverse_rdict)
+        print (id_)
+        print (paths_to_root)
         j = j + 1
         if j > 100:
             print ("Infinitive cicle")
@@ -225,10 +228,11 @@ def recurse_path_check (id_, root_id, rdict,  reverse_rdict, status_dict, paths_
         node_lst = []
         ### this will be commulative node list
         for node in node_list:
-            node_l = []
-            (node_l, status_dict) = path_check(node, root_id, rdict,  reverse_rdict, status_dict, paths_dict)
-            node_lst = node_lst + node_l
-            node_lst = list(dict.fromkeys(node_lst))
+            if not (node == root_id):
+                node_l = []
+                (node_l, status_dict) = path_check(node, root_id, rdict,  reverse_rdict, status_dict, paths_dict)
+                node_lst = node_lst + node_l
+                node_lst = list(dict.fromkeys(node_lst))
         node_list = copy.copy(node_lst)
         ### to avoid infinitive cicles
         i=i+1
@@ -256,9 +260,10 @@ def node_resolving (id_, root_id, rdict, reverse_rdict, status_dict, paths_dict)
                 continue
             elif status_dict[dnode] == 1:
                 ### this means conflict
-                return {dnode:777}
+                quit ('conflict for node %s' % dnode)
         else:
             status_dict[dnode] = 0
+            status_dict = recurse_path_check(dnode, root_id, rdict,  reverse_rdict, status_dict, paths_dict)
     return status_dict
     
 #def deadends_resolving():
