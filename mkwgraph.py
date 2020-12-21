@@ -56,7 +56,7 @@ if __name__ == "__main__":
     import re
     import wgraph
 
-    ref_points_list = ['--14--']
+    ref_points_list = ['--14--', '--13--']
 
     ######### get file's names from the command line ####################
     if (len(sys.argv)==2):

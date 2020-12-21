@@ -53,10 +53,10 @@ digraph G {
 	"++11++" [label="++11++
 Эмилия не
 знает правды" URL="https://www.ru"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+	node [color=gray90 fontcolor=gray90]
 	"++12++" [label="++12++
 Эмилия
-лжет"]
+лжет" URL="https://www.ru"]
 	node [color=gray90 fontcolor=gray90]
 	"++13++" [label="++13++
 Там был Яго, который
@@ -178,7 +178,7 @@ digraph G {
 	"--12--" [label="--12--
 Дездемона
 говорит правду" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+	node [color=gray90 fontcolor=gray90]
 	"--13--" [label="--13--
 Эмилия говорит
 правду" URL="https://www.ru"]
@@ -224,7 +224,7 @@ digraph G {
 	"++10++" -> "--11--" [color=gray90]
 	"++10++" -> "--10--" [style=dotted]
 	"++10++" -> "--12--" [color=red dir=both]
-	"++12++" -> "--13--" [color=red dir=both]
+	"++12++" -> "--13--" [color=gray90 dir=both]
 	"++13++" -> "--14--" [color=gray90]
 	"++14++" -> "--14--" [color=gray90]
 	"++15++" -> "--14--" [color=gray90]
@@ -237,14 +237,14 @@ digraph G {
 	"--0--" -> "++6++" [style=dotted]
 	"--0--" -> "++5++" [style=dotted]
 	"--1--" -> "++11++" [color=gray90]
-	"--1--" -> "++12++"
+	"--1--" -> "++12++" [color=gray90]
 	"--2--" -> "++10++"
 	"--3--" -> "++2++"
 	"--3--" -> "++1++" [color=red dir=both]
 	"--4--" -> "++6++" [style=dotted]
 	"--4--" -> "++5++" [style=dotted]
 	"--4--" -> "++4++" [color=red dir=both]
-	"--5--" -> "++12++"
+	"--5--" -> "++12++" [color=gray90]
 	"--5--" -> "++11++" [color=gray90 style=dotted]
 	"--6--" -> "++13++" [color=gray90]
 	"--6--" -> "++25++" [color=red dir=both]
