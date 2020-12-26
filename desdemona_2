@@ -17,10 +17,10 @@ digraph G {
 Разговор Яго с Кассио,
 где Кассио говорил
 о связи с Дездемоной" URL="https://www.ru"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+	node [color=gray90 fontcolor=gray90]
 	"++4++" [label="++4++
 Кассио говорит
-правду"]
+правду" URL="https://www.ru"]
 	node [color=gray90 fontcolor=gray90]
 	"++5++" [label="++5++
 Разговор
@@ -243,7 +243,7 @@ digraph G {
 	"--3--" -> "++1++" [color=gray90 dir=both]
 	"--4--" -> "++6++" [style=dotted]
 	"--4--" -> "++5++" [color=gray90 style=dotted]
-	"--4--" -> "++4++" [color=red dir=both]
+	"--4--" -> "++4++" [color=gray90 dir=both]
 	"--5--" -> "++12++"
 	"--5--" -> "++11++" [color=gray90 style=dotted]
 	"--6--" -> "++13++" [color=gray90]

@@ -223,10 +223,10 @@
 <g id="node5" class="node">
 <title>++4++</title>
 <g id="a_node5"><a xlink:href="https://www.ru" xlink:title="++4++&#10;Кассио говорит&#10;правду">
-<ellipse fill="none" stroke="#0000ff" cx="227.4802" cy="-983.8555" rx="77.1494" ry="37.4533"/>
-<text text-anchor="middle" x="227.4802" y="-995.1555" font-family="Times,serif" font-size="14.00" fill="#000000">++4++</text>
-<text text-anchor="middle" x="227.4802" y="-980.1555" font-family="Times,serif" font-size="14.00" fill="#000000">Кассио говорит</text>
-<text text-anchor="middle" x="227.4802" y="-965.1555" font-family="Times,serif" font-size="14.00" fill="#000000">правду</text>
+<ellipse fill="none" stroke="#e5e5e5" cx="227.4802" cy="-983.8555" rx="77.1494" ry="37.4533"/>
+<text text-anchor="middle" x="227.4802" y="-995.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">++4++</text>
+<text text-anchor="middle" x="227.4802" y="-980.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">Кассио говорит</text>
+<text text-anchor="middle" x="227.4802" y="-965.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">правду</text>
 </a>
 </g>
 </g>
@@ -753,9 +753,9 @@
 <!-- &#45;&#45;4&#45;&#45;&#45;&gt;++4++ -->
 <g id="edge37" class="edge">
 <title>&#45;&#45;4&#45;&#45;&#45;&gt;++4++</title>
-<path fill="none" stroke="#ff0000" d="M226.8136,-1079.0287C226.9199,-1063.8503 227.0376,-1047.052 227.1441,-1031.846"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="223.3132,-1079.0924 226.743,-1089.1167 230.313,-1079.1415 223.3132,-1079.0924"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="230.6456,-1031.637 227.2158,-1021.6126 223.6457,-1031.5879 230.6456,-1031.637"/>
+<path fill="none" stroke="#e5e5e5" d="M226.8136,-1079.0287C226.9199,-1063.8503 227.0376,-1047.052 227.1441,-1031.846"/>
+<polygon fill="#e5e5e5" stroke="#e5e5e5" points="223.3132,-1079.0924 226.743,-1089.1167 230.313,-1079.1415 223.3132,-1079.0924"/>
+<polygon fill="#e5e5e5" stroke="#e5e5e5" points="230.6456,-1031.637 227.2158,-1021.6126 223.6457,-1031.5879 230.6456,-1031.637"/>
 </g>
 <!-- &#45;&#45;4&#45;&#45;&#45;&gt;++5++ -->
 <g id="edge36" class="edge">

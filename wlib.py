@@ -244,10 +244,11 @@ def paths_to_root (id_, root_id,  rdict,  reverse_rdict):
 
 
 def path_check (id_, root_id, rdict,  reverse_rdict, status_dict, paths_dict):
-### If we know the status of node with id = id_ (1 - true, 0 - false, -1 - deleted)
-### then next step downstream nodes with only one reverse path to root via this
-### node (id = id_) should be marked as deleted (-1)
-    
+    '''
+If we know the status of node with id = id_ (1 - true, 0 - false, -1 - deleted)
+then next step downstream nodes with only one reverse path to root via this
+node (id = id_) should be marked as deleted (-1)
+    '''
     ### initiation of lists with such nodes for direct, inderect, complement edges:
     status_dict[id_] = -1
     flag = 0
@@ -264,20 +265,21 @@ def path_check (id_, root_id, rdict,  reverse_rdict, status_dict, paths_dict):
     return (node_list, status_dict)
 
 def recurse_path_check (id_, root_id, rdict,  reverse_rdict, status_dict, paths_dict):
+    '''
+using step by step recursion (path_check) marks as deleted all downstram nodes
+having a single path to root via the node with id = id_
+    '''
     import copy
-### using step by step recursion (path_check) marks as deleted all downstram nodes
-### having a single path to root via the node with id = id_
     node_list = [id_]
     i = 0 # for infinitive cicle avoiding
     while len(node_list) > 0:
         node_lst = []
         ### this will be commulative node list
         for node in node_list:
-            if not (node == root_id):
-                node_l = []
-                (node_l, status_dict) = path_check(node, root_id, rdict,  reverse_rdict, status_dict, paths_dict)
-                node_lst = node_lst + node_l
-                node_lst = list(dict.fromkeys(node_lst))
+            node_l = []
+            (node_l, status_dict) = path_check(node, root_id, rdict,  reverse_rdict, status_dict, paths_dict)
+            node_lst = node_lst + node_l
+            node_lst = list(dict.fromkeys(node_lst))
         node_list = copy.copy(node_lst)
         ### to avoid infinitive cicles
         i=i+1
