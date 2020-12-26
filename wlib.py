@@ -3,20 +3,56 @@
 
 ### The library for wave graf relolving
 
+''' Vacabular:
+
+statememt = graph node: statements in the wave analysis
+
+root node: the statement analysed with wave analysis, the root in the wikigraph
+
+wikigraph = wave graph
+
+recurse dictionary: rdict, key is a statement (node) id, value - dictinary with 3 possible keys: 'direct', 'indirect', 'complement', 
+with values - list of node ids, rdict = {node_id:{'direct':[node_ids],'indirect':[node_ids],'complement':[node_ids]}, ...} 
+
+reverse recurse dictionary:  reverse_rdict - like rdict but in the upstream direction, towards root node
+
+dead ends: deadends, statements without any contrdictions, direct, inderect or complement, are concidered as a truth
+
+status dictionary: status_dict, created during graph analysing. Keys - node ids, values:
+   1 - truth
+   0 - false
+   -1 - deleted (due to resolving)
+   777 = conflict (truth and false)
+
+phase: due to wave analysis approcah all statements in the cahin are alternately false and true (like phase changing to pi). 
+Phase is a dictionary: key - node id, value: 1 (truth) or 0 (false)
+'''
+
 
 def check_structure(yaml_data):
+    '''
+Analysing of structure for logical errors and creation of some auxiliary dictianares needed for analysys:
+- root id (root_id)
+- recurse dictionary (rdict) 
+- reverse recurse dictionary
+- phase
+- paths dictionary (paths_dict) 
+see vocabilary at ths beginning
+    '''
+   
     statemnts_list = yaml_data['statements']
     paths_list = []
-    # a single path to root is represened by a list, all paths to root for a node is a list of lists. Dictionary: key is node id, value is a list 
+    # a single path to root is represened by a list of nodes, all paths to root for a node is a list of lists. Dictionary: key is node id, value is a list 
     # of paths to root (list of lists)
     paths_dict = {}
     # phase determins if this is a positive or negative (relative to the root) statement
     phase = {}
-    # First statement is always a root
+    # First statement in YAML file is always a root
     root_id = statemnts_list[0]['id']
+    # create recurse dictionary  and reverse recurse dictionaries (see vocabulary)
     (rdict, reverse_rdict) = recurs_dict(yaml_data)
-    # Create chains towards root for each element except the first one which is a root
-    for statement in yaml_data['statements'][1:]:
+    # Create chains towards root for each element
+    for statement in yaml_data['statements']:
         paths_list = paths_to_root (statement['id'], root_id, rdict, reverse_rdict)
         # If we don't have path to root then this is a mistake in our yaml file
         if not len(paths_list):
@@ -167,18 +203,28 @@ def recurs_dict (yml_data):
 
 
 def step_to_root (paths_list, paths_to_root, root_id, rdict,  reverse_rdict):
+    # paths_list is a list of path for specific id
+    # paths_to_root - list of all paths with root (at the end)
+    # if for any path in paths_list we may add a new node to the path to root then return flag is changded from 0 (default) to 1
     flag = 0
     new_paths_list = []
-    for path in paths_list:
+    for  path in paths_list:
         new_path = []
         if not (path[-1] ==  root_id):
+        # if this condition is not met for all path the returned flag = 0 and for path_to_root it means that the itarative calculation is done 
             for new_node in list(set(reverse_rdict[path[-1]]['direct'] + reverse_rdict[path[-1]]['indirect'] + reverse_rdict[path[-1]]['complement'])):
                 if new_node == root_id:
+                    # we add new path to paths_to_root list
                     paths_to_root.append(path + [root_id])
+                    # flag = 1 means that some change is done
                     flag = 1
                 elif not new_node in path:
                     new_paths_list.append(path + [new_node])
+                    # flag = 1 means that some change is done
                     flag = 1
+        elif len(path) == 1:
+            paths_to_root.append(root_id)
+
     return (flag, paths_to_root, new_paths_list)
 
 def paths_to_root (id_, root_id,  rdict,  reverse_rdict):
@@ -189,8 +235,7 @@ def paths_to_root (id_, root_id,  rdict,  reverse_rdict):
     j = 0
     while flag:
         (flag, paths_to_root, paths_list) = step_to_root (paths_list, paths_to_root, root_id, rdict,  reverse_rdict)
-        print (id_)
-        print (paths_to_root)
+        # to avoid infinitive cicles:
         j = j + 1
         if j > 100:
             print ("Infinitive cicle")
