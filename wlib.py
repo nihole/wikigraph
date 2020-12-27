@@ -251,10 +251,10 @@ node (id = id_) should be marked as deleted (-1)
     '''
     ### initiation of lists with such nodes for direct, inderect, complement edges:
     status_dict[id_] = -1
-    flag = 0
     node_list = []
     print ("id: %s" % id_ )
     for dnode_ in set(rdict[id_]['direct'] + rdict[id_]['indirect'] + rdict[id_]['complement']):
+        flag = 0
         if not dnode_ in status_dict.keys():
             print ('node for analysis: %s' % dnode_)
             for path in paths_dict[dnode_]:
