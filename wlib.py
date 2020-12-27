@@ -191,7 +191,7 @@ def recurs_dict (yml_data):
                 reverse_rdict[rnode]['indirect'].append(dnode)
         if check_complement(record):
             if len(record['complement']) > 1:
-                print "Only a single complement contradiction is possible!"
+                print ("Only a single complement contradiction is possible!")
             else: 
                 [element] = record['complement']
                 rnode = element['id']
