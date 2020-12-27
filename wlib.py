@@ -259,10 +259,13 @@ node (id = id_) should be marked as deleted (-1)
             print ('node for analysis: %s' % dnode_)
             for path in paths_dict[dnode_]:
                 print (path)
-                if not id_ in path:
-                # Means that there is a path to the root not via node with id = id_
+                flg = 0
+                for nd in path:
+                    if nd in  status_dict.keys():
+                        flg = 1
+                        break
+                if flg == 0:
                     flag = 1
-                    print ("break")
                     break
             if not flag:
                 status_dict[dnode_] = -1

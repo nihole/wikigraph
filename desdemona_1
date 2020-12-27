@@ -26,11 +26,11 @@ digraph G {
 Разговор
 Кассио во
 сне" URL="https://www.ru"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+	node [color=gray90 fontcolor=gray90]
 	"++6++" [label="++6++
 Дездемона
 подарила платок
-Кассио"]
+Кассио" URL="https://www.ru"]
 	node [color=gray90 fontcolor=gray90]
 	"++7++" [label="++7++
 Дездемона обрадовалась
@@ -53,10 +53,10 @@ digraph G {
 	"++11++" [label="++11++
 Эмилия не
 знает правды" URL="https://www.ru"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+	node [color=gray90 fontcolor=gray90]
 	"++12++" [label="++12++
 Эмилия
-лжет"]
+лжет" URL="https://www.ru"]
 	node [color=gray90 fontcolor=gray90]
 	"++13++" [label="++13++
 Там был Яго, который
@@ -72,10 +72,10 @@ digraph G {
 что это платок Дездемоны,
 и что она передала
 его" URL="https://www.ru"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+	node [color=gray90 fontcolor=gray90]
 	"++16++" [label="++16++
 Дездемона
-порочна"]
+порочна" URL="https://www.ru"]
 	node [color=gray90 fontcolor=gray90]
 	"++17++" [label="++17++
 Дездемона умеет
@@ -102,11 +102,11 @@ digraph G {
 что не он, а Кассио
 стал заместителем
 Отелло" URL="https://www.ru"]
-	node [color=blue fontcolor=black href="https://www.ru"]
+	node [color=gray90 fontcolor=gray90]
 	"++22++" [label="++22++
 Это был платок,
 подаеренный
-Дездемоной"]
+Дездемоной" URL="https://www.ru"]
 	node [color=gray90 fontcolor=gray90]
 	"++23++" [label="++23++
 Яго говорит
@@ -156,7 +156,7 @@ digraph G {
 Это ложь, не
 было этого
 разговора" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+	node [color=gray90 fontcolor=gray90]
 	"--8--" [label="--8--
 Это был другой платок
 или платок, потерянный
@@ -165,7 +165,7 @@ digraph G {
 	"--9--" [label="--9--
 Дездемона обрадовалась
 возвращению" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+	node [color=gray90 fontcolor=gray90]
 	"--10--" [label="--10--
 У Дездемоны
 добрая и чистая
@@ -178,7 +178,7 @@ digraph G {
 	"--12--" [label="--12--
 Дездемона
 говорит правду" URL="https://www.ru"]
-	node [color=red fontcolor=black]
+	node [color=gray90 fontcolor=gray90]
 	"--13--" [label="--13--
 Эмилия говорит
 правду" URL="https://www.ru"]
@@ -218,13 +218,13 @@ digraph G {
 	"++3++" -> "--4--" [color=gray90]
 	"++3++" -> "--6--" [color=gray90]
 	"++5++" -> "--7--" [color=gray90]
-	"++6++" -> "--8--"
+	"++6++" -> "--8--" [color=gray90]
 	"++7++" -> "--9--" [color=gray90]
-	"++9++" -> "--10--" [style=dotted]
+	"++9++" -> "--10--" [color=gray90 style=dotted]
 	"++10++" -> "--11--" [color=gray90]
-	"++10++" -> "--10--" [style=dotted]
+	"++10++" -> "--10--" [color=gray90 style=dotted]
 	"++10++" -> "--12--" [color=gray90 dir=both]
-	"++12++" -> "--13--" [color=red dir=both]
+	"++12++" -> "--13--" [color=gray90 dir=both]
 	"++13++" -> "--14--" [color=gray90]
 	"++14++" -> "--14--" [color=gray90]
 	"++15++" -> "--14--" [color=gray90]
@@ -234,25 +234,25 @@ digraph G {
 	"++21++" -> "--19--" [color=gray90 style=dotted]
 	"++24++" -> "--19--" [color=gray90 dir=both]
 	"--0--" -> "++3++" [color=gray90]
-	"--0--" -> "++6++" [style=dotted]
+	"--0--" -> "++6++" [color=gray90 style=dotted]
 	"--0--" -> "++5++" [color=gray90 style=dotted]
 	"--1--" -> "++11++" [color=gray90]
-	"--1--" -> "++12++"
+	"--1--" -> "++12++" [color=gray90]
 	"--2--" -> "++10++" [color=gray90]
 	"--3--" -> "++2++" [color=gray90]
 	"--3--" -> "++1++" [color=gray90 dir=both]
-	"--4--" -> "++6++" [style=dotted]
+	"--4--" -> "++6++" [color=gray90 style=dotted]
 	"--4--" -> "++5++" [color=gray90 style=dotted]
 	"--4--" -> "++4++" [color=gray90 dir=both]
-	"--5--" -> "++12++"
+	"--5--" -> "++12++" [color=gray90]
 	"--5--" -> "++11++" [color=gray90 style=dotted]
 	"--6--" -> "++13++" [color=gray90]
 	"--6--" -> "++25++" [color=gray90 dir=both]
 	"--7--" -> "++14++" [color=gray90 style=dotted]
 	"--8--" -> "++15++" [color=gray90]
-	"--8--" -> "++22++" [color=red dir=both]
+	"--8--" -> "++22++" [color=gray90 dir=both]
 	"--9--" -> "++7++" [color=gray90]
-	"--10--" -> "++16++" [color=red dir=both]
+	"--10--" -> "++16++" [color=gray90 dir=both]
 	"--11--" -> "++17++" [color=gray90]
 	"--11--" -> "++18++" [color=gray90 style=dotted]
 	"--13--" -> "++18++" [color=gray90 style=dotted]
@@ -261,7 +261,7 @@ digraph G {
 	"--14--" -> "++23++" [color=gray90 dir=both]
 	"--15--" -> "++21++" [color=gray90 dir=both]
 	"--17--" -> "++10++" [color=gray90 style=dotted]
-	"--18--" -> "++6++"
+	"--18--" -> "++6++" [color=gray90]
 	"--18--" -> "++7++" [color=gray90 style=dotted]
 	"--18--" -> "++8++" [color=gray90 style=dotted]
 	"--18--" -> "++9++" [color=gray90 style=dotted]
