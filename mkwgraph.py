@@ -37,6 +37,7 @@ def wcicles (ref_points_lst, yaml_data):
         file_name = 'desdemona_' + str(i) 
         wgraph.wgraph(yaml_data, status_dict, phase, file_name)
         dead_ends_lst = wlib.deadend(yaml_data, status_dict)
+        print (dead_ends_lst)
         ref_points_lst = []
         i = i + 1
         if i > 10:
