@@ -253,15 +253,20 @@ node (id = id_) should be marked as deleted (-1)
     status_dict[id_] = -1
     flag = 0
     node_list = []
+    print ("id: %s" % id_ )
     for dnode_ in set(rdict[id_]['direct'] + rdict[id_]['indirect'] + rdict[id_]['complement']):
-        for path in paths_dict[dnode_]:
-            if not id_ in path:
-                flag = 1
-                break
-        if not flag:
-            status_dict[dnode_] = -1
-            node_list.append(dnode_)
-
+        if not dnode_ in status_dict.keys():
+            print ('node for analysis: %s' % dnode_)
+            for path in paths_dict[dnode_]:
+                print (path)
+                if not id_ in path:
+                # Means that there is a path to the root not via node with id = id_
+                    flag = 1
+                    print ("break")
+                    break
+            if not flag:
+                status_dict[dnode_] = -1
+                node_list.append(dnode_)
     return (node_list, status_dict)
 
 def recurse_path_check (id_, root_id, rdict,  reverse_rdict, status_dict, paths_dict):
@@ -279,7 +284,7 @@ having a single path to root via the node with id = id_
             node_l = []
             (node_l, status_dict) = path_check(node, root_id, rdict,  reverse_rdict, status_dict, paths_dict)
             node_lst = node_lst + node_l
-            node_lst = list(dict.fromkeys(node_lst))
+            node_lst = list(set(node_lst))
         node_list = copy.copy(node_lst)
         ### to avoid infinitive cicles
         i=i+1

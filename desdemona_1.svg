@@ -223,10 +223,10 @@
 <g id="node5" class="node">
 <title>++4++</title>
 <g id="a_node5"><a xlink:href="https://www.ru" xlink:title="++4++&#10;Кассио говорит&#10;правду">
-<ellipse fill="none" stroke="#0000ff" cx="227.4802" cy="-983.8555" rx="77.1494" ry="37.4533"/>
-<text text-anchor="middle" x="227.4802" y="-995.1555" font-family="Times,serif" font-size="14.00" fill="#000000">++4++</text>
-<text text-anchor="middle" x="227.4802" y="-980.1555" font-family="Times,serif" font-size="14.00" fill="#000000">Кассио говорит</text>
-<text text-anchor="middle" x="227.4802" y="-965.1555" font-family="Times,serif" font-size="14.00" fill="#000000">правду</text>
+<ellipse fill="none" stroke="#e5e5e5" cx="227.4802" cy="-983.8555" rx="77.1494" ry="37.4533"/>
+<text text-anchor="middle" x="227.4802" y="-995.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">++4++</text>
+<text text-anchor="middle" x="227.4802" y="-980.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">Кассио говорит</text>
+<text text-anchor="middle" x="227.4802" y="-965.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">правду</text>
 </a>
 </g>
 </g>
@@ -294,10 +294,10 @@
 <g id="node8" class="node">
 <title>++7++</title>
 <g id="a_node8"><a xlink:href="https://www.ru" xlink:title="++7++&#10;Дездемона обрадовалась&#10;повышению Кассио">
-<ellipse fill="none" stroke="#0000ff" cx="790.4802" cy="-983.8555" rx="113.6886" ry="37.4533"/>
-<text text-anchor="middle" x="790.4802" y="-995.1555" font-family="Times,serif" font-size="14.00" fill="#000000">++7++</text>
-<text text-anchor="middle" x="790.4802" y="-980.1555" font-family="Times,serif" font-size="14.00" fill="#000000">Дездемона обрадовалась</text>
-<text text-anchor="middle" x="790.4802" y="-965.1555" font-family="Times,serif" font-size="14.00" fill="#000000">повышению Кассио</text>
+<ellipse fill="none" stroke="#e5e5e5" cx="790.4802" cy="-983.8555" rx="113.6886" ry="37.4533"/>
+<text text-anchor="middle" x="790.4802" y="-995.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">++7++</text>
+<text text-anchor="middle" x="790.4802" y="-980.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">Дездемона обрадовалась</text>
+<text text-anchor="middle" x="790.4802" y="-965.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">повышению Кассио</text>
 </a>
 </g>
 </g>
@@ -305,18 +305,18 @@
 <g id="node36" class="node">
 <title>&#45;&#45;9&#45;&#45;</title>
 <g id="a_node36"><a xlink:href="https://www.ru" xlink:title="&#45;&#45;9&#45;&#45;&#10;Дездемона обрадовалась&#10;возвращению">
-<ellipse fill="none" stroke="#ff0000" cx="790.4802" cy="-841.0824" rx="113.6886" ry="37.4533"/>
-<text text-anchor="middle" x="790.4802" y="-852.3824" font-family="Times,serif" font-size="14.00" fill="#000000">&#45;&#45;9&#45;&#45;</text>
-<text text-anchor="middle" x="790.4802" y="-837.3824" font-family="Times,serif" font-size="14.00" fill="#000000">Дездемона обрадовалась</text>
-<text text-anchor="middle" x="790.4802" y="-822.3824" font-family="Times,serif" font-size="14.00" fill="#000000">возвращению</text>
+<ellipse fill="none" stroke="#e5e5e5" cx="790.4802" cy="-841.0824" rx="113.6886" ry="37.4533"/>
+<text text-anchor="middle" x="790.4802" y="-852.3824" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">&#45;&#45;9&#45;&#45;</text>
+<text text-anchor="middle" x="790.4802" y="-837.3824" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">Дездемона обрадовалась</text>
+<text text-anchor="middle" x="790.4802" y="-822.3824" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">возвращению</text>
 </a>
 </g>
 </g>
 <!-- ++7++&#45;&gt;&#45;&#45;9&#45;&#45; -->
 <g id="edge13" class="edge">
 <title>++7++&#45;&gt;&#45;&#45;9&#45;&#45;</title>
-<path fill="none" stroke="#000000" d="M784.457,-946.3436C783.6426,-928.7766 783.5126,-907.6468 784.0672,-888.9429"/>
-<polygon fill="#000000" stroke="#000000" points="787.5688,-888.9636 784.4457,-878.8395 780.5737,-888.7015 787.5688,-888.9636"/>
+<path fill="none" stroke="#e5e5e5" d="M784.457,-946.3436C783.6426,-928.7766 783.5126,-907.6468 784.0672,-888.9429"/>
+<polygon fill="#e5e5e5" stroke="#e5e5e5" points="787.5688,-888.9636 784.4457,-878.8395 780.5737,-888.7015 787.5688,-888.9636"/>
 </g>
 <!-- ++8++ -->
 <g id="node9" class="node">
@@ -335,10 +335,10 @@
 <g id="node10" class="node">
 <title>++9++</title>
 <g id="a_node10"><a xlink:href="https://www.ru" xlink:title="++9++&#10;Она просит&#10;за Кассио">
-<ellipse fill="none" stroke="#0000ff" cx="981.4802" cy="-983.8555" rx="59.2941" ry="37.4533"/>
-<text text-anchor="middle" x="981.4802" y="-995.1555" font-family="Times,serif" font-size="14.00" fill="#000000">++9++</text>
-<text text-anchor="middle" x="981.4802" y="-980.1555" font-family="Times,serif" font-size="14.00" fill="#000000">Она просит</text>
-<text text-anchor="middle" x="981.4802" y="-965.1555" font-family="Times,serif" font-size="14.00" fill="#000000">за Кассио</text>
+<ellipse fill="none" stroke="#e5e5e5" cx="981.4802" cy="-983.8555" rx="59.2941" ry="37.4533"/>
+<text text-anchor="middle" x="981.4802" y="-995.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">++9++</text>
+<text text-anchor="middle" x="981.4802" y="-980.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">Она просит</text>
+<text text-anchor="middle" x="981.4802" y="-965.1555" font-family="Times,serif" font-size="14.00" fill="#e5e5e5">за Кассио</text>
 </a>
 </g>
 </g>
@@ -753,9 +753,9 @@
 <!-- &#45;&#45;4&#45;&#45;&#45;&gt;++4++ -->
 <g id="edge37" class="edge">
 <title>&#45;&#45;4&#45;&#45;&#45;&gt;++4++</title>
-<path fill="none" stroke="#ff0000" d="M226.8136,-1079.0287C226.9199,-1063.8503 227.0376,-1047.052 227.1441,-1031.846"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="223.3132,-1079.0924 226.743,-1089.1167 230.313,-1079.1415 223.3132,-1079.0924"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="230.6456,-1031.637 227.2158,-1021.6126 223.6457,-1031.5879 230.6456,-1031.637"/>
+<path fill="none" stroke="#e5e5e5" d="M226.8136,-1079.0287C226.9199,-1063.8503 227.0376,-1047.052 227.1441,-1031.846"/>
+<polygon fill="#e5e5e5" stroke="#e5e5e5" points="223.3132,-1079.0924 226.743,-1089.1167 230.313,-1079.1415 223.3132,-1079.0924"/>
+<polygon fill="#e5e5e5" stroke="#e5e5e5" points="230.6456,-1031.637 227.2158,-1021.6126 223.6457,-1031.5879 230.6456,-1031.637"/>
 </g>
 <!-- &#45;&#45;4&#45;&#45;&#45;&gt;++5++ -->
 <g id="edge36" class="edge">
@@ -816,8 +816,8 @@
 <!-- &#45;&#45;9&#45;&#45;&#45;&gt;++7++ -->
 <g id="edge45" class="edge">
 <title>&#45;&#45;9&#45;&#45;&#45;&gt;++7++</title>
-<path fill="none" stroke="#000000" d="M796.5148,-878.8395C797.3228,-896.4395 797.4464,-917.5744 796.8855,-936.2556"/>
-<polygon fill="#000000" stroke="#000000" points="793.3845,-936.2182 796.5035,-946.3436 800.3795,-936.4832 793.3845,-936.2182"/>
+<path fill="none" stroke="#e5e5e5" d="M796.5148,-878.8395C797.3228,-896.4395 797.4464,-917.5744 796.8855,-936.2556"/>
+<polygon fill="#e5e5e5" stroke="#e5e5e5" points="793.3845,-936.2182 796.5035,-946.3436 800.3795,-936.4832 793.3845,-936.2182"/>
 </g>
 <!-- &#45;&#45;10&#45;&#45;&#45;&gt;++16++ -->
 <g id="edge46" class="edge">
@@ -885,8 +885,8 @@
 <!-- &#45;&#45;18&#45;&#45;&#45;&gt;++7++ -->
 <g id="edge56" class="edge">
 <title>&#45;&#45;18&#45;&#45;&#45;&gt;++7++</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M938.6161,-1094.5876C910.8685,-1073.8462 874.4996,-1046.6603 844.7423,-1024.4166"/>
-<polygon fill="#000000" stroke="#000000" points="846.6423,-1021.4671 836.5372,-1018.2832 842.4513,-1027.0738 846.6423,-1021.4671"/>
+<path fill="none" stroke="#e5e5e5" stroke-dasharray="1,5" d="M938.6161,-1094.5876C910.8685,-1073.8462 874.4996,-1046.6603 844.7423,-1024.4166"/>
+<polygon fill="#e5e5e5" stroke="#e5e5e5" points="846.6423,-1021.4671 836.5372,-1018.2832 842.4513,-1027.0738 846.6423,-1021.4671"/>
 </g>
 <!-- &#45;&#45;18&#45;&#45;&#45;&gt;++8++ -->
 <g id="edge57" class="edge">
@@ -897,8 +897,8 @@
 <!-- &#45;&#45;18&#45;&#45;&#45;&gt;++9++ -->
 <g id="edge58" class="edge">
 <title>&#45;&#45;18&#45;&#45;&#45;&gt;++9++</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M981.4802,-1089.1167C981.4802,-1071.5497 981.4802,-1050.4199 981.4802,-1031.7161"/>
-<polygon fill="#000000" stroke="#000000" points="984.9803,-1031.6126 981.4802,-1021.6126 977.9803,-1031.6127 984.9803,-1031.6126"/>
+<path fill="none" stroke="#e5e5e5" stroke-dasharray="1,5" d="M981.4802,-1089.1167C981.4802,-1071.5497 981.4802,-1050.4199 981.4802,-1031.7161"/>
+<polygon fill="#e5e5e5" stroke="#e5e5e5" points="984.9803,-1031.6126 981.4802,-1021.6126 977.9803,-1031.6127 984.9803,-1031.6126"/>
 </g>
 </g>
 </svg>

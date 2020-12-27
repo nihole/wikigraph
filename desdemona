@@ -1,31 +1,31 @@
 digraph G {
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"++0++" [label="++0++
 Дездемона
 изменила
 Отелло" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++1++" [label="++1++
 Дездемона
-не любит Отелло" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+не любит Отелло"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++2++" [label="++2++
 Дездемона
-любит Кассио" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+любит Кассио"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++3++" [label="++3++
 Разговор Яго с Кассио,
 где Кассио говорил
-о связи с Дездемоной" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+о связи с Дездемоной"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++4++" [label="++4++
 Кассио говорит
-правду" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+правду"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++5++" [label="++5++
 Разговор
 Кассио во
-сне" URL="https://www.ru"]
+сне"]
 	node [color=blue fontcolor=black href="https://www.ru"]
 	"++6++" [label="++6++
 Дездемона
@@ -35,24 +35,24 @@ digraph G {
 	"++7++" [label="++7++
 Дездемона обрадовалась
 повышению Кассио"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++8++" [label="++8++
 Кассио молод,
 имеет хорошие
 манеры и нравится
-женщинам" URL="https://www.ru"]
+женщинам"]
 	node [color=blue fontcolor=black href="https://www.ru"]
 	"++9++" [label="++9++
 Она просит
 за Кассио"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++10++" [label="++10++
 Дездемона
-лжет" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+лжет"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++11++" [label="++11++
 Эмилия не
-знает правды" URL="https://www.ru"]
+знает правды"]
 	node [color=blue fontcolor=black href="https://www.ru"]
 	"++12++" [label="++12++
 Эмилия
@@ -76,21 +76,21 @@ digraph G {
 	"++16++" [label="++16++
 Дездемона
 порочна"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++17++" [label="++17++
 Дездемона умеет
 лгать. Она уже солгала
-отцу, убежав к Отелло" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+отцу, убежав к Отелло"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++18++" [label="++18++
 Ветренность венецианских
 девушек - им нельзя
-верить" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+верить"]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++19++" [label="++19++
 Эмилия хочет
 выгородить
-Дездемону" URL="https://www.ru"]
+Дездемону"]
 	node [color=gray90 fontcolor=gray90]
 	"++20++" [label="++20++
 У Яго нет мотива
@@ -115,43 +115,43 @@ digraph G {
 	"++24++" [label="++24++
 Яго хороший
 и честный человек" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=blue fontcolor=black href="https://www.ru"]
 	"++25++" [label="++25++
 Отелло все
 правильно
-понял" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+понял"]
+	node [color=red fontcolor=black]
 	"--0--" [label="--0--
 Дездемона
 не изменяла
 Отелло" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"--1--" [label="--1--
 Эмилия говорит,
 что не изменяла" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"--2--" [label="--2--
 Дездемона говорит,
 что не изменяла" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"--3--" [label="--3--
 Дездемона
 любит Отелло" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"--4--" [label="--4--
 Кассио
 лжет" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"--5--" [label="--5--
 Эмилия говорит,
 что Дездемона
 любит Отелло" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"--6--" [label="--6--
 Отелло слышал только
 часть диалога и неправильно
 его интерпретировал." URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"--7--" [label="--7--
 Это ложь, не
 было этого
@@ -170,11 +170,11 @@ digraph G {
 У Дездемоны
 добрая и чистая
 душа" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"--11--" [label="--11--
 Дездемона
 не умеет лгать" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"--12--" [label="--12--
 Дездемона
 говорит правду" URL="https://www.ru"]
@@ -195,11 +195,11 @@ digraph G {
 	"--16--" [label="--16--
 У Яго есть мотив
 совершить преступление" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"--17--" [label="--17--
 Дездемона говорит,
 что любит Отелло" URL="https://www.ru"]
-	node [color=gray90 fontcolor=gray90]
+	node [color=red fontcolor=black]
 	"--18--" [label="--18--
 Дездемона
 не любит Кассио" URL="https://www.ru"]
@@ -207,23 +207,23 @@ digraph G {
 	"--19--" [label="--19--
 Яго - злой и
 порочный человек" URL="https://www.ru"]
-	"++0++" -> "--2--" [color=gray90]
-	"++0++" -> "--1--" [color=gray90]
-	"++0++" -> "--3--" [color=gray90 style=dotted]
-	"++0++" -> "--0--" [color=gray90 dir=both]
-	"++1++" -> "--5--" [color=gray90 style=dotted]
-	"++1++" -> "--17--" [color=gray90 style=dotted]
-	"++2++" -> "--3--" [color=gray90]
-	"++2++" -> "--18--" [color=gray90 dir=both]
-	"++3++" -> "--4--" [color=gray90]
-	"++3++" -> "--6--" [color=gray90]
-	"++5++" -> "--7--" [color=gray90]
+	"++0++" -> "--2--"
+	"++0++" -> "--1--"
+	"++0++" -> "--3--" [style=dotted]
+	"++0++" -> "--0--" [color=red dir=both]
+	"++1++" -> "--5--" [style=dotted]
+	"++1++" -> "--17--" [style=dotted]
+	"++2++" -> "--3--"
+	"++2++" -> "--18--" [color=red dir=both]
+	"++3++" -> "--4--"
+	"++3++" -> "--6--"
+	"++5++" -> "--7--"
 	"++6++" -> "--8--"
 	"++7++" -> "--9--"
 	"++9++" -> "--10--" [style=dotted]
-	"++10++" -> "--11--" [color=gray90]
+	"++10++" -> "--11--"
 	"++10++" -> "--10--" [style=dotted]
-	"++10++" -> "--12--" [color=gray90 dir=both]
+	"++10++" -> "--12--" [color=red dir=both]
 	"++12++" -> "--13--" [color=red dir=both]
 	"++13++" -> "--14--" [color=gray90]
 	"++14++" -> "--14--" [color=gray90]
@@ -233,36 +233,36 @@ digraph G {
 	"++20++" -> "--16--" [color=gray90 dir=both]
 	"++21++" -> "--19--" [color=gray90 style=dotted]
 	"++24++" -> "--19--" [color=gray90 dir=both]
-	"--0--" -> "++3++" [color=gray90]
+	"--0--" -> "++3++"
 	"--0--" -> "++6++" [style=dotted]
-	"--0--" -> "++5++" [color=gray90 style=dotted]
-	"--1--" -> "++11++" [color=gray90]
+	"--0--" -> "++5++" [style=dotted]
+	"--1--" -> "++11++"
 	"--1--" -> "++12++"
-	"--2--" -> "++10++" [color=gray90]
-	"--3--" -> "++2++" [color=gray90]
-	"--3--" -> "++1++" [color=gray90 dir=both]
+	"--2--" -> "++10++"
+	"--3--" -> "++2++"
+	"--3--" -> "++1++" [color=red dir=both]
 	"--4--" -> "++6++" [style=dotted]
-	"--4--" -> "++5++" [color=gray90 style=dotted]
-	"--4--" -> "++4++" [color=gray90 dir=both]
+	"--4--" -> "++5++" [style=dotted]
+	"--4--" -> "++4++" [color=red dir=both]
 	"--5--" -> "++12++"
-	"--5--" -> "++11++" [color=gray90 style=dotted]
+	"--5--" -> "++11++" [style=dotted]
 	"--6--" -> "++13++" [color=gray90]
-	"--6--" -> "++25++" [color=gray90 dir=both]
+	"--6--" -> "++25++" [color=red dir=both]
 	"--7--" -> "++14++" [color=gray90 style=dotted]
 	"--8--" -> "++15++" [color=gray90]
 	"--8--" -> "++22++" [color=red dir=both]
 	"--9--" -> "++7++"
 	"--10--" -> "++16++" [color=red dir=both]
-	"--11--" -> "++17++" [color=gray90]
-	"--11--" -> "++18++" [color=gray90 style=dotted]
-	"--13--" -> "++18++" [color=gray90 style=dotted]
-	"--13--" -> "++19++" [color=gray90 style=dotted]
+	"--11--" -> "++17++"
+	"--11--" -> "++18++" [style=dotted]
+	"--13--" -> "++18++" [style=dotted]
+	"--13--" -> "++19++" [style=dotted]
 	"--14--" -> "++20++" [color=gray90 style=dotted]
 	"--14--" -> "++23++" [color=gray90 dir=both]
 	"--15--" -> "++21++" [color=gray90 dir=both]
-	"--17--" -> "++10++" [color=gray90 style=dotted]
+	"--17--" -> "++10++" [style=dotted]
 	"--18--" -> "++6++"
 	"--18--" -> "++7++" [style=dotted]
-	"--18--" -> "++8++" [color=gray90 style=dotted]
+	"--18--" -> "++8++" [style=dotted]
 	"--18--" -> "++9++" [style=dotted]
 }
