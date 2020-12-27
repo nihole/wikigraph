@@ -5,6 +5,7 @@ import re
 import sys
 import yaml
 import format
+import wlib
 from graphviz import Digraph
 
 
@@ -70,7 +71,7 @@ if __name__ == "__main__":
     else:
         print ("   ######################################################\n")
         print ("   Syntax is:\n")
-        print ("   python3 ../../wgraph.py desdemona.yml desdemona.gv\n")
+        print ("   python3 ../wikigraph/wgraph.py yaml/desdemona.yml desdemona\n")
         print ("   ######################################################\n")
         quit()
 
@@ -91,4 +92,6 @@ if __name__ == "__main__":
     else:
         yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
 
-    wgraph(yaml_data, {}, graph_file)
+    (root_id, rdict, reverse_rdict, phase,  paths_dict ) = wlib.check_structure(yaml_data)
+
+    wgraph(yaml_data, {}, phase, graph_file)

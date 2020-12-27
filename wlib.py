@@ -70,7 +70,7 @@ see vocabilary at ths beginning
                 quit('Phase problem for node %s' % statement['id'])
         phase[statement['id']] = flag
         paths_dict[statement['id']] = paths_list
-    phase[root_id] = 1
+    phase[root_id] = 0
     return (root_id, rdict, reverse_rdict, phase,  paths_dict)
 
 def check_direct_contr(record):
