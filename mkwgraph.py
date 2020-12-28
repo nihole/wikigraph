@@ -41,7 +41,7 @@ def wcicles (ref_points_lst, yaml_data):
         ref_points_lst = []
         i = i + 1
         if i > 10:
-            print "Err: Infinitive cicle"
+            print ("Err: Infinitive cicle")
             break
         
 
