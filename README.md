@@ -41,3 +41,12 @@ If there are no refutation, then we consider this statement as true. This means 
 This definition is not precise and rather intuitive. We are talking about a small set of dead-end (edge) nodes, with rather general statements (for example, philosophical views, or emotional preferences) that lead to the resolution of the graph.
 
 The bottom line is that these are the statements on which "the picture of the world" rests or at least the attitude to the root statement.
+
+**Basic axiom of wave analysis**
+
+There is always hidden information that does not allow unambiguous resolution of a full wave graph
+(See definition of full wave graph here)
+
+**Consequence**
+
+If the resolution of the wave graph occurs, then this indicates the presence of an irrational element, a logic error, or the incompleteness of the wave graph.
