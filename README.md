@@ -6,7 +6,7 @@ Wikigraph (or Wave Graph) is a presentation of information in a logical relation
 
 Here is a brief presentation of wave analysis:
 
-- Each graph has a root that represents the statement under discussion, and the entire graph is a set of pros and cons with respect to that root statement.
+- **Root.** Each graph has a root that represents the statement under discussion, and the entire graph is a set of pros and cons with respect to that root statement.
 
 Consider two statements: A and B. We will assume that of these statements can be either true or false. Then the following dependences of statement A on B are possible:
 
