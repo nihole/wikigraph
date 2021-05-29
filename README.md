@@ -13,11 +13,15 @@ Create a folder YOUR_GIT_FOLDER and enter this folder (cd YOUR_GIT_FOLDER_PATH)
   - graphviz
   - wgraph
 
+You have 4 examples in wg_examples. So you have 4 graphs and 4 YAML files discribing the structure of these graphs.
+
 Refer to examples with explanations:
+
+**EXAMPLE1. Root and direct contradiction**
 
 Open YAML file in the directory YOUR_GIT_FOLDER_PAT/wg_examples/example1.yml (or https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml in my github repository).
 
-This YAML file represents direct a **contradiction example**. To create graph based on this structure run the python file:
+This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python file:
 
  python3 YOUR_GIT_FOLDER_PAT/wikigraph/**wgraph.py** YOUR_GIT_FOLDER_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_FOLDER_PATH/wg_examples/**example4**
  
@@ -27,8 +31,12 @@ This YAML file represents direct a **contradiction example**. To create graph ba
 
 You will find two nodes here. Navigate to each of them, click on the links and investigate the articles relted to those 2 nodes (in the case of a github repository, you have to select 'raw' to get these links).
 
+Also check out example2, example3 and examples4 with articles corresponding to the nodes for these graphs:
 
-Also check out example2, example3 and examples with articles corresponding to the nodes for these graphs.
+**Example2. Direct and indirect contradictions**
+**Example3. Contradictions and proofs**
+**Example4. Logical chain with all logical dependencies**
+
 
 
 ## Wave Analysis
