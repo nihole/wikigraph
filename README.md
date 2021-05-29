@@ -17,7 +17,7 @@ Refer to examples with explanations:
 
 Open YAML file in the directory YOUR_GIT_FOLDER_PAT/wg_examples/example1.yml (or https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml in my github repository).
 
-This YAML file represents direct contradiction example. To create graph using this file from your git folder run the python file:
+This YAML file represents direct a **contradiction example**. To create graph based on this structure run the python file:
 
  python3 YOUR_GIT_FOLDER_PAT/wikigraph/**wgraph.py** YOUR_GIT_FOLDER_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_FOLDER_PATH/wg_examples/**example4**
  
