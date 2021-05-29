@@ -13,7 +13,7 @@ Create a folder YOUR_GIT_FOLDER and enter this folder (cd YOUR_GIT_FOLDER_PATH)
   - graphviz
   - wgraph
 
-Refer to examples with exmplanations:
+Refer to examples with explanations:
 
 Open YAML file in the directory YOUR_GIT_FOLDER_PAT/wg_examples/example1.yml (or https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml in my github repository).
 
