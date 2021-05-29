@@ -27,7 +27,7 @@ This YAML file represents a **direct contradiction example**. To create graph ba
  
  The script wgraph.py executes some logical verification of your YAML file and creates 2 files: NetworkX file and svg file. In this particular case it will be 
  - **example1** (NetworkX, you can investigate it clicking the link in my github repository https://github.com/nihole/wg_examples/blob/main/example1)
- - **example1.svg** (svg, NetworkX, you can investigate it clicking the link in my gothub repository https://github.com/nihole/wg_examples/blob/main/example1)
+ - **example1.svg** (svg, NetworkX, you can investigate it clicking the link in my gothub repository https://github.com/nihole/wg_examples/blob/main/example1.svg)
 
 You will find two nodes here. Navigate to each of them, click on the links and investigate the articles relted to those 2 nodes (in the case of a github repository, you have to select 'raw' to get these links).
 
