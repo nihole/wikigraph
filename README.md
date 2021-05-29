@@ -34,7 +34,7 @@ You will find two nodes here. Navigate to each of them, click on the links and i
 Also check out example2, example3 and examples4 with articles corresponding to the nodes for these graphs:
 
 - **Example2. Direct and indirect contradictions**
-- **Example3. Contradictions and proofs**
+- **Example3. Contradictions, complements and proofs**
 - **Example4. Logical chain with all logical dependencies**
 
 
