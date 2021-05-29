@@ -1,6 +1,35 @@
 # WikiGraph
 
-Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. The logical relationship is represented by a graph, with each node of the graph being a statement, which in general is a wiki article. Each logical chain is built in accordance with wave analysis and is called a wave.
+Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. The logical relationship is represented by a graph, where each node in the graph is a statement, which in general is a wiki article. Each logical chain is built in accordance with wave analysis and is called a wave. The structure of these logical chains (waves) is discribed in YAML file. Based on this YAML file graph is created. Each node of this graph is linked to a wiki article.
+
+To start to use it:
+
+Create a folder YOUR_GIT_FOLDER and enter this folder (cd YOUR_GIT_FOLDER_PATH)
+
+- git clone https://github.com/nihole/wikigraph.git
+- git clone https://github.com/nihole/wg_examples.git
+- install
+  - PyYAML
+  - graphviz
+  - wgraph
+
+Refer to examples with exmplanations:
+
+Open YAML file in the directory YOUR_GIT_FOLDER_PAT/wg_examples/example1.yml (or https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml in my github repository).
+
+This YAML file represents direct contradiction example. To create graph using this file from your git folder run the python file:
+
+ python3 YOUR_GIT_FOLDER_PAT/wikigraph/**wgraph.py** YOUR_GIT_FOLDER_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_FOLDER_PATH/wg_examples/**example4**
+ 
+ The script wgraph.py executes some logical verification of your YAML file and creates 2 files: NetworkX file and svg file. In this particular case it will be 
+ - example1 (NetworkX, you can investigate it clicking the link in my github repository https://github.com/nihole/wg_examples/blob/main/example1)
+ - example1.svg (svg, NetworkX, you can investigate it clicking the link in my gothub repository https://github.com/nihole/wg_examples/blob/main/example1)
+
+You will find two nodes here. Navigate to each of them, click on the links and investigate the articles relted to those 2 nodes (in the case of a github repository, you have to select 'raw' to get these links).
+
+
+Also check out example2, example3 and examples with articles corresponding to the nodes for these graphs.
+
 
 ## Wave Analysis
 
