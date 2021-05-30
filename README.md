@@ -11,7 +11,6 @@ Create a folder YOUR_GIT_FOLDER and enter this folder (cd YOUR_GIT_FOLDER_PATH)
 - install
   - PyYAML
   - graphviz
-  - wgraph
 
 All python scrypts are located in **wikigraph** folder and this repository is used for scripts only.
 - wgraph.py: the main script, takes YAML file as imput and creates graph (see examples below)
