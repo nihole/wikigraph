@@ -13,6 +13,12 @@ Create a folder YOUR_GIT_FOLDER and enter this folder (cd YOUR_GIT_FOLDER_PATH)
   - graphviz
   - wgraph
 
+All python scrypts are located in wikigraph folder and this repository is used for scripts only.
+- wgraph.py: the main script, takes YAML file as imput and creates graph (see examples below)
+- mkgraph.pe: is still under construction, is used for automatical resolving (refer to tems below)
+
+
+
 You have 4 examples in wg_examples. So you have 4 graphs and 4 YAML files discribing the structure of these graphs.
 
 Refer to examples with explanations:
