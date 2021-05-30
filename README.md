@@ -1,6 +1,6 @@
 # WikiGraph
 
-Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. The logical relationship is represented by a graph, where each node in the graph is a statement, which in general is a wiki article. Each logical chain is built in accordance with wave analysis and is called a wave. The structure of these logical chains (waves) is discribed in YAML file. Based on this YAML file graph is created. Each node of this graph is linked to a wiki article.
+Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships are represented by the graph, where each node in the graph is a statement, which in general is a wiki article. Each logical chain is built in accordance with wave analysis and is called a wave. The structure of these logical chains (waves) is discribed in YAML file. Based on this YAML file graph is created. Each node of this graph is linked to a wiki article.
 
 To start to use it:
 
@@ -13,29 +13,30 @@ Create a folder YOUR_GIT_FOLDER and enter this folder (cd YOUR_GIT_FOLDER_PATH)
   - graphviz
   - wgraph
 
-All python scrypts are located in wikigraph folder and this repository is used for scripts only.
+All python scrypts are located in **wikigraph** folder and this repository is used for scripts only.
 - wgraph.py: the main script, takes YAML file as imput and creates graph (see examples below)
 - mkgraph.pe: is still under construction, is used for automatical resolving (refer to tems below)
 
+Additional separate repositories are used for the wiki graphs themselves, and the repository wikis are used for **wiki articles** associated with nodes in the graph.
 
-
-You have 4 examples in wg_examples. So you have 4 graphs and 4 YAML files discribing the structure of these graphs.
-
-Refer to examples with explanations:
+Examples with explanations:
 
 **EXAMPLE1. Root and direct contradiction**
 
-Open YAML file in the directory YOUR_GIT_FOLDER_PAT/wg_examples/example1.yml (or https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml in my github repository).
+Open YAML file in the directory YOUR_GIT_FOLDER_PAT/wg_examples/yaml/example1.yml (or https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml in my github repository).
 
 This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python file:
 
  python3 YOUR_GIT_FOLDER_PAT/wikigraph/**wgraph.py** YOUR_GIT_FOLDER_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_FOLDER_PATH/wg_examples/**example4**
  
- The script wgraph.py executes some logical verification of your YAML file and creates 2 files: NetworkX file and svg file. In this particular case it will be 
+ The script wgraph.py executes some logical verification of your YAML file and creates 2 files: NetworkX file and svg file. 
+ You can use NetworkX to cretate graphs with other tools, but in our case svg file is esufficient. You can open this file in any browser.
+ 
+ In this particular case it will be 
  - **example1** (NetworkX, you can investigate it clicking the link in my github repository https://github.com/nihole/wg_examples/blob/main/example1)
  - **example1.svg** (svg, NetworkX, you can investigate it clicking the link in my gothub repository https://github.com/nihole/wg_examples/blob/main/example1.svg)
 
-You will find two nodes here. Navigate to each of them, click on the links and investigate the articles relted to those 2 nodes (in the case of a github repository, you have to select 'raw' to get these links).
+Open the svg file in any browser or just by clicking on it. You will find two nodes here. Navigate to each of them, click on the links and check out the wiki articles related to those two nodes (in the case of a github repository, you must select "raw" to get these links).
 
 Also check out example2, example3 and examples4 with articles corresponding to the nodes for these graphs:
 
@@ -43,13 +44,18 @@ Also check out example2, example3 and examples4 with articles corresponding to t
 - **Example3. Contradictions, complements and proofs**
 - **Example4. Logical chain with all logical dependencies**
 
+So if you want to start your own wiki graph you have to create yaml file with the same structure as you see in the examples and run wrgaph.py script.
+
+Of course, you can use git for this, which provides unique opportunities for structured discussion and creation a collective wiki graph.
 
 
-## Wave Analysis
+# Wave Analysis
+
+This approach relies on the mathematics (wave analysis) described here. In fact, examples above are enough to understand the principles. 
 
 Here is a brief presentation of wave analysis:
 
-- **Root.** Each graph has a root that represents the statement under discussion, and the entire graph is a set of pros and cons with respect to that root statement.
+- **Root** Each graph has a root that represents the statement under discussion, and the entire graph is a set of pros and cons with respect to that root statement.
 
 Consider two statements: A and B. We will assume that of these statements can be either true or false. Then the following dependences of statement A on B are possible:
 
