@@ -1,6 +1,6 @@
 # WikiGraph
 
-Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships are represented by the graph, where each node in the graph is a statement, which in general is a wiki article. Each logical chain is built in accordance with wave analysis and is called a wave. The structure of these logical chains (waves) is discribed in YAML file. Based on this YAML file graph is created. Each node of this graph is linked to a wiki article.
+Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships are represented by the graph, where each node is a statement that can be represnted by a wiki article. Each logical chain is built in accordance with a [wave analysis](https://habr.com/ru/post/506670/) and is called a wave. The structure of these logical chains (waves) is discribed in YAML file. Based on this YAML file graph is created. Each node of this graph is linked to a wiki article.
 
 To start to use it:
 
