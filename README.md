@@ -1,6 +1,8 @@
 # WikiGraph
 
-Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships are represented by the graph, where each node is a statement or a wiki article. Each logical chain is built in accordance with a [wave analysis](https://habr.com/ru/post/506670/) and is called a wave. The structure of these logical chains (waves) is described by the YAML file, on the basis of which the graph is built. Each node of this graph is linked to a wiki article.
+Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships can be displayed as a graph, where each node is a statement or a wiki article. Each logical chain is built in accordance with a [wave analysis](https://habr.com/ru/post/506670/) and is called a wave. The structure of these logical chains (waves) is described by the YAML file, on the basis of which the graph is built. Each node of this graph is linked to a wiki article.
+
+Example:
 
 To start to use it:
 
@@ -12,10 +14,10 @@ Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
   - PyYAML
   - graphviz
 
-- **wg_example repository** is an example of repository used for particular wiki graph. There are no scripts here, information only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the analysis in this repository is a logical sequence of arguments for and against this statement. The main file here is a YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
+- **wg_example repository** is an example of repository used for particular wikigraph. There are no scripts here, information only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the analysis in this repository is a logical sequence of arguments for and against this statement. The main file here is a YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
 
-- **wikigraph repository** is used for scripts only. This is a common repository for all wiki graphs.
-Main scipt here is **wgraph.py**. It takes YAML file (from repositories dedicated to posting information relevant to a specific discussion) as input and creates graph (see examples below). Another important script is **mkgraph.py**, which is used for automatic **resolution** of the graph (see terms below), but it is still under construction.
+- **wikigraph repository** is used for scripts only. This is a common repository for all wikigraphs.
+  Main scipt here is **wgraph.py**. It takes YAML file (from repositories dedicated to posting information relevant to a specific discussion) as input and creates graph (see examples below). Another important script is **mkgraph.py**, which is used for automatic **resolution** of the graph (see terms below), but it is still under construction.
 
 
 Examples with explanations:
@@ -27,11 +29,12 @@ Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml (or 
 This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python file:
 
  python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_PATH/wg_examples/**example4**
- 
+
  The script wgraph.py executes some logical verification of your YAML file and creates 2 files: NetworkX file and svg file. 
  You can use NetworkX to cretate graphs with other tools, but in our case svg file is esufficient. You can open this file in any browser.
- 
+
  In this particular case it will be 
+
  - **example1** (NetworkX, you can investigate it clicking the link in my github repository https://github.com/nihole/wg_examples/blob/main/example1)
  - **example1.svg** (svg, NetworkX, you can investigate it clicking the link in my gothub repository https://github.com/nihole/wg_examples/blob/main/example1.svg)
 
@@ -43,9 +46,9 @@ Also check out example2, example3 and examples4 with articles corresponding to t
 - **Example3. Contradictions, complements and proofs**
 - **Example4. Logical chain with all logical dependencies**
 
-So if you want to start your own wiki graph you have to create yaml file with the same structure as you see in the examples and run wrgaph.py script.
+So if you want to start your own wikigraph you have to create yaml file with the same structure as you see in the examples and run wrgaph.py script.
 
-Of course, you can use git for this, which provides unique opportunities for structured discussion and creation a collective wiki graph.
+Of course, you can use git for this, which provides unique opportunities for structured discussion and creation a collective wikigraph.
 
 
 # Wave Analysis
@@ -61,7 +64,7 @@ Consider two statements: A and B. We will assume that of these statements can be
 - **Independence** (A does not depend on B). The truth or falsity of statement A does not depend in any way on the truth or falsity of statement B.
 
 - **Direct rebuttal**. If statement B is true, then statement A is false. We will denote such a relationship as **A --d-> B**. This arrow **--d->** actually can be replaced with expression "false because", that is, A --p-> B is a short expression of the expression "A false because B is (true) ". 
-On the graph, we will denote this connection by a solid line with an arrow from A to B.
+  On the graph, we will denote this connection by a solid line with an arrow from A to B.
 
 - **Indirect refutation**. If statement B is true, then the probability that statement A is false increases. We will call this an indirect refutation and denote it as **A --i-> B**. On the graph, we will denote it by a dotted line with an arrow from A to B.
 
