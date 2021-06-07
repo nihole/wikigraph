@@ -1,10 +1,10 @@
 # WikiGraph
 
-Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships are represented by the graph, where each node is a statement that can be represnted by a wiki article. Each logical chain is built in accordance with a [wave analysis](https://habr.com/ru/post/506670/) and is called a wave. The structure of these logical chains (waves) is discribed in YAML file. Based on this YAML file graph is created. Each node of this graph is linked to a wiki article.
+Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships are represented by the graph, where each node is a statement that can be represnted by a wiki article. Each logical chain is built in accordance with a [wave analysis](https://habr.com/ru/post/506670/) and is called a wave. The structure of these logical chains (waves) is described by the YAML file, on the basis of which the graph is built. Each node of this graph is linked to a wiki article.
 
 To start to use it:
 
-Create a folder YOUR_GIT_FOLDER and enter this folder (cd YOUR_GIT_FOLDER_PATH)
+Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
 
 - git clone https://github.com/nihole/wikigraph.git
 - git clone https://github.com/nihole/wg_examples.git
@@ -12,21 +12,21 @@ Create a folder YOUR_GIT_FOLDER and enter this folder (cd YOUR_GIT_FOLDER_PATH)
   - PyYAML
   - graphviz
 
-All python scrypts are located in **wikigraph** folder and this repository is used for scripts only.
-- wgraph.py: the main script, takes YAML file as imput and creates graph (see examples below)
-- mkgraph.pe: is still under construction, is used for automatical resolving (refer to tems below)
+- **wg_example** is an example of repository used for particular wiki graph. There are no scripts here, information only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the analysis in this repository is a logical sequence of arguments for and against this statement. The main file here is a YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
 
-Additional separate repositories are used for the wiki graphs themselves, and the repository wikis are used for **wiki articles** associated with nodes in the graph.
+- **wikigraph repository** is used for scripts only. This is a common repository for all wiki graphs.
+Main scipt here is **wgraph.py**. It takes YAML file (from repositories dedicated to posting information relevant to a specific discussion) as input and creates graph (see examples below). Another important script is **mkgraph.py**, which is used for automatic **resolution** of the graph (see terms below), but it is still under construction.
+
 
 Examples with explanations:
 
 **EXAMPLE1. Root and direct contradiction**
 
-Open YAML file in the directory YOUR_GIT_FOLDER_PAT/wg_examples/yaml/example1.yml (or https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml in my github repository).
+Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml (or https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml in my github repository).
 
 This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python file:
 
- python3 YOUR_GIT_FOLDER_PAT/wikigraph/**wgraph.py** YOUR_GIT_FOLDER_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_FOLDER_PATH/wg_examples/**example4**
+ python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_PATH/wg_examples/**example4**
  
  The script wgraph.py executes some logical verification of your YAML file and creates 2 files: NetworkX file and svg file. 
  You can use NetworkX to cretate graphs with other tools, but in our case svg file is esufficient. You can open this file in any browser.
