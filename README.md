@@ -37,15 +37,13 @@ Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
   - PyYAML
   - graphviz
 
-We have 2 types of repositories. 
+The idea is to have a single repository with scripts and multiple data repositories. Each time you initiate a discussion or invitation, you can create a separate data repository for this. But for analysis and charting, you will still use scripts from the common single script repository.
+
+So we have 2 types of repositories:
 
 - **Repositories with data** for wave analysis. Example of this repository is **wg_example repository**. There are no scripts here, articles (correlated to nodes), dependencies (edges) and graphs themself only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the analysis in this repository is a logical sequence of arguments for and against this statement. The main file here is a YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.  Each statement you want to investigate with wave analysis may require a new, separate repository to be created. 
 
 - **Script repository**. This is **wikigraph repository**. It is used for scripts only and common for all wikigraphs. That is why we have only a single repository of this type. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
-
-**Important note**
-
-The idea is to have a single script repository and many repository with data. Each time you initiate a debates or invistgation you can create a separate data repository fro that. But for analizing and graph creation you will stil use scripts from the common scriptrepository (wikigraph).
   
 ## Examples with explanations:
 
