@@ -1,10 +1,14 @@
 # WikiGraph
 
-Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships can be displayed as a graph, where each node is a statement or a wiki article. Each logical chain is built in accordance with a [wave analysis](https://habr.com/ru/post/506670/) and is called a wave. The structure of these logical chains (waves) is described by the YAML file, on the basis of which the graph is built. Each node of this graph is linked to a wiki article.
+Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships can be displayed as a graph, where each node is a statement or wiki article, and each edge represents one of three possible types of logical relationships: direct refutation, indirect refutation and complement (see description below in this document). 
+
+This approach is called  [wave analysis](https://habr.com/ru/post/506670/) . With this approach, logical chains are created, consisting of arguments for and against the main statement. It looks like a wave. Therefore, we will call this logical chain **wave**.
+
+The idea behind this project is to describe this structure in a YAML file and use a wiki repository for articles related to nodes. A graph is automatically generated from this YAML file.
 
 Example:
 
-To start to use it:
+##How to start
 
 Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
 
@@ -14,10 +18,17 @@ Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
   - PyYAML
   - graphviz
 
-- **wg_example repository** is an example of repository used for particular wikigraph. There are no scripts here, information only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the analysis in this repository is a logical sequence of arguments for and against this statement. The main file here is a YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
+Why two repositories?
 
-- **wikigraph repository** is used for scripts only. This is a common repository for all wikigraphs.
-  Main scipt here is **wgraph.py**. It takes YAML file (from repositories dedicated to posting information relevant to a specific discussion) as input and creates graph (see examples below). Another important script is **mkgraph.py**, which is used for automatic **resolution** of the graph (see terms below), but it is still under construction.
+We have 2 types of repositories. 
+
+- Repositories with data for wave analysis. Example of this repository is **wg_example repository**. There are no scripts here, information only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the analysis in this repository is a logical sequence of arguments for and against this statement. The main file here is a YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
+
+  Each statement you want to investigate can with wave analysis can require the creation of a new separate repository for that. For example, you can find another repository [wg_nav](https://github.com/nihole/wg_nav) that is used for analysis of the statement "The poisoning of Navalny was an operation of special services of Russia."
+
+  It can be any difficult or controversial question. This can be used as a platform for controversy, a way to prepare for a discussion and just to understand yourself and other people.
+
+- **Wikigraph repository** is used for scripts only. This is a common repository for all wikigraphs, and it is always a single repository. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
 
 
 Examples with explanations:
