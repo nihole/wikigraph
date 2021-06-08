@@ -23,7 +23,7 @@ If you want a real-world example, refer to the repository [wg_nav](https://githu
 
 ## When to use?
 
-  It can be any difficult or controversial issue. It can be used as a platform for debates, a way to prepare for discussion and just a tool for understanding yourself and other people. If you try to plot this graph, you will better understand why your opponents have such a “weird point of view”. Actually from the **basic axiom of wave analysis** (see below) follows that there is no 100% relyable arguments and facts and your point of view is always based, among other things, on intuitive assumptions that covers the hidden data creating huge holes in your picture of the world. This fact, however, does not prevent your picture of the world from being adequate and more or less true.
+  It can be used as a platform for debates, a way to prepare for discussion and just a tool for understanding yourself and other people. If you try to plot this graph, you will better understand why your opponents have such a “weird point of view”. Actually from the **basic axiom of wave analysis** (see below) follows that there is no 100% relyable arguments and facts and your point of view is always based, among other things, on intuitive assumptions that covers the hidden data creating huge holes in your picture of the world. This fact, however, does not prevent your picture of the world from being adequate and more or less true.
   
 It is very important to understand that if the topic being analyzed is related to something significant, it must be a collective effort. Even a simple analysis can lead to hundreds articles and relationships between them. Moreover, a person cannot imagine all possible waves, disputes and contradictions.  
 
@@ -45,23 +45,23 @@ So we have 2 types of repositories:
 
 - **Script repository**. This is **wikigraph repository**. It is used for scripts only and common for all wikigraphs. That is why we have only a single repository of this type. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
   
-## Examples with explanations:
+## Examples with explanations
 
 **EXAMPLE1. Root and direct contradiction**
 
-Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml (or https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml in my github repository).
+Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml ([example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml) in my github repository.
 
 This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python file:
 
  python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_PATH/wg_examples/**example4**
 
- The script wgraph.py executes some logical verification of your YAML file and creates 2 files: NetworkX file and svg file. 
- You can use NetworkX to cretate graphs with other tools, but in our case svg file is esufficient. You can open this file in any browser.
+ The script wgraph.py executes some logical verification of your YAML file and creates 2 files with NetworkX and svg types. 
+ You can use NetworkX to cretate graphs with other tools, but in our case svg file is sufficient. You can open this file in any browser.
 
  In this particular case it will be 
 
- - **example1** (NetworkX, you can investigate it clicking the link in my github repository https://github.com/nihole/wg_examples/blob/main/example1)
- - **example1.svg** (svg, NetworkX, you can investigate it clicking the link in my gothub repository https://github.com/nihole/wg_examples/blob/main/example1.svg)
+ - **example1** (NetworkX, you can investigate it clicking the link in my github repository [example1 NetworkX file ](https://github.com/nihole/wg_examples/blob/main/example1)
+ - **example1.svg** (svg, you can investigate it clicking the link in my github repository [example1 svg file](https://github.com/nihole/wg_examples/blob/main/example1.svg)
 
 Open the svg file in any browser or just by clicking on it. You will find two nodes here. Navigate to each of them, click on the links and check out the wiki articles related to those two nodes (in the case of a github repository, you must select "raw" to get these links).
 
