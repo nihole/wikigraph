@@ -8,7 +8,7 @@ The idea behind this project is to describe this structure in a YAML file and us
 
 Example:
 
-##How to start
+## How to start
 
 Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
 
