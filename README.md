@@ -6,8 +6,6 @@ This method is called  [wave analysis](https://habr.com/ru/post/506670/) . With 
 
 The idea behind this project is to describe this structure in a YAML file and use a github repository wiki for articles related to nodes. A graph is automatically generated from this YAML file.
 
-Example:
-
 ## How to start
 
 Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
