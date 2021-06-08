@@ -20,9 +20,9 @@ We have 2 types of repositories.
 
 - Repositories with data for wave analysis. Example of this repository is **wg_example repository**. There are no scripts here, information only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the analysis in this repository is a logical sequence of arguments for and against this statement. The main file here is a YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
 
-  Each statement you want to investigate can with wave analysis can require the creation of a new separate repository for that. For example, you can find another repository [wg_nav](https://github.com/nihole/wg_nav) that is used for analysis of the statement "The poisoning of Navalny was an operation of special services of Russia."
-
-  It can be any difficult or controversial question. This can be used as a platform for controversy, a way to prepare for a discussion and just to understand yourself and other people.
+  Each statement you want to investigate with wave analysis may require a new, separate repository to be created. For example, you can find another repository [wg_nav](https://github.com/nihole/wg_nav) which is used to analyze the statement "Navalny's poisoning was an operation of the Russian special services." And you will find hundreds of claims (usually related to wiki articles) that support and refute this root sentense, presented in a graph.
+  
+  It can be any difficult or controversial issue. It can be used as a platform for argue, a way to prepare for discussion and just a tool for understanding yourself and other people.
 
 - **Wikigraph repository** is used for scripts only. This is a common repository for all wikigraphs, and it is always a single repository. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
 
