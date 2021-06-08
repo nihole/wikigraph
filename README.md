@@ -24,7 +24,7 @@ We have 2 types of repositories.
   
   It can be any difficult or controversial issue. It can be used as a platform for argue, a way to prepare for discussion and just a tool for understanding yourself and other people.
 
-- **Script repository**. Example is **wikigraph repository**. It is used for scripts only. This is a common repository for all wikigraphs, and it is always a single repository. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
+- **Script repository**. This is **wikigraph repository**. It is used for scripts only and common for all wikigraphs. That is why we have only a single repository of this type. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
 
 
 Examples with explanations:
