@@ -1,6 +1,6 @@
 # WikiGraph
 
-Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships can be displayed as a graph, where each node is a statement or wiki article, and each edge represents one of three possible types of logical relationships: direct refutation, indirect refutation and complement (see description below in this document). 
+Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships can be displayed as a graph, where each node is a statement or wiki article, and each edge represents one of three possible types of logical relationships: **direct refutation**, **indirect refutation** and **complement** (see description below in this document). 
 
 This approach is called  [wave analysis](https://habr.com/ru/post/506670/) . With this approach, logical chains are created, consisting of arguments for and against the main statement. It looks like a wave. Therefore, we will call this logical chain **wave**.
 
