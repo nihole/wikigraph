@@ -4,6 +4,8 @@ Wikigraph (or Wave Graph) is a presentation of information in a logical relation
 
 This method is called  [wave analysis](https://habr.com/ru/post/506670/) . With this approach, logical chains are created, consisting of arguments (nodes) for and against the main statement (root node). It looks like a wave. Therefore, we will call this logical chain as a **wave**.
 
+[example4](https://raw.githubusercontent.com/nihole/wg_examples/main/example4.svg?token=ACHUZVRISMV3N5EMGYNTMCDAZEIPS)
+
 The idea behind this project is to describe this structure in a YAML file and use a github repository wiki for articles related to nodes. A graph is automatically generated from this YAML file.
 
 ## How to start
