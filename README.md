@@ -24,6 +24,8 @@ If you want a real-world example, refer to the repository [wg_nav](https://githu
 ## When to use?
 
   It can be any difficult or controversial issue. It can be used as a platform for debates, a way to prepare for discussion and just a tool for understanding yourself and other people. If you try to plot this graph, you will better understand why your opponents have such a “weird point of view”. Actually from the **basic axiom of wave analysis** (see below) follows that there is no 100% relyable arguments and facts and your point of view is always based, among other things, on intuitive assumptions that covers the hidden data creating huge holes in your picture of the world. This fact, however, does not prevent your picture of the world from being adequate and more or less true.
+  
+It is very important to understand that if the topic being analyzed is related to something significant, it must be a collective effort. Even a simple analysis can lead to hundreds articles and relationships between them. Moreover, a person cannot imagine all possible waves, disputes and contradictions.  
 
 ## How to start
 
