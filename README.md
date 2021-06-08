@@ -1,12 +1,29 @@
 # WikiGraph
 
+## What is it?
+
 Wikigraph (or Wave Graph) is a presentation of information in a logical relationship. These logical relationships can be displayed as a graph, where each node is a statement or wiki article, and each edge represents one of three possible types of logical relationships: **direct refutation**, **indirect refutation** and **complement** (see description below in this document). 
 
 This method is called  [wave analysis](https://habr.com/ru/post/506670/) . With this approach, logical chains are created, consisting of arguments (nodes) for and against the main statement (root node). It looks like a wave. Therefore, we will call this logical chain as a **wave**.
 
+The idea behind this project is to describe this structure in a YAML file and use a github repository wiki for articles related to nodes. A graph is automatically generated from this YAML file.
+
+Click the link below to see an example of a wikigraph, which will be discussed later in this document (example4).
+
 [example4](https://raw.githubusercontent.com/nihole/wg_examples/main/example4.svg?token=ACHUZVRISMV3N5EMGYNTMCDAZEIPS)
 
-The idea behind this project is to describe this structure in a YAML file and use a github repository wiki for articles related to nodes. A graph is automatically generated from this YAML file.
+Navigate to any node and click on the link. You can now read the wiki article related to this node. This is usually an article with proofs, quotes, justification ... whatever to support this node's claim. But in this example, we are using this link to explain how to understand and create this graph.
+
+Click the link o see the YAML file used for the graph above creation.
+
+[YAML for example4](https://github.com/nihole/wg_examples/blob/main/yaml/example4.yml)
+
+If you want a real-world example, refer to the repository [wg_nav](https://github.com/nihole/wg_nav), which is used to analyze the statement "Navalny's poisoning was an operation of the Russian special services." This only covers about 20% of all possible waves but you will already find hundreds of nodes there. 
+
+
+## When to use?
+
+  It can be any difficult or controversial issue. It can be used as a platform for debates, a way to prepare for discussion and just a tool for understanding yourself and other people. If you try to plot this graph, you will better understand why your opponents have such a “weird point of view”. Actually from the **basic axiom of wave analysis** (see below) follows that there is no 100% relyable arguments and facts and your point of view is always based, among other things, on intuitive assumptions that covers the hidden data creating huge holes in your picture of the world. This fact, however, does not prevent your picture of the world from being adequate and more or less true.
 
 ## How to start
 
@@ -20,16 +37,15 @@ Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
 
 We have 2 types of repositories. 
 
-- **Repositories with data** for wave analysis. Example of this repository is **wg_example repository**. There are no scripts here, information only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the analysis in this repository is a logical sequence of arguments for and against this statement. The main file here is a YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
-
-  Each statement you want to investigate with wave analysis may require a new, separate repository to be created. For example, you can find another repository [wg_nav](https://github.com/nihole/wg_nav) which is used to analyze the statement "Navalny's poisoning was an operation of the Russian special services." And you will find hundreds of claims (usually related to wiki articles) that support and refute this root sentense, presented in a graph.
-  
-  It can be any difficult or controversial issue. It can be used as a platform for argue, a way to prepare for discussion and just a tool for understanding yourself and other people.
+- **Repositories with data** for wave analysis. Example of this repository is **wg_example repository**. There are no scripts here, articles (correlated to nodes), dependencies (edges) and graphs themself only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the analysis in this repository is a logical sequence of arguments for and against this statement. The main file here is a YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.  Each statement you want to investigate with wave analysis may require a new, separate repository to be created. 
 
 - **Script repository**. This is **wikigraph repository**. It is used for scripts only and common for all wikigraphs. That is why we have only a single repository of this type. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
 
+**Important note**
 
-Examples with explanations:
+The idea is to have a single script repository and many repository with data. Each time you initiate a debates or invistgation you can create a separate data repository fro that. But for analizing and graph creation you will stil use scripts from the common scriptrepository (wikigraph).
+  
+## Examples with explanations:
 
 **EXAMPLE1. Root and direct contradiction**
 
