@@ -12,7 +12,7 @@ Click the link below to see an example of a wikigraph, which will be discussed l
 
 [example4](https://raw.githubusercontent.com/nihole/wg_examples/main/example4.svg?token=ACHUZVRISMV3N5EMGYNTMCDAZEIPS)
 
-The statement under investigation (root node) in this example: "Alice was at home yesterday at 19:00." All other nodes are arguments for or against: blue nodes are supportive claims, and red nodes are rebuttals ones. Navigate to any node and click on the link. You can now read the wiki article related to this node. This is usually an article with proofs, citations, justification ... whatever to support this node's claim. But in this example, we are using this link to explain how to understand and create this graph.
+The statement under investigation (root node) in this example: "Alice was at home yesterday at 19:00." All other nodes are arguments for or against: blue nodes are supportive claims, and red nodes are rebuttals. Navigate to any node and click on the link. You can now read the wiki article related to this node. This is usually an article with proofs, citations, justification ... whatever to support this node's claim. But in this example, we are using this link to explain how to understand and create this graph.
 
 Click the link below to see the YAML file used for the graph above creation.
 
