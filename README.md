@@ -12,7 +12,7 @@ Click the link below to see an example of a wikigraph, which will be discussed l
 
 [example4](https://raw.githubusercontent.com/nihole/wg_examples/main/example4.svg?token=ACHUZVRISMV3N5EMGYNTMCDAZEIPS)
 
-The statement under investigation (root node) in this example: "Alice was at home yesterday at 19:00." All other nodes are arguments for or against: blue nodes are supportive claims, and red nodes are rebuttals. Navigate to any node and click on the link. You can now read the wiki article related to this node. This is usually an article with proofs, citations, justification ... whatever to support this node's claim. But in this example, we are using this link to explain how to understand and create this graph.
+The statement under investigation (root node) in this example: "Alice was at home yesterday at 19:00." All other nodes are arguments for or against: blue nodes are supportive statements, and red nodes are rebuttals. Navigate to any node and click on the link. You can now read the wiki article related to this node. This is usually an article with proofs, citations, justification ... whatever to support this node's statement. But in this example, we are using this link to explain how to understand and create this graph.
 
 Click the link below to see the YAML file used for the graph above creation.
 
@@ -79,11 +79,13 @@ So we have 2 types of repositories:
 
 # Wave Analysis
 
-Here is a brief presentation of [wave analysis](https://habr.com/ru/post/506670/):
+The best way to undesratand what is [wave analysis](https://habr.com/ru/post/506670/) is to refer to the examples. 
+
+Here is a brief vocabular and main concepts.
 
 - **Root**. Each graph has a root that represents the statement under discussion, and the entire graph is a set of pros and cons with respect to that root statement.
 
-Consider two statements: A and B. We will assume that each of these statements can be either true or false. Then the following dependences of statement A on B are possible:
+Consider two statements: A and B. We will assume that each of these statements can be either true or false. Then the following dependences of statement A on B are possible in wave analysis:
 
 - **Independence**. (A does not depend on B). The truth or falsity of statement A does not depend in any way on the truth or falsity of statement B.
 
@@ -100,7 +102,7 @@ All other relationships are expressed via these 3 types. Actually, we have only 
 
 - **Graph convergence**. We will call a graph decidable (or convergent) if the analysis of this graph unambiguously leads to the conclusion about whether the root statement is true or false.  You can find more information about this [here](https://habr.com/ru/post/506670/).
 
-- **Dead-end (edge) nodes**. We will call a node N a dead-end if not a single arrow leaves it, including a bidirectional one. This means that this is not refuted by any statements and can be considered true. This means that if the connection is strong enough (direct refutation), this statement can refute the statement of the upstream node in the logical wave, which, in turn, can create other dead-end nodes and so on to the very top, thus leading to the resolution of the graph.
+- **Dead-end (edge) nodes**. We will call a node N a dead-end if not a single arrow leaves it, including a bidirectional one. This means that this is not refuted by any statements and can be considered true. Then if the connection is strong enough (direct refutation), this statement can refute the upstream  in the logical wave, which, in turn, can create other dead-end nodes and so on to the very top, thus leading to the resolution of the graph.
 
 - **Reference Points**. This definition is not precise and rather intuitive. We are talking about a small set of dead-end nodes, with rather general statements (for example, philosophical views, or emotional preferences) that lead to the resolution of the graph.
 
