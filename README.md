@@ -80,7 +80,7 @@ So we have 2 types of repositories:
 
 The best way to undesratand what is [wave analysis](https://habr.com/ru/post/506670/) is to refer to the examples. 
 
-Here is a brief vocabular and main concepts.
+Here is a brief vocabular and main concepts of wave analysis.
 
 - **Root**. Each graph has a root that represents the statement under discussion, and the entire graph is a set of pros and cons with respect to that root statement.
 
