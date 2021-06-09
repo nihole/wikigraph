@@ -36,7 +36,7 @@ Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
 
 Then investigate examples.
 
-- **Example1. Root node and direct contradiction**
+**Example1. Root node and direct contradiction**
 
 Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml ([example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml) in my github repository.
 
@@ -56,9 +56,9 @@ Open the svg file in any browser or just by clicking on it. You will find two no
 
 Also check out example2, example3 and examples4 with articles corresponding to the nodes for these graphs:
 
-- **Example2. Direct and indirect contradictions**
-- **Example3. Contradictions, complements and proofs**
-- **Example4. Wikigraph with all logical dependencies**
+**Example2. Direct and indirect contradictions**
+**Example3. Contradictions, complements and proofs**
+**Example4. Wikigraph with all logical dependencies**
 
 So if you want to start your own wikigraph you have to create yaml file with the same structure as you see in the examples and run wrgaph.py script.
 
