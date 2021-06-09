@@ -102,11 +102,11 @@ All other relationships are expressed via these 3 types. Actually, we have only 
 
 - **Dead-end (edge) nodes**. We will call a node N a dead-end if not a single arrow leaves it, including a bidirectional one. This means that this is not refuted by any statements and can be considered true. This means that if the connection is strong enough (direct refutation), this statement can refute the statement of the upstream node in the logical wave, which, in turn, can create other dead-end nodes and so on to the very top, thus leading to the resolution of the graph.
 
-**Reference Points**. This definition is not precise and rather intuitive. We are talking about a small set of dead-end nodes, with rather general statements (for example, philosophical views, or emotional preferences) that lead to the resolution of the graph.
+- **Reference Points**. This definition is not precise and rather intuitive. We are talking about a small set of dead-end nodes, with rather general statements (for example, philosophical views, or emotional preferences) that lead to the resolution of the graph.
 
 The bottom line is that these are the statements on which "the picture of the world" rests or at least the attitude to the root statement.
 
-**Basic axiom of wave analysis**. There is always hidden information that does not allow unambiguous resolution of a full wave graph
+- **Basic axiom of wave analysis**. There is always hidden information that does not allow unambiguous resolution of a full wave graph
 (See definition of full wave graph here)
 
-**Consequence** of the basic axiom. If the resolution of the wave graph occurs, then this indicates the presence of an irrational element, a logic error, or the incompleteness of the wave graph.
+- **Consequence** of the basic axiom. If the resolution of the wave graph occurs, then this indicates the presence of an irrational element, a logic error, or the incompleteness of the wave graph.
