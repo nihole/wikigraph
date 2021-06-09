@@ -33,9 +33,6 @@ Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
 
 - git clone https://github.com/nihole/wikigraph.git
 - git clone https://github.com/nihole/wg_examples.git
-- install
-  - PyYAML
-  - graphviz
 
 Then investigate examples.
 
