@@ -1,4 +1,4 @@
-# WikiGraph
+# Wikigraph
 
 ## What is this?
 
