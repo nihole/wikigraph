@@ -25,7 +25,7 @@ If you want a real-world example, refer to the repository [wg_nav](https://githu
 
   It can be used as a platform for discussion, a way to prepare for debates or even a tool for understanding yourself and other people. If you try to plot this graph, you will better understand why your opponents have such a “weird point of view”. In fact, it follows from the **basic axiom of wave analysis** (see below) that there are no 100% reliable arguments and facts, and your events interpretation is always based, among other things, on intuitive assumptions, that help you to cover huge holes in your picture of the world due to hidden or incorrect data. This method can help you to identify what irrational postulates (**reference points**) underlie your or your opponent's worldview and lead to a certain interpretation of events.
   
-It should also be pretty clear that in the case of analyzing something significant, it must be a collective effort. Even a simple statements can lead to hundreds of articles and relationships between them. Moreover, a single person cannot imagine all possible waves, arguments and contradictions.
+It should also be pretty clear that in the case of analyzing something essential, it must be a collective effort. Even a simple statements can lead to hundreds of articles and relationships between them. Moreover, a single person cannot imagine all possible waves, arguments and contradictions.
 
 ## How to start
 
@@ -37,15 +37,7 @@ Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
   - PyYAML
   - graphviz
 
-The idea is to have a single repository with scripts and multiple data repositories used for investigation of root statement. Each time you initiate a discussion or investigation, you can create a separate data repository for this. And sctipts used for analysis and graph creation are always located in the common single script repository.
-
-So we have 2 types of repositories:
-
-- **Repositories with data** for wave analysis. Example of this repository is **wg_example repository**. There are no scripts here, articles (correlated to nodes), dependencies (edges) and graphs themself only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the analysis in this repository is a logical sequence of arguments for and against this statement. The main files here are YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
-
-- **Script repository**. This is **wikigraph repository**. It is used only for scripts and is used  to analyze the structure and generate graphs for each data repository. That is why we have only a single repository of this type. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
-  
-## Examples with explanations
+Then investigate examples.
 
 **EXAMPLE1. Root and direct contradiction**
 
@@ -75,6 +67,15 @@ So if you want to start your own wikigraph you have to create yaml file with the
 
 Of course, you can use git for this, which provides unique opportunities for structured discussion and creation a collective wikigraph.
 
+## Repositories
+
+The idea is to have a single repository with scripts (wikigraph.git) and multiple data repositories (wg_examples in this case) used for investigation of root statement. Each time you initiate a discussion or investigation, you can create a separate data repository for this. And sctipts used for analysis and graph creation are always located in the common single script repository.
+
+So we have 2 types of repositories:
+
+- **Repositories with data** for wave analysis. Example of this repository is **wg_example repository**. There are no scripts here, articles (correlated to nodes), dependencies (edges) and graphs themself only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the analysis in this repository is a logical sequence of arguments for and against this statement. The main files here are YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
+
+- **Script repository**. This is **wikigraph repository**. It is used only for scripts and is used  to analyze the structure and generate graphs for each data repository. That is why we have only a single repository of this type. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
 
 # Wave Analysis
 
