@@ -57,7 +57,9 @@ Open the svg file in any browser or just by clicking on it. You will find two no
 Also check out example2, example3 and examples4 with articles corresponding to the nodes for these graphs:
 
 **Example2. Direct and indirect contradictions**
+
 **Example3. Contradictions, complements and proofs**
+
 **Example4. Wikigraph with all logical dependencies**
 
 So if you want to start your own wikigraph you have to create yaml file with the same structure as you see in the examples and run wrgaph.py script.
