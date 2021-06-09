@@ -4,7 +4,7 @@
 
 Wikigraph (or Wave Graph) is a presentation of information in logical dependencies, displayed as a graph, where each node is a statement linked to wiki article, and each edge represents one of three types of logical relationships: **direct refutation**, **indirect refutation** and **complement** (see description below in this document). 
 
-This method is called  [wave analysis](https://habr.com/ru/post/506670/) . With this approach, logical chains are created, consisting of arguments (nodes) for and against the main statement (root node). It looks like a wave: yes, no, yes, no... Therefore, we will call this logical chain as a **wave**.
+This method is called  [wave analysis](https://habr.com/ru/post/506670/) . With this approach, logical chains are created, consisting of alternately changing argument (nodes) for and against the main statement (root node). It looks like a wave: yes, no, yes, no... Therefore, we will call this logical chain as a **wave**.
 
 The idea behind this project is to describe this structure in a YAML file and use a github repository wiki for articles related to nodes. A graph is automatically generated from this YAML file.
 
@@ -12,7 +12,7 @@ Click the link below to see an example of a wikigraph, which will be discussed l
 
 [example4](https://raw.githubusercontent.com/nihole/wg_examples/main/example4.svg?token=ACHUZVRISMV3N5EMGYNTMCDAZEIPS)
 
-Discussed (root) statement in this example: "Alice was home yesterday at 19:00." All other nodes are arguments for or against: blue nodes are supportive claims, and red nodes are rebuttals ones. Navigate to any node and click on the link. You can now read the wiki article related to this node. This is usually an article with proofs, citations, justification ... whatever to support this node's claim. But in this example, we are using this link to explain how to understand and create this graph.
+The statement under investigation (root node) in this example: "Alice was at home yesterday at 19:00." All other nodes are arguments for or against: blue nodes are supportive claims, and red nodes are rebuttals ones. Navigate to any node and click on the link. You can now read the wiki article related to this node. This is usually an article with proofs, citations, justification ... whatever to support this node's claim. But in this example, we are using this link to explain how to understand and create this graph.
 
 Click the link below to see the YAML file used for the graph above creation.
 
@@ -25,7 +25,7 @@ If you want a real-world example, refer to the repository [wg_nav](https://githu
 
   It can be used as a platform for debates, a way to prepare for discussion or just as a tool for understanding yourself and other people. If you try to plot this graph, you will better understand why your opponents have such a “weird point of view”. In fact, it follows from the **basic axiom of wave analysis** (see below) that there are no 100% reliable arguments and facts, and your events interpretation is always based, among other things, on intuitive assumptions, that help you to cover huge holes in your picture of the world due to hidden or incorrect data. This method can help you to identify what intuitive postulates (**reference points**) underlie your or your opponent's worldview and lead to a certain interpretation of events.
   
-It is also very important to understand that if the topic being analyzed is related to something significant, it must be a collective effort. Even a simple analysis can lead to hundreds of articles and relationships between them. Moreover, a single person cannot imagine all possible waves, arguments and contradictions.
+It should also be pretty clear that in the case of analyzing something significant, it must be a collective effort. Even a simple statements can lead to hundreds of articles and relationships between them. Moreover, a single person cannot imagine all possible waves, arguments and contradictions.
 
 ## How to start
 
