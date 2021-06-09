@@ -39,7 +39,7 @@ Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
 
 Then investigate examples.
 
-**EXAMPLE1. Root and direct contradiction**
+**EXAMPLE1. Root node and direct contradiction**
 
 Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml ([example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml) in my github repository.
 
