@@ -1,7 +1,7 @@
 # hello.py - http://www.graphviz.org/content/hello
 # -*- coding: utf-8 -*-
 
-### The library for wave graf relolving
+### The library for wave graf resolving
 
 ''' Vacabular:
 

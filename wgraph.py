@@ -22,20 +22,20 @@ def wgraph(yaml_data, status_dict, phase, graph_file):
         if phase[record['id']]:
             lbl = record['id'] + '\n' + format.format(record['text'])
             if not (record['id'] in status_dict.keys()):
-                g.attr('node', color='red', fontcolor = 'black')
-                g.node(record['id'], label=lbl, URL='https://www.ru')
+                g.attr('node', color='red', href=record['wiki_link'], fontcolor = 'black')
+                g.node(record['id'], label=lbl)
             else:
-                g.attr('node', color='gray90', fontcolor = 'gray90')
-                g.node(record['id'], label=lbl, URL='https://www.ru')
+                g.attr('node', color='gray90', href=record['wiki_link'], fontcolor = 'gray90')
+                g.node(record['id'], label=lbl)
 
         else:
             lbl = record['id'] + '\n' + format.format(record['text'])
             if not (record['id'] in status_dict.keys()): 
-                g.attr('node', color='blue', href='https://www.ru',  fontcolor = 'black')
+                g.attr('node', color='blue', href=record['wiki_link'],  fontcolor = 'black')
                 g.node(record['id'], label=lbl)
             else:
-                g.attr('node', color='gray90', fontcolor = 'gray90')
-                g.node(record['id'], label=lbl, URL='https://www.ru')
+                g.attr('node', color='gray90', href=record['wiki_link'], fontcolor = 'gray90')
+                g.node(record['id'], label=lbl)
 
     ### Edge creation
 
