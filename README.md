@@ -37,7 +37,7 @@ Create a folder YOUR_GIT_PATH and enter this folder (cd YOUR_GIT_PATH)
   - PyYAML
   - graphviz
 
-The idea is to have a single repository with scripts and multiple data repositories. Each time you initiate a discussion or invitation, you can create a separate data repository for this. But for analysis and charting, you will still use scripts from the common single script repository.
+The idea is to have a single repository with scripts and multiple data repositories used for investigation of root statement. Each time you initiate a discussion or investigation, you can create a separate data repository for this. And sctipts used for analysis and graph creation are always located in the common single script repository.
 
 So we have 2 types of repositories:
 
