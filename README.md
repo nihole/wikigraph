@@ -12,7 +12,7 @@ Click the link below to see an example of a wikigraph, which will be discussed l
 
 [example4](https://raw.githubusercontent.com/nihole/wg_examples/main/example4.svg?token=ACHUZVRISMV3N5EMGYNTMCDAZEIPS)
 
-Discussed (root) statement in this example: "Alice was home yesterday at 19:00." All other nodes are arguments for or against: blue nodes are supportive assertions, and red nodes are rebuttals. Navigate to any node and click on the link. You can now read the wiki article related to this node. This is usually an article with proofs, quotes, justification ... whatever to support this node's claim. But in this example, we are using this link to explain how to understand and create this graph.
+Discussed (root) statement in this example: "Alice was home yesterday at 19:00." All other nodes are arguments for or against: blue nodes are supportive claims, and red nodes are rebuttals ones. Navigate to any node and click on the link. You can now read the wiki article related to this node. This is usually an article with proofs, citations, justification ... whatever to support this node's claim. But in this example, we are using this link to explain how to understand and create this graph.
 
 Click the link below to see the YAML file used for the graph above creation.
 
@@ -23,7 +23,7 @@ If you want a real-world example, refer to the repository [wg_nav](https://githu
 
 ## When to use?
 
-  It can be used as a platform for debates, a way to prepare for discussion or just as a tool for understanding yourself and other people. If you try to plot this graph, you will better understand why your opponents have such a “weird point of view”. In fact, it follows from the **basic axiom of wave analysis** (see below) that there are no 100% reliable arguments and facts, and your events interpretation is always based, among other things, on intuitive assumptions. This helps you to cover huge holes in your picture of the world due to hidden or incorrect data. However, this does not prevent your picture of the world from being adequate and more or less true.
+  It can be used as a platform for debates, a way to prepare for discussion or just as a tool for understanding yourself and other people. If you try to plot this graph, you will better understand why your opponents have such a “weird point of view”. In fact, it follows from the **basic axiom of wave analysis** (see below) that there are no 100% reliable arguments and facts, and your events interpretation is always based, among other things, on intuitive assumptions, that help you to cover huge holes in your picture of the world due to hidden or incorrect data. This method can help you to identify what intuitive postulates (**reference points**) underlie your or your opponent's worldview and lead to a certain interpretation of events.
   
 It is also very important to understand that if the topic being analyzed is related to something significant, it must be a collective effort. Even a simple analysis can lead to hundreds of articles and relationships between them. Moreover, a single person cannot imagine all possible waves, arguments and contradictions.
 
