@@ -25,7 +25,7 @@ If you want a real-world example, refer to the repository [wg_nav](https://githu
 
   It can be used as a platform for discussion, a way to prepare for debates or even a tool for understanding yourself and other people. If you try to plot this graph, you will better understand why your opponents have such a “weird point of view”. In fact, it follows from the **basic axiom of wave analysis** (see below) that there are no 100% reliable arguments and facts, and your events interpretation is always based, among other things, on intuitive assumptions, that help you to cover huge holes in your picture of the world due to hidden or incorrect data. This method can help you to identify what irrational postulates (**reference points**) underlie your or your opponent's worldview and lead to a certain interpretation of events.
   
-It should also be pretty clear that in the case of analyzing something essential, it must be a collective effort. Even a simple statements can lead to hundreds of articles and relationships between them. Moreover, a single person cannot imagine all possible waves, arguments and contradictions.
+It should also be pretty clear that in the case of analyzing something essential, it must be a collective effort. Even a simple statement can lead to dozens of waves and hundreds of articles and relationships between them. Moreover, a single person cannot imagine all possible waves, arguments and contradictions.
 
 ## How to start
 
