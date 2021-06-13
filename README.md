@@ -62,9 +62,7 @@ Also check out example2, example3 and examples4 with articles corresponding to t
 
 **Example4. Wikigraph with all logical dependencies**
 
-So if you want to start your own wikigraph you have to create yaml file with the same structure as you see in the examples and run wrgaph.py script.
-
-Of course, you can use git for this, which provides unique opportunities for structured discussion and creation a collective wikigraph.
+Therefore, if you want to start your own wikigraph you need to create a yaml file with the same structure as in the examples and run the wrgaph.py script.
 
 ## Repositories
 
