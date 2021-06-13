@@ -42,7 +42,7 @@ Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml or [
 
 This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python script **wgraph.py** (use python3 wgraph.py -h for help):
 
-- python3 PATH-to-script/**wgraph** PATH-to-YAML/**yaml_file.yml** PATH-to-graph/**graph_to_be_created**
+- python3 **wgraph** **path_to_yaml_file.yml** **path_to_graph_to_be_created**
  
  And in case of this example it will be:
  
