@@ -40,7 +40,7 @@ Then investigate examples.
 
 Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml or [example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml) in my github repository.
 
-This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python file:
+This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python script **wgraph.py** (use python3 wgraph.py -h for help):
 
  python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_PATH/wg_examples/**example4**
 
