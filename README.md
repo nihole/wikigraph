@@ -25,7 +25,7 @@ If you want a real-world example, refer to the repository [wg_nav](https://githu
 
   It can be used as a platform for discussion, a way to prepare for debates or even a tool for understanding yourself and other people. If you try to plot this graph, you will better understand why your opponents have such a “weird point of view”. In fact, it follows from the **basic axiom of wave analysis** (see below) that there are no 100% reliable arguments and facts, and your events interpretation is always based, among other things, on intuitive assumptions, that help you to cover huge holes in your picture of the world due to hidden or incorrect data. This method can help you to identify what irrational postulates (**reference points**) underlie your or your opponent's worldview and lead to a certain interpretation of events.
   
-It should also be pretty clear that in the case of analyzing something essential, it must be a collective effort. Even a simple statements can lead to hundreds of articles and relationships between them. Moreover, a single person cannot imagine all possible waves, arguments and contradictions.
+It should also be pretty clear that in the case of analyzing something essential, it must be a collective effort. Even a simple statement can lead to dozens of waves and hundreds of articles and relationships between them. Moreover, a single person cannot imagine all possible waves, arguments and contradictions.
 
 ## How to start
 
@@ -38,19 +38,19 @@ Then investigate examples.
 
 **Example1. Root node and direct contradiction**
 
-Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml ([example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml) in my github repository.
+Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml or [example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml) in my github repository.
 
-This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python file:
+This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python script **wgraph.py** (use python3 wgraph.py -h for help):
 
- python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_PATH/wg_examples/**example4**
+- python3 **wgraph.py** path_to_yaml_file.yml path_to_graph_to_be_created
+ 
+ And in case of this example it will be:
+ 
+- python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_PATH/wg_examples/**example1**
 
- The script wgraph.py executes some logical verification of your YAML file and creates 2 files with NetworkX and svg types. 
- You can use NetworkX to cretate graphs with other tools, but in our case svg file is sufficient. You can open this file in any browser.
+ The script wgraph.py executes some logical verification of your YAML file and create **svg** file:
 
- In this particular case it will be 
-
- - **example1** (NetworkX, you can investigate it clicking the link in my github repository [example1 NetworkX file ](https://github.com/nihole/wg_examples/blob/main/example1)
- - **example1.svg** (svg, you can investigate it clicking the link in my github repository [example1 svg file](https://github.com/nihole/wg_examples/blob/main/example1.svg)
+ - **example1.svg**. You can investigate it by clicking the link in my github repository [example1 svg file](https://github.com/nihole/wg_examples/blob/main/example1.svg)
 
 Open the svg file in any browser or just by clicking on it. You will find two nodes here. Navigate to each of them, click on the links and check out the wiki articles related to those two nodes (in the case of a github repository, you must select "raw" to get these links).
 
@@ -62,19 +62,17 @@ Also check out example2, example3 and examples4 with articles corresponding to t
 
 **Example4. Wikigraph with all logical dependencies**
 
-So if you want to start your own wikigraph you have to create yaml file with the same structure as you see in the examples and run wrgaph.py script.
+Therefore, if you want to start your own wikigraph you need to create a yaml file with the same structure as in the examples and run the wrgaph.py script.
 
-Of course, you can use git for this, which provides unique opportunities for structured discussion and creation a collective wikigraph.
+## Data and Script Repositories
 
-## Repositories
+The idea is to have a single repository with scripts (wikigraph.git) and multiple data repositories (wg_examples in this case) used for investigation of root statement. Each time you initiate a discussion or investigation, you can create a separate data repository for this. And sctipts used for analysis and graphs creation are always located in the common single script repository.
 
-The idea is to have a single repository with scripts (wikigraph.git) and multiple data repositories (wg_examples in this case) used for investigation of root statement. Each time you initiate a discussion or investigation, you can create a separate data repository for this. And sctipts used for analysis and graph creation are always located in the common single script repository.
+So, we have 2 types of repositories:
 
-So we have 2 types of repositories:
+- **Repositories with data** for wave analysis. Example of this repository is **wg_example.git repository**. There are no scripts here. It is used for articles (correlated to nodes), dependencies (edges) and graphs only. The main files here are YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
 
-- **Repositories with data** for wave analysis. Example of this repository is **wg_example.git repository**. There are no scripts here. It is used for articles (correlated to nodes), dependencies (edges) and graphs only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the wave analysis is a logical sequence of arguments for and against this statement. The main files here are YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
-
-- **Script repository**. This is **wikigraph.git repository**. It is used only for scripts and is used  to analyze the structure and generate graphs for each data repository. That is why we have only a single repository of this type. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
+- **Script repository**. This is **wikigraph.git repository**. Only scripts are located here (no data) which are used for structure analyzis and graphs generation for each data repository. That is why we have only a single repository of this type. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
 
 # Wave Analysis
 
@@ -88,7 +86,7 @@ Consider two statements: A and B. We will assume that each of these statements c
 
 - **Independence**. (A does not depend on B). The truth or falsity of statement A does not depend in any way on the truth or falsity of statement B.
 
-- **Direct rebuttal**. If statement B is true, then statement A is false. We will denote such a relationship as **A --d-> B**. This arrow **--d->** actually can be replaced with expression "false because", that is, A --p-> B is a short expression of the statement "A is false because B is (true) ". 
+- **Direct rebuttal**. If statement B is true, then statement A is false. We will denote such a relationship as **A --d-> B**. This arrow **--d->** actually can be replaced with expression "false because", that is, A --p-> B is a short expression of the statement "A is false because B (is true) ". 
   On the graph, we will represent this dependency by a solid line with an arrow from A to B.
 
 - **Indirect rebuttal**. If statement B is true, then the probability that statement A is false increases. We will call this an indirect rebuttal and denote it as **A --i-> B**. On the graph, we will represent it by a dotted line with an arrow from A to B.
@@ -105,7 +103,7 @@ All other relationships are expressed via these 3 types. Actually, we have only 
 
 - **Reference Points**. This definition is not precise and rather intuitive. We are talking about a set of dead-end nodes, with rather general statements (for example, philosophical views, or emotional preferences) that lead to the resolution of the graph. The main idea here is that they are irational postulates that underlie the perception of the world.
 
-- **Basic axiom of wave analysis**. There is always hidden information that does not allow unambiguous resolution of a full wave graph
+- **Basic axiom of wave analysis**: there is always hidden information that does not allow unambiguous resolution of a full wave graph
 (See definition of full wave graph [here](https://habr.com/ru/post/506670/))
 
-- **Consequence** of the basic axiom. If the resolution of the wave graph occurs, then this indicates the presence of an irrational element, a logic error, or the incompleteness of the wave graph.
+- **Consequence** of the basic axiom: If the resolution of the wave graph occurs, then this indicates the presence of an irrational element, a logic error, or the incompleteness of the wave graph.
