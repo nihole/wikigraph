@@ -42,15 +42,15 @@ Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml or [
 
 This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python script **wgraph.py** (use python3 wgraph.py -h for help):
 
- python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_PATH/wg_examples/**example1**
+- python3 PATH-to-script/**wgraph** PATH-to-YAML/**yaml_file.yml** PATH-to-graph/**graph_to_be_created**
+ 
+ And in case of this example it will be:
+ 
+- python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_PATH/wg_examples/**example1**
 
- The script wgraph.py executes some logical verification of your YAML file and creates 2 files with NetworkX and svg types. 
- You can use NetworkX to cretate graphs with other tools, but in our case svg file is sufficient. You can open this file in any browser.
+ The script wgraph.py executes some logical verification of your YAML file and create **svg** file:
 
- In this particular case it will be 
-
- - **example1** (NetworkX, you can investigate it clicking the link in my github repository [example1 NetworkX file ](https://github.com/nihole/wg_examples/blob/main/example1)
- - **example1.svg** (svg, you can investigate it clicking the link in my github repository [example1 svg file](https://github.com/nihole/wg_examples/blob/main/example1.svg)
+ - **example1.svg**. You can investigate it clicking the link in my github repository [example1 svg file](https://github.com/nihole/wg_examples/blob/main/example1.svg)
 
 Open the svg file in any browser or just by clicking on it. You will find two nodes here. Navigate to each of them, click on the links and check out the wiki articles related to those two nodes (in the case of a github repository, you must select "raw" to get these links).
 
