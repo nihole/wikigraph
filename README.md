@@ -38,7 +38,7 @@ Then investigate examples.
 
 **Example1. Root node and direct contradiction**
 
-Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml ([example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml) in my github repository.)
+Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml or [example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml) in my github repository.
 
 This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python file:
 
