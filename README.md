@@ -64,7 +64,7 @@ Also check out example2, example3 and examples4 with articles corresponding to t
 
 Therefore, if you want to start your own wikigraph you need to create a yaml file with the same structure as in the examples and run the wrgaph.py script.
 
-## Repositories
+## Data and Script Repositories
 
 The idea is to have a single repository with scripts (wikigraph.git) and multiple data repositories (wg_examples in this case) used for investigation of root statement. Each time you initiate a discussion or investigation, you can create a separate data repository for this. And sctipts used for analysis and graph creation are always located in the common single script repository.
 
