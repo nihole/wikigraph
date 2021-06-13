@@ -70,9 +70,9 @@ The idea is to have a single repository with scripts (wikigraph.git) and multipl
 
 So, we have 2 types of repositories:
 
-- **Repositories with data** for wave analysis. Example of this repository is **wg_example.git repository**. There are no scripts here. It is used for articles (correlated to nodes), dependencies (edges) and graphs only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the wave analysis is a logical sequence of arguments for and against this statement. The main files here are YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
+- **Repositories with data** for wave analysis. Example of this repository is **wg_example.git repository**. There are no scripts here. It is used for articles (correlated to nodes), dependencies (edges) and graphs only. The main files here are YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
 
-- **Script repository**. This is **wikigraph.git repository**. It is used only for scripts and is used  to analyze the structure and generate graphs for each data repository. That is why we have only a single repository of this type. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
+- **Script repository**. This is **wikigraph.git repository**. Only scripts are located here (no data) which are used for structure analyzis and graphs generation for each data repository. That is why we have only a single repository of this type. The main script is **wgraph.py**. It takes a YAML file (from repositories of first type) as input and generates a graph. Another important script is **mkgraph.py**, which is used to automatic  graph **resolving**  (see vocabulary below), but it is still under development.
 
 # Wave Analysis
 
