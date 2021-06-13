@@ -42,7 +42,7 @@ Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml or [
 
 This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python script **wgraph.py** (use python3 wgraph.py -h for help):
 
- python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_PATH/wg_examples/**example4**
+ python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/**example1.yml** YOUR_GIT_PATH/wg_examples/**example1**
 
  The script wgraph.py executes some logical verification of your YAML file and creates 2 files with NetworkX and svg types. 
  You can use NetworkX to cretate graphs with other tools, but in our case svg file is sufficient. You can open this file in any browser.
