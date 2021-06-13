@@ -86,7 +86,7 @@ Consider two statements: A and B. We will assume that each of these statements c
 
 - **Independence**. (A does not depend on B). The truth or falsity of statement A does not depend in any way on the truth or falsity of statement B.
 
-- **Direct rebuttal**. If statement B is true, then statement A is false. We will denote such a relationship as **A --d-> B**. This arrow **--d->** actually can be replaced with expression "false because", that is, A --p-> B is a short expression of the statement "A is false because B is (true) ". 
+- **Direct rebuttal**. If statement B is true, then statement A is false. We will denote such a relationship as **A --d-> B**. This arrow **--d->** actually can be replaced with expression "false because", that is, A --p-> B is a short expression of the statement "A is false because B (is true) ". 
   On the graph, we will represent this dependency by a solid line with an arrow from A to B.
 
 - **Indirect rebuttal**. If statement B is true, then the probability that statement A is false increases. We will call this an indirect rebuttal and denote it as **A --i-> B**. On the graph, we will represent it by a dotted line with an arrow from A to B.
