@@ -103,7 +103,7 @@ All other relationships are expressed via these 3 types. Actually, we have only 
 
 - **Reference Points**. This definition is not precise and rather intuitive. We are talking about a set of dead-end nodes, with rather general statements (for example, philosophical views, or emotional preferences) that lead to the resolution of the graph. The main idea here is that they are irational postulates that underlie the perception of the world.
 
-- **Basic axiom of wave analysis**. There is always hidden information that does not allow unambiguous resolution of a full wave graph
+- **Basic axiom of wave analysis**: there is always hidden information that does not allow unambiguous resolution of a full wave graph
 (See definition of full wave graph [here](https://habr.com/ru/post/506670/))
 
-- **Consequence** of the basic axiom. If the resolution of the wave graph occurs, then this indicates the presence of an irrational element, a logic error, or the incompleteness of the wave graph.
+- **Consequence** of the basic axiom: If the resolution of the wave graph occurs, then this indicates the presence of an irrational element, a logic error, or the incompleteness of the wave graph.
