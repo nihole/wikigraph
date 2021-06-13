@@ -66,9 +66,9 @@ Therefore, if you want to start your own wikigraph you need to create a yaml fil
 
 ## Data and Script Repositories
 
-The idea is to have a single repository with scripts (wikigraph.git) and multiple data repositories (wg_examples in this case) used for investigation of root statement. Each time you initiate a discussion or investigation, you can create a separate data repository for this. And sctipts used for analysis and graph creation are always located in the common single script repository.
+The idea is to have a single repository with scripts (wikigraph.git) and multiple data repositories (wg_examples in this case) used for investigation of root statement. Each time you initiate a discussion or investigation, you can create a separate data repository for this. And sctipts used for analysis and graphs creation are always located in the common single script repository.
 
-So we have 2 types of repositories:
+So, we have 2 types of repositories:
 
 - **Repositories with data** for wave analysis. Example of this repository is **wg_example.git repository**. There are no scripts here. It is used for articles (correlated to nodes), dependencies (edges) and graphs only. In this example, the root node (the statement under discussion) is "Alice was at home yesterday at 7 p.m.". Then all the wave analysis is a logical sequence of arguments for and against this statement. The main files here are YAML file describing the logical relationships between nodes, and the svg file, which is the graph itself, created based on this YAML file. The wiki of this repository is used for articles correlated to nodes.
 
