@@ -18,15 +18,6 @@ statements:
   - id: null
   complement:
   - id: null
-- id: --3--
-  text: Bob saw her at the theatre yesterday at 7 p.m.
-  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_3
-  direct_contradictions:
-  - id: ++10++
-  indirect_contradictions:
-  - id: null
-  complement:
-  - id: null
 - id: --4--
   text: Mike saw her at the theatre yesterday at 7 p.m.
   wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_4
@@ -36,15 +27,15 @@ statements:
   - id: null
   complement:
   - id: null
-- id: ++10++
-  text: Bob is lying
-  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_pw_10
+- id: --3--
+  text: Bob saw her at the theatre yesterday at 7 p.m.
+  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_3
   direct_contradictions:
-  - id: null
+  - id: ++10++
   indirect_contradictions:
   - id: null
   complement:
-  - id: --10--
+  - id: null
 - id: ++11++
   text: Mike was mistaken and mistake another girl for Alice
   wiki_link: https://github.com/nihole/wg_examples/wiki/examples_pw_11
@@ -54,15 +45,15 @@ statements:
   - id: null
   complement:
   - id: --11--
-- id: --10--
-  text: Bob is telling the truth
-  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_10
+- id: ++10++
+  text: Bob is lying
+  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_pw_10
   direct_contradictions:
   - id: null
   indirect_contradictions:
   - id: null
   complement:
-  - id: null
+  - id: --10--
 - id: --11--
   text: ''
   wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_11
@@ -72,3 +63,12 @@ statements:
   - id: null
   complement:
   - id: ''
+- id: --10--
+  text: Bob is telling the truth
+  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_10
+  direct_contradictions:
+  - id: null
+  indirect_contradictions:
+  - id: null
+  complement:
+  - id: null
