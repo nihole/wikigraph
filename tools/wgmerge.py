@@ -12,6 +12,24 @@ import re
 import yaml
 import getopt
 
+def input_check(node_id, src_file, dst_file, merge):
+
+    if merge:
+        consent = input("\n  All waves having the root %s from file %s will be merged into %s\n  If you want to rewrite (not to merge) use this command without -m key.\n\n  MERGE (y|n)? " % (node_id, src_file, dst_file))
+        if ((consent == 'y') or (consent == 'yes') or (consent == 'Y') or (consent == 'Yes') or (consent == '')):
+           pass
+        elif  (consent == 'n' or consent == 'no' or consent == 'N' or consent == 'No'):
+            sys.xit ()
+        else:
+            sys.exit("  Incorrect input!!! Please use 'n' or press Enter")
+    else:
+        consent = input("\n  All waves having the root %s from file %s will rewrite all waves with a root in %s in %s\n  If you want to merge (to rewrite) use this command with -m key.\n\n  REWRITE (y|n)? " % (node_id, src_file, node_id, dst_file))
+        if ((consent == 'y') or (consent == 'yes') or (consent == 'Y') or (consent == 'Yes') or (consent == '')):
+            pass
+        elif  (consent == 'n' or consent == 'no' or consent == 'n|N|y|Y|No|no|Yes|yes' or consent == 'No'):
+            sys.exit ()
+        else:
+            sys.exit("  Incorrect input!!! Please use 'n|N|y|Y|No|no|Yes|yes' or press Enter")          
 
 def usage_incorrect ():
   print('\nIncorrect syntax\nType python3 wgmerge.py -h')
@@ -77,6 +95,7 @@ def main():
 
     sys.stdout.flush()
 
+
     # list of downstream nodes with the node_id as root taken fron source YAML file
     global nodes
 
@@ -119,6 +138,8 @@ def main():
     if not(src_file and dst_file and node_id):
         usage_incorrect()
         sys.exit()
+
+    input_check(node_id, src_file, dst_file, merge)
 
    ######### take data from src YAML file ####################
 
