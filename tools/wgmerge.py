@@ -17,7 +17,7 @@ def extract_dst_node_ids(node_id)       - finds all node IDs one step downstream
 def check_upstream(node_id, yaml_data)	- finds and returns all node IDs one step upstream of the node with the given node id in yaml_data
 def get_source_node_ids (node_id)	- creates a full list of node ids in waves starting with node_id taken from source file
 def get_destination_node_ids (node_id)  - creates a full list of node ids in waves starting with node_id taken from destination file
-
+def merge_data (node_id)			- merges
 '''
 
 import sys
@@ -137,9 +137,56 @@ def check_upstream(node_id, yaml_data):
     reverse_node_ids = rec_yaml_data[0][node_id]['direct'] + rec_yaml_data[0][node_id]['indirect'] + rec_yaml_data[0][node_id]['complement']
     return (reverse_node_ids)
 
-#def merge ():
-    
-    
+def merge_data (node_id):
+    global source_node_ids
+    global destination_node_ids 
+    for id_source in source_node_ids:
+        if id_source in destination_node_ids:
+            node_new = search_node (new_yaml_data, node_id)
+            node_source = search_node (src_yaml_data, id_source)
+            node_destination = search_node (dst_yaml_data, id_source)
+            direct_src_ids = []
+            indirect_src_ids = []
+            complement_src_ids = []
+            direct_dst_ids = []
+            indirect_dst_ids = []
+            complement_dst_ids = []
+            diff_direct = []
+            diff_indirect = []
+            diff_complement = []
+
+            for el_src in node_source['direct_contradictions']:
+                    if el_src:
+                        direct_src_ids.append(el_src['id'])
+            for el_src in node_source['indirect_contradictions']:
+                    if el_src:
+                        indirect_src_ids.append(el_src['id'])
+            for el_src in node_source['complement']:
+                    if el_src:
+                        complement_src_ids.append(el_src['id']) 
+            for el_dst in node_destination['direct_contradictions']:
+                    if el_dst:
+                        direct_dst_ids.append(el_dst['id'])
+            for el_dst in node_destination['indirect_contradictions']:
+                    if el_dst:
+                        indirect_dst_ids.append(el_dst['id'])
+            for el_dst in node_destination['complement']:
+                    if el_dst:
+                        complement_dst_ids.append(el_dst['id']) 
+            diff_direct = direct_src_ids - direct_dst_ids
+            diff_indirect = indirect_src_ids - indirect_dst_ids
+            diff_complement = complement_src_ids - complement_dst_ids
+          
+            
+            for diff_el in diff_direct:
+                node_new['direct_contradictions'].append({'id':diff_el})
+            for indiff_el in indiff_direct:
+                node_new['indirect_contradictions'].append({'id':diff_el})  
+            for diff_el in diff_complement:
+                node_new['complement'].append({'id':diff_el}) 
+        else:
+            node_source = search_node (src_yaml_data, id_source)
+            new_yaml_data['statements'].append(node_source)     
 
 ### Creates a full list of node ids in waves starting with node_id taken from source file
 
@@ -263,11 +310,14 @@ def main():
     new_yaml_data = dst_yaml_data.copy()
 
     ######### creation a child YAML file ###################
-
-    get_source_node_ids(node_id)
-    print (source_node_ids)
-    get_destination_node_ids(node_id)
-    print (destination_node_ids)
+    get_source_node_ids (node_id)
+    get_destination_node_ids (node_id)
+    if merge:
+        merge_data(node_id)
+#    get_source_node_ids(node_id)
+#    print (source_node_ids)
+#    get_destination_node_ids(node_id)
+#    print (destination_node_ids)
 
 
 
