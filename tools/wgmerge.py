@@ -7,10 +7,29 @@
 #                                                                 #
 ##################################################################
 
+
+'''
+
+def search_node (yaml_data, node_id) 	- returns node (dictionary) with node['id'] == node_id
+def get_downstreem_nodes(node) 		- for the node returns all downstream node's id as a list ds_node_ids
+def extract_src_node_ids(node_id)	- finds all node IDs one step downstream of the node with the given node id in src_yaml_data and adds them to the global list source_node_ids 
+def extract_dst_node_ids(node_id)       - finds all node IDs one step downstream of the node with the given node id in dst_yaml_data and adds them to the global list destination_node_ids
+def check_upstream(node_id, yaml_data)	- finds and returns all node IDs one step upstream of the node with the given node id in yaml_data
+def get_source_node_ids (node_id)	- creates a full list of node ids in waves starting with node_id taken from source file
+def get_destination_node_ids (node_id)  - creates a full list of node ids in waves starting with node_id taken from destination file
+
+'''
+
 import sys
 import re
 import yaml
 import getopt
+import os
+sys.path.insert(1,'../')
+import wlib
+
+
+### Displays the message requiring confirmation if merge or rewright is performed
 
 def input_check(node_id, src_file, dst_file, merge):
 
@@ -35,6 +54,8 @@ def usage_incorrect ():
   print('\nIncorrect syntax\nType python3 wgmerge.py -h')
 
 
+### Help message
+
 def help_info():
   print ("\n")
   print("##################################################################################################################################")
@@ -52,11 +73,11 @@ def help_info():
   print("##################################################################################################################################")
   print ("\n")
 
+### Return nodes (dictionary) with node['id'] == node_id
 
-def search_node (node_id):
-    global src_yaml_data
+def search_node (yaml_data, node_id):
     flag = 0
-    for node in src_yaml_data['statements']:
+    for node in yaml_data['statements']:
         if node['id'] == node_id:
             flag = 1
             break
@@ -64,6 +85,8 @@ def search_node (node_id):
         return node
     else:
         quit("Error!! Node with id %s does not extits!!" % node_id)
+
+### For the node returns all downstream node's id as a list ds_node_ids
 
 def get_downstreem_nodes(node):
     ds_node_ids = []
@@ -79,16 +102,66 @@ def get_downstreem_nodes(node):
     ds_node_ids = list(set(ds_node_ids))
     return ds_node_ids
 
-def add_node(node_id):
-    global new_yaml_data
+### Finds all node IDs one step downstream of the node with the given node id in src_yaml_data and adds them to the global list source_node_ids 
+
+def extract_src_node_ids(node_id):
     global nodes
-    global new_node_ids
-    new_node = search_node(node_id)
-    nodes.append(new_node.copy())
+    global srs_yaml_data
+    global source_node_ids
+    new_node = search_node(src_yaml_data, node_id)
+#    nodes.append(new_node.copy())
     ds_node_ids = get_downstreem_nodes(new_node)
     for id_ in ds_node_ids:
-         if not id_ in new_node_ids:
-             new_node_ids.append(id_)
+         if not id_ in source_node_ids:
+             source_node_ids.append(id_)
+
+### Finds all node IDs one step downstream of the node with the given node id in dst_yaml_data and adds them to the global list destination_node_ids
+
+def extract_dst_node_ids(node_id):
+    global nodes
+    global dst_yaml_data
+    global destination_node_ids
+    new_node = search_node(dst_yaml_data, node_id)
+#    nodes.append(new_node.copy())
+    ds_node_ids = get_downstreem_nodes(new_node)
+    for id_ in ds_node_ids:
+         if not id_ in destination_node_ids:
+             destination_node_ids.append(id_)
+
+### Verufy if the node with node_id has upstread outside of source_node_ids. 
+### If all upstream nodes are in source_node_ids and merge = False this node will be removed
+
+def check_upstream(node_id, yaml_data):
+    rec_yaml_data = {}
+    rec_yaml_data = wlib.recurs_dict(yaml_data)
+    reverse_node_ids = rec_yaml_data[0][node_id]['direct'] + rec_yaml_data[0][node_id]['indirect'] + rec_yaml_data[0][node_id]['complement']
+    return (reverse_node_ids)
+
+#def merge ():
+    
+    
+
+### Creates a full list of node ids in waves starting with node_id taken from source file
+
+def get_source_node_ids (node_id):
+    global source_node_ids
+    extract_src_node_ids(node_id)
+    for node_id in source_node_ids:
+        if node_id:
+            extract_src_node_ids(node_id)
+    if None in source_node_ids: source_node_ids.remove(None)
+    if '' in source_node_ids: source_node_ids.remove('')
+
+### Creates a full list of node ids in waves starting with node_id taken from destination file
+
+def get_destination_node_ids (node_id):
+    global destination_node_ids
+    extract_dst_node_ids(node_id)
+    for node_id in destination_node_ids:
+        if node_id:
+            extract_dst_node_ids(node_id)
+    if None in destination_node_ids: destination_node_ids.remove(None)
+    if '' in destination_node_ids: destination_node_ids.remove('')
 
 
 def main():
@@ -98,18 +171,27 @@ def main():
 
     # list of downstream nodes with the node_id as root taken fron source YAML file
     global nodes
+    nodes = []
 
     # list of IDs of downstream nodes with the node_id as root taken fron source YAML file
-    global new_node_ids
+    global source_node_ids
+    source_node_ids = []
+
+    global destination_node_ids
+    destination_node_ids = []
 
     # dict created from source YAML file. This file will not been changed
     global src_yaml_data
+    src_yaml_data = {}
 
     # initial dict created from destination YAML file
     global dst_yaml_data
+    dst_yaml_data = {}
 
     # new created dict from which new YAML file will be created 
     global new_yaml_data
+    new_yaml_data = {}
+
 
 
     [src_file, dst_file, node_id, merge] = ['','','',False]
@@ -147,9 +229,14 @@ def main():
     data_src = f_src.read()
     f_src.close()
 
-    f_dst = open( "%s" % dst_file, 'w+')
-    data_dst = f_dst.read()
-    f_dst.close()
+    try:
+        f_dst = open( "%s" % dst_file)
+        data_dst = f_dst.read()
+        f_dst.close()
+    except IOError:
+        os.system ('touch %s' % dst_file)
+        flag_new_file = 1
+        data_dst = ''
 
     yaml_version = yaml.__version__
     m = re.match('(\d(\.\d)?)', yaml_version)
@@ -158,22 +245,29 @@ def main():
     if (float(yaml_ver) < 5.1):
         src_yaml_data = yaml.load(data_src)
         dst_yaml_data = yaml.load(data_dst)
+ 
         
     else:
         src_yaml_data = yaml.load(data_src,Loader=yaml.FullLoader)
         dst_yaml_data = yaml.load(data_dst,Loader=yaml.FullLoader)
+        
+    if not dst_yaml_data:
+        rnode = search_node (src_yaml_data, node_id) 
+        initiate_rnode = rnode.copy()
+        initiate_rnode['direct_contradictions'] = [{'id':''}]
+        initiate_rnode['indirect_contradictions'] = [{'id':''}]
+        initiate_rnode['complement'] = [{'id':''}]
+        dst_yaml_data = {'statements':[initiate_rnode]}
+        print (dst_yaml_data)   
+    
+    new_yaml_data = dst_yaml_data.copy()
 
     ######### creation a child YAML file ###################
 
-    nodes = []
-    new_node_ids = []
-    new_yaml_data = {'statements':nodes}
-
-    add_node(node_id)
-    for node_id in new_node_ids:
-        if node_id:
-            add_node(node_id)
-    
+    get_source_node_ids(node_id)
+    print (source_node_ids)
+    get_destination_node_ids(node_id)
+    print (destination_node_ids)
 
 
 
