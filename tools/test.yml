@@ -3,61 +3,17 @@ statements:
   text: Alice was not at the theatre yesterday at 7 p.m.
   wiki_link: https://github.com/nihole/wg_examples/wiki/examples_pw_1
   direct_contradictions:
-  - id: ''
-  indirect_contradictions:
-  - id: ''
-  complement:
-  - id: ''
-- id: --4--
-  text: Mike saw her at the theatre yesterday at 7 p.m.
-  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_4
-  direct_contradictions:
-  - id: ++11++
+  - id: --3--
+  - id: --4--
   indirect_contradictions:
   - id: null
   complement:
   - id: null
-- id: --3--
-  text: Bob saw her at the theatre yesterday at 7 p.m.
-  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_3
-  direct_contradictions:
-  - id: null
-  indirect_contradictions:
-  - id: null
-  complement:
-  - id: null
-- id: ++11++
-  text: Mike was mistaken and mistake another girl for Alice
-  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_pw_11
-  direct_contradictions:
-  - id: null
-  indirect_contradictions:
-  - id: null
-  complement:
-  - id: --11--
-- id: --11--
-  text: ''
-  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_11
-  direct_contradictions:
-  - id: null
-  indirect_contradictions:
-  - id: null
-  complement:
-  - id: ''
 - id: --3--
   text: Bob saw her at the theatre yesterday at 7 p.m.
   wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_3
   direct_contradictions:
   - id: ++10++
-  indirect_contradictions:
-  - id: null
-  complement:
-  - id: null
-- id: --4--
-  text: Mike saw her at the theatre yesterday at 7 p.m.
-  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_4
-  direct_contradictions:
-  - id: ++11++
   indirect_contradictions:
   - id: null
   complement:
@@ -71,15 +27,6 @@ statements:
   - id: null
   complement:
   - id: --10--
-- id: ++11++
-  text: Mike was mistaken and mistake another girl for Alice
-  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_pw_11
-  direct_contradictions:
-  - id: null
-  indirect_contradictions:
-  - id: null
-  complement:
-  - id: --11--
 - id: --10--
   text: Bob is telling the truth
   wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_10
@@ -89,6 +36,24 @@ statements:
   - id: null
   complement:
   - id: null
+- id: --4--
+  text: Mike saw her at the theatre yesterday at 7 p.m.
+  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_4
+  direct_contradictions:
+  - id: ++11++
+  indirect_contradictions:
+  - id: null
+  complement:
+  - id: null
+- id: ++11++
+  text: Mike was mistaken and mistake another girl for Alice
+  wiki_link: https://github.com/nihole/wg_examples/wiki/examples_pw_11
+  direct_contradictions:
+  - id: null
+  indirect_contradictions:
+  - id: null
+  complement:
+  - id: --11--
 - id: --11--
   text: ''
   wiki_link: https://github.com/nihole/wg_examples/wiki/examples_nw_11

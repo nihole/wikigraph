@@ -173,15 +173,26 @@ def merge_data (node_id):
             for el_dst in node_destination['complement']:
                     if el_dst:
                         complement_dst_ids.append(el_dst['id']) 
-            diff_direct = direct_src_ids - direct_dst_ids
-            diff_indirect = indirect_src_ids - indirect_dst_ids
-            diff_complement = complement_src_ids - complement_dst_ids
+            diff_direct = list(set(direct_src_ids) -set(direct_dst_ids))
+            if None in diff_direct: diff_direct.remove(None)
+            if '' in diff_direct: diff_direct.remove('')
+            diff_indirect = list(set(indirect_src_ids) - set(indirect_dst_ids))
+            if None in diff_indirect: diff_indirect.remove(None)
+            if '' in diff_indirect: diff_indirect.remove('')
+            diff_complement = list(set(complement_src_ids) - set(complement_dst_ids))
+            if None in diff_complement: diff_complement.remove(None)
+            if '' in diff_complement: diff_complemnet.remove('')
           
-            
+            if (len(diff_direct) > 0)  and (len(direct_dst_ids) == 1) and (node_new['direct_contradictions'][0]['id'] == None):
+                node_new['direct_contradictions'].remove({'id':None})
             for diff_el in diff_direct:
                 node_new['direct_contradictions'].append({'id':diff_el})
-            for indiff_el in indiff_direct:
-                node_new['indirect_contradictions'].append({'id':diff_el})  
+            if (len(diff_indirect) > 0)  and (len(indirect_dst_ids) == 1) and (node_new['indirect_contradictions'][0]['id'] == None):
+                node_new['indirect_contradictions'].remove({'id':None})
+            for diff_el in diff_indirect:
+                node_new['indirect_contradictions'].append({'id':diff_el})
+            if (len(diff_complement) > 0)  and (len(complement_dst_ids) == 1) and (node_new['complement'][0]['id'] == None) :
+                node_new['complement'].remove({'id':None})  
             for diff_el in diff_complement:
                 node_new['complement'].append({'id':diff_el}) 
         else:
@@ -193,22 +204,24 @@ def merge_data (node_id):
 def get_source_node_ids (node_id):
     global source_node_ids
     extract_src_node_ids(node_id)
-    for node_id in source_node_ids:
-        if node_id:
-            extract_src_node_ids(node_id)
+    for id_ in source_node_ids:
+        if id_:
+            extract_src_node_ids(id_)
     if None in source_node_ids: source_node_ids.remove(None)
     if '' in source_node_ids: source_node_ids.remove('')
+    source_node_ids.append(node_id)
 
 ### Creates a full list of node ids in waves starting with node_id taken from destination file
 
 def get_destination_node_ids (node_id):
     global destination_node_ids
     extract_dst_node_ids(node_id)
-    for node_id in destination_node_ids:
-        if node_id:
-            extract_dst_node_ids(node_id)
+    for id_ in destination_node_ids:
+        if id_:
+            extract_dst_node_ids(id_)
     if None in destination_node_ids: destination_node_ids.remove(None)
     if '' in destination_node_ids: destination_node_ids.remove('')
+    destination_node_ids.append( node_id)
 
 
 def main():
@@ -301,11 +314,10 @@ def main():
     if not dst_yaml_data:
         rnode = search_node (src_yaml_data, node_id) 
         initiate_rnode = rnode.copy()
-        initiate_rnode['direct_contradictions'] = [{'id':''}]
-        initiate_rnode['indirect_contradictions'] = [{'id':''}]
-        initiate_rnode['complement'] = [{'id':''}]
+        initiate_rnode['direct_contradictions'] = [{'id':None}]
+        initiate_rnode['indirect_contradictions'] = [{'id':None}]
+        initiate_rnode['complement'] = [{'id':None}]
         dst_yaml_data = {'statements':[initiate_rnode]}
-        print (dst_yaml_data)   
     
     new_yaml_data = dst_yaml_data.copy()
 
