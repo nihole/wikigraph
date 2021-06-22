@@ -24,8 +24,9 @@ import sys
 import re
 import yaml
 import getopt
+import pathlib
 import os
-sys.path.insert(1,'../')
+sys.path.insert(1,"%s/.." % pathlib.Path(__file__).parent.absolute())
 import wlib
 
 
@@ -208,17 +209,17 @@ def rewrite_data (node_id):
     global src_yaml_data
     global destination_yaml_data
     global new_yaml_data
-    print (source_node_ids)
+    global reverse_dst_yaml_data
+
     diff_up_dst_ids = []
     summ_node_ids = list(set(source_node_ids + destination_node_ids))
     summ_node_ids.append(node_id)
     for id_summ in summ_node_ids:
-        print (id_summ)
         if (id_summ in source_node_ids) and not (id_summ in destination_node_ids):
             node_source = search_node (src_yaml_data, id_summ)
             new_yaml_data['statements'].append(node_source)
         elif (id_summ in source_node_ids) and (id_summ in destination_node_ids):
-            if id_summ == node_id:
+            if new_yaml_data['statements'][0]['id']==node_id:
                 node_source = search_node (src_yaml_data, id_summ)
                 new_yaml_data['statements'][0] = node_source
             else: 
@@ -227,14 +228,11 @@ def rewrite_data (node_id):
                 new_yaml_data['statements'].remove(node_destination)
                 new_yaml_data['statements'].append(node_source)
         else:
-            upsream_ids = check_upstream(id_summ, dst_yaml_data)
+            upsream_ids = reverse_dst_yaml_data[0][id_summ]['direct'] + reverse_dst_yaml_data[0][id_summ]['indirect'] + reverse_dst_yaml_data[0][id_summ]['complement']
             diff_up_dst_ids = list(set(upsream_ids) - set(destination_node_ids))
             if None in diff_up_dst_ids: diff_up_dst_ids.remove(None)
             if '' in diff_up_dst_ids: diff_up_dst_ids.remove('')
             if len(diff_up_dst_ids) > 0:
-                print ('QQQQ')
-                print (diff_up_dst_ids)
-                print ('QQQQ')
                 node_new = search_node (new_yaml_data, id_summ)
                 if not (node_new['direct_contradictions'][0]['id'] == None):
                     for el_ in node_new['direct_contradictions']:
@@ -261,9 +259,6 @@ def rewrite_data (node_id):
                 else:
                     new_yaml_data['statements'].remove(node_source)
             else:
-                print ('PPP')
-                print (diff_up_dst_ids)
-                print ('PPP')
                 node_new = search_node (new_yaml_data, id_summ)
                 new_yaml_data['statements'].remove(node_new)    
     
@@ -322,6 +317,9 @@ def main():
     # new created dict from which new YAML file will be created 
     global new_yaml_data
     new_yaml_data = {}
+
+    global reverse_dst_yaml_data
+    reverse_dst_yaml_data =  []
 
 
 
@@ -395,6 +393,9 @@ def main():
     ######### creation a child YAML file ###################
     get_source_node_ids (node_id)
     get_destination_node_ids (node_id)
+
+    reverse_dst_yaml_data = wlib.recurs_dict(dst_yaml_data)
+    
     if merge:
         merge_data(node_id)
     else:
@@ -407,7 +408,7 @@ def main():
 
 
     with open(dst_file, 'w') as f_dst:
-        yaml.dump(new_yaml_data, f_dst, default_flow_style=False, sort_keys=False) 
+        yaml.dump(new_yaml_data, f_dst, default_flow_style=False, sort_keys=False, allow_unicode=True)
       
 if __name__ == "__main__":
   main() 
