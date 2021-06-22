@@ -140,6 +140,9 @@ def check_upstream(node_id, yaml_data):
 def merge_data (node_id):
     global source_node_ids
     global destination_node_ids 
+    global src_yaml_data
+    global destination_yaml_data
+    global new_yaml_data
     for id_source in source_node_ids:
         if id_source in destination_node_ids:
             node_new = search_node (new_yaml_data, node_id)
@@ -197,7 +200,75 @@ def merge_data (node_id):
                 node_new['complement'].append({'id':diff_el}) 
         else:
             node_source = search_node (src_yaml_data, id_source)
-            new_yaml_data['statements'].append(node_source)     
+            new_yaml_data['statements'].append(node_source)   
+
+def rewrite_data (node_id):
+    global source_node_ids
+    global destination_node_ids 
+    global src_yaml_data
+    global destination_yaml_data
+    global new_yaml_data
+    print (source_node_ids)
+    diff_up_dst_ids = []
+    summ_node_ids = list(set(source_node_ids + destination_node_ids))
+    summ_node_ids.append(node_id)
+    for id_summ in summ_node_ids:
+        print (id_summ)
+        if (id_summ in source_node_ids) and not (id_summ in destination_node_ids):
+            node_source = search_node (src_yaml_data, id_summ)
+            new_yaml_data['statements'].append(node_source)
+        elif (id_summ in source_node_ids) and (id_summ in destination_node_ids):
+            if id_summ == node_id:
+                node_source = search_node (src_yaml_data, id_summ)
+                new_yaml_data['statements'][0] = node_source
+            else: 
+                node_destination = search_node (dst_yaml_data, id_summ)
+                node_source = search_node (src_yaml_data, id_summ)
+                new_yaml_data['statements'].remove(node_destination)
+                new_yaml_data['statements'].append(node_source)
+        else:
+            upsream_ids = check_upstream(id_summ, dst_yaml_data)
+            diff_up_dst_ids = list(set(upsream_ids) - set(destination_node_ids))
+            if None in diff_up_dst_ids: diff_up_dst_ids.remove(None)
+            if '' in diff_up_dst_ids: diff_up_dst_ids.remove('')
+            if len(diff_up_dst_ids) > 0:
+                print ('QQQQ')
+                print (diff_up_dst_ids)
+                print ('QQQQ')
+                node_new = search_node (new_yaml_data, id_summ)
+                if not (node_new['direct_contradictions'][0]['id'] == None):
+                    for el_ in node_new['direct_contradictions']:
+                        if not el_['id'] in source_node_ids:
+                            node_new['direct_contradictions'].remove(el_)
+                    if len(node_new['direct_contradictions']) == 0:
+                        node_new['direct_contradictions'].append({'id':None})
+                else:
+                    new_yaml_data['statements'].remove(node_source)
+                if not (node_new['indirect_contradictions'][0]['id'] == None):
+                    for el_ in node_new['indirect_contradictions']:
+                        if not el_['id'] in source_node_ids:
+                            node_new['indirect_contradictions'].remove(el_)
+                    if len(node_new['indirect_contradictions']) == 0:
+                        node_new['indirect_contradictions'].append({'id':None})
+                else:
+                    new_yaml_data['statements'].remove(node_source)
+                if not (node_new['complement'][0]['id'] == None):
+                    for el_ in node_new['complement']:
+                        if not el_['id'] in source_node_ids:
+                            node_new['complement'].remove(el_)
+                    if len(node_new['complement']) == 0:
+                        node_new['complement'].append({'id':None})
+                else:
+                    new_yaml_data['statements'].remove(node_source)
+            else:
+                print ('PPP')
+                print (diff_up_dst_ids)
+                print ('PPP')
+                node_new = search_node (new_yaml_data, id_summ)
+                new_yaml_data['statements'].remove(node_new)    
+    
+
+      
 
 ### Creates a full list of node ids in waves starting with node_id taken from source file
 
@@ -326,6 +397,8 @@ def main():
     get_destination_node_ids (node_id)
     if merge:
         merge_data(node_id)
+    else:
+        rewrite_data(node_id)
 #    get_source_node_ids(node_id)
 #    print (source_node_ids)
 #    get_destination_node_ids(node_id)
