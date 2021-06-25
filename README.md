@@ -10,7 +10,7 @@ The idea behind this project is to describe this structure in a YAML file and us
 
 Click the link below to see an example of a wikigraph, which will be discussed later in this document (example4).
 
-[example4](https://github.com/nihole/wg_examples/blob/main/example4.svg) (click 'Raw' to get access to links)
+[example4](https://github.com/nihole/wg_examples/blob/main/graphs/examples/example4.svg) (click 'Raw' to get access to links)
 
 ![example4](https://github.com/nihole/wg_examples/blob/main/tmp/Example4.png)
 
