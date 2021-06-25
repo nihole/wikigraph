@@ -50,7 +50,7 @@ This YAML file represents a **direct contradiction example**. To create graph ba
  
 - python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/examples/**example1.yml** YOUR_GIT_PATH/wg_examples/graphs/examples/**example1**
 
- The script wgraph.py executes some logical verification of your YAML file and create **svg** file:
+ The script wgraph.py executes some logical verification of your YAML file and creates **svg** file:
 
  - **example1.svg**. You can investigate it by clicking the link in my github repository [example1 svg file](https://github.com/nihole/wg_examples/blob/main/graphs/examples/example1.svg)
 
