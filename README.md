@@ -62,7 +62,7 @@ Also check out example2, example3 and examples4 with articles corresponding to t
 
 **Example2. Direct and indirect contradictions**
 
-<img src="https://github.com/nihole/wg_examples/blob/main/graphs/examples/example2.svg" alt="Example2" style="zoom:30%;" />
+<img src="https://github.com/nihole/wg_examples/blob/main/graphs/examples/example2.svg" alt="Example2" style="zoom:30%" />
 
 **Example3. Contradictions, complements and proofs**
 
