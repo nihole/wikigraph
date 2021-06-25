@@ -54,7 +54,7 @@ This YAML file represents a **direct contradiction example**. To create graph ba
 
  - **example1.svg**. You can investigate it by clicking the link in my github repository 
  
- ![example1 svg file](https://github.com/nihole/wg_examples/blob/main/graphs/examples/example1.svg)
+<img src="https://github.com/nihole/wg_examples/blob/main/graphs/examples/example1.svg" alt="Example1" width="200" height="200">
 
 Open the svg file in any browser or just by clicking on it. You will find two nodes here. Navigate to each of them, click on the links and check out the wiki articles related to those two nodes (in the case of a github repository, you must select "raw" to get these links).
 
@@ -66,11 +66,11 @@ Also check out example2, example3 and examples4 with articles corresponding to t
 
 **Example3. Contradictions, complements and proofs**
 
-![example3 svg file](https://github.com/nihole/wg_examples/blob/main/graphs/examples/example3.svg)
+<img src="https://github.com/nihole/wg_examples/blob/main/graphs/examples/example3.svg" alt="Example3" width="400" height="400">
 
 **Example4. Wikigraph with all logical dependencies**
 
-![example4 svg file](https://github.com/nihole/wg_examples/blob/main/graphs/examples/example4.svg){:height="300" width="50%"}
+<img src="https://github.com/nihole/wg_examples/blob/main/graphs/examples/example4.svg" alt="Example4" width="500" height="500">
 
 Therefore, if you want to start your own wikigraph you need to create a yaml file with the same structure as in the examples and run the wrgaph.py script.
 
