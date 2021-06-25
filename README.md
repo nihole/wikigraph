@@ -70,7 +70,7 @@ Also check out example2, example3 and examples4 with articles corresponding to t
 
 **Example4. Wikigraph with all logical dependencies**
 
-![example4 svg file](https://github.com/nihole/wg_examples/blob/main/graphs/examples/example4.svg | width=200 )
+![example4 svg file](https://github.com/nihole/wg_examples/blob/main/graphs/examples/example4.svg width=200 )
 
 Therefore, if you want to start your own wikigraph you need to create a yaml file with the same structure as in the examples and run the wrgaph.py script.
 
