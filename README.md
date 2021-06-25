@@ -18,7 +18,7 @@ The statement under investigation (root node) in this example: "Alice was at hom
 
 Click the link below to see the YAML file used for the graph above creation.
 
-[YAML for example4](https://github.com/nihole/wg_examples/blob/main/yaml/example4.yml)
+[YAML for example4](https://github.com/nihole/wg_examples/blob/main/yaml/examples/example4.yml)
 
 If you want a real-world example, refer to the repository [wg_nav](https://github.com/nihole/wg_nav), which is used to analyze the statement "Navalny's poisoning was an operation of the Russian special services." This only covers about 20% of all possible waves but you will already find hundreds of nodes there. 
 
@@ -40,7 +40,7 @@ Then investigate examples.
 
 **Example1. Root node and direct contradiction**
 
-Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/example1.yml or [example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/example1.yml) in my github repository.
+Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/examples/example1.yml or [example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/examples/example1.yml) in my github repository.
 
 This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python script **wgraph.py** (use python3 wgraph.py -h for help):
 
@@ -52,7 +52,7 @@ This YAML file represents a **direct contradiction example**. To create graph ba
 
  The script wgraph.py executes some logical verification of your YAML file and create **svg** file:
 
- - **example1.svg**. You can investigate it by clicking the link in my github repository [example1 svg file](https://github.com/nihole/wg_examples/blob/main/example1.svg)
+ - **example1.svg**. You can investigate it by clicking the link in my github repository [example1 svg file](https://github.com/nihole/wg_examples/blob/main/graphs/examples/example1.svg)
 
 Open the svg file in any browser or just by clicking on it. You will find two nodes here. Navigate to each of them, click on the links and check out the wiki articles related to those two nodes (in the case of a github repository, you must select "raw" to get these links).
 
