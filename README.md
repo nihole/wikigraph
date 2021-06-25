@@ -62,7 +62,7 @@ Also check out example2, example3 and examples4 with articles corresponding to t
 
 **Example2. Direct and indirect contradictions**
 
-<img src="https://github.com/nihole/wg_examples/blob/main/graphs/examples/example2.svg" alt="Example2" width="50%" height="50%">
+<img src="https://github.com/nihole/wg_examples/blob/main/graphs/examples/example2.svg" alt="Example2" width="300" height="300">
 
 **Example3. Contradictions, complements and proofs**
 
@@ -70,7 +70,7 @@ Also check out example2, example3 and examples4 with articles corresponding to t
 
 **Example4. Wikigraph with all logical dependencies**
 
-![example4 svg file](https://github.com/nihole/wg_examples/blob/main/graphs/examples/example4.svg){:height="50%" width="50%"}
+![example4 svg file](https://github.com/nihole/wg_examples/blob/main/graphs/examples/example4.svg){:height="300" width="50%"}
 
 Therefore, if you want to start your own wikigraph you need to create a yaml file with the same structure as in the examples and run the wrgaph.py script.
 
