@@ -48,7 +48,7 @@ This YAML file represents a **direct contradiction example**. To create graph ba
  
  And in case of this example it will be:
  
-- python3 wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/examples/**example1.yml** wg_examples/graphs/examples/**example1**
+- python3 wikigraph/**wgraph.py** wg_examples/yaml/examples/**example1.yml** wg_examples/graphs/examples/**example1**
 
  The script wgraph.py executes some logical verification of your YAML file and creates **svg** file:
 
