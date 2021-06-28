@@ -40,7 +40,7 @@ Then investigate examples.
 
 **Example1. Root node and direct contradiction**
 
-Open YAML file in the directory YOUR_GIT_PATH/wg_examples/yaml/examples/example1.yml or [example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/examples/example1.yml) in my github repository.
+Open YAML file in the directory wg_examples/yaml/examples/example1.yml or [example1 YAML](https://github.com/nihole/wg_examples/blob/main/yaml/examples/example1.yml) in my github repository.
 
 This YAML file represents a **direct contradiction example**. To create graph based on this structure run the python script **wgraph.py** (use python3 wgraph.py -h for help):
 
@@ -48,7 +48,7 @@ This YAML file represents a **direct contradiction example**. To create graph ba
  
  And in case of this example it will be:
  
-- python3 YOUR_GIT_PATH/wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/examples/**example1.yml** YOUR_GIT_PATH/wg_examples/graphs/examples/**example1**
+- python3 wikigraph/**wgraph.py** YOUR_GIT_PATH/wg_examples/yaml/examples/**example1.yml** wg_examples/graphs/examples/**example1**
 
  The script wgraph.py executes some logical verification of your YAML file and creates **svg** file:
 
