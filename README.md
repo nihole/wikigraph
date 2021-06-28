@@ -6,7 +6,7 @@ Wikigraph (or Wave Graph) is a presentation of information in logical dependenci
 
 This method is called  [wave analysis](https://habr.com/ru/post/506670/) . With this approach, logical chains are created, consisting of alternately changing arguments (nodes) for and against the main statement (root node). It looks like a wave: yes, no, yes, no... Therefore, we will call this logical chain as a **wave**.
 
-The idea behind this project is to describe this structure in a YAML file and use a github repository wiki for articles related to nodes. A graph is automatically generated from this YAML file.
+The idea behind this project is to describe this structure in a YAML file. In the current implementation, for node-related articles, I use the markdown files located in the folder 'wiki' in the data repositories (see explanation below), but this can be any kind of wiki or any article on the Internet. A graph with all necessary links is automatically generated from this YAML file.
 
 Click the link below to see an example of a wikigraph, which will be discussed later in this document (example4).
 
