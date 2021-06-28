@@ -111,7 +111,7 @@ All other relationships are expressed via these 3 types. Actually, we have only 
 
 - **Dead-end (edge) nodes**. We will call a node N a dead-end if not a single arrow leaves it, including a bidirectional one. This means that this is not refuted by any statements and can be considered true. Then if the connection is strong enough (direct refutation), this statement can refute the upstream  in the logical wave, which, in turn, can create other dead-end nodes and so on to the very top, thus leading to the resolution of the graph.
 
-- **Reference Points**. This definition is not precise and rather intuitive. We are talking about a set of dead-end nodes, with rather general statements (for example, philosophical views, or emotional preferences) that lead to the resolution of the graph. The main idea here is that they are irational postulates that underlie the perception of the world.
+- **Reference Points**. This definition is not precise and rather intuitive. We are talking about a set of dead-end nodes, with rather general statements (for example, philosophical views, or emotional preferences) that lead to the resolution of the graph. The main idea here is that they are irational postulates that underlie the perception of the situation.
 
 - **Basic axiom of wave analysis**: there is always hidden information that does not allow unambiguous resolution of a full wave graph
 (See definition of full wave graph [here](https://habr.com/ru/post/506670/))
