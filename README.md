@@ -20,7 +20,7 @@ Click the link below to see the YAML file used for the graph above creation.
 
 [YAML for example4](https://github.com/nihole/wg_examples/blob/main/yaml/examples/example4.yml)
 
-If you want a real-world example, refer to the repository [wg_nav](https://github.com/nihole/wg_nav), which is used to analyze the statement "Navalny's poisoning was an operation of the Russian special services." This only covers about 20% of all possible waves but you will already find hundreds of nodes there. 
+If you want a real-world example, refer to the repository [wg_navalny](https://github.com/nihole/wg_navalny), which is used to analyze the statement "Navalny's poisoning was an operation of the Russian special services." This only covers about 20% of all possible waves but you will already find hundreds of nodes there. 
 
 
 ## When to use?
