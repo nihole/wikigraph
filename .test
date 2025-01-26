@@ -1,0 +1,272 @@
+digraph G {
+	node [color=blue fontcolor=black]
+	"++0++" [label="++0++
+Дездемона
+изменила
+Отелло"]
+	node [color=blue fontcolor=black]
+	"++1++" [label="++1++
+Дездемона
+не любит Отелло"]
+	node [color=blue fontcolor=black]
+	"++2++" [label="++2++
+Дездемона
+любит Кассио"]
+	node [color=blue fontcolor=black]
+	"++3++" [label="++3++
+Разговор Яго с Кассио,
+где Кассио говорил
+о связи с Дездемоной"]
+	node [color=blue fontcolor=black]
+	"++4++" [label="++4++
+Кассио говорит
+правду"]
+	node [color=blue fontcolor=black]
+	"++5++" [label="++5++
+Разговор
+Кассио во
+сне"]
+	node [color=blue fontcolor=black]
+	"++6++" [label="++6++
+Дездемона
+подарила платок
+Кассио"]
+	node [color=blue fontcolor=black]
+	"++7++" [label="++7++
+Дездемона обрадовалась
+повышению Кассио"]
+	node [color=blue fontcolor=black]
+	"++8++" [label="++8++
+Кассио молод,
+имеет хорошие
+манеры и нравится
+женщинам"]
+	node [color=blue fontcolor=black]
+	"++9++" [label="++9++
+Она просит
+за Кассио"]
+	node [color=blue fontcolor=black]
+	"++10++" [label="++10++
+Дездемона
+лжет"]
+	node [color=blue fontcolor=black]
+	"++11++" [label="++11++
+Эмилия не
+знает правды"]
+	node [color=blue fontcolor=black]
+	"++12++" [label="++12++
+Эмилия
+лжет"]
+	node [color=blue fontcolor=black]
+	"++13++" [label="++13++
+Там был Яго, который
+подтвердил факт
+измены"]
+	node [color=blue fontcolor=black]
+	"++14++" [label="++14++
+Источник информации
+Яго - он честен
+и предан"]
+	node [color=blue fontcolor=black]
+	"++15++" [label="++15++
+Яго подтвердил,
+что это платок Дездемоны,
+и что она передала
+его"]
+	node [color=blue fontcolor=black]
+	"++16++" [label="++16++
+Дездемона
+порочна"]
+	node [color=blue fontcolor=black]
+	"++17++" [label="++17++
+Дездемона умеет
+лгать. Она уже солгала
+отцу, убежав к Отелло"]
+	node [color=blue fontcolor=black]
+	"++18++" [label="++18++
+Ветренность венецианских
+девушек - им нельзя
+верить"]
+	node [color=blue fontcolor=black]
+	"++19++" [label="++19++
+Эмилия хочет
+выгородить
+Дездемону"]
+	node [color=blue fontcolor=black]
+	"++20++" [label="++20++
+У Яго нет мотива
+обманывать
+Отелло"]
+	node [color=blue fontcolor=black]
+	"++21++" [label="++21++
+Яго не обижен тем,
+что не он, а Кассио
+стал заместителем
+Отелло"]
+	node [color=blue fontcolor=black]
+	"++22++" [label="++22++
+Это был платок,
+подаеренный
+Дездемоной"]
+	node [color=blue fontcolor=black]
+	"++23++" [label="++23++
+Яго говорит
+правду"]
+	node [color=blue fontcolor=black]
+	"++24++" [label="++24++
+Яго хороший
+и честный человек"]
+	node [color=blue fontcolor=black]
+	"++25++" [label="++25++
+Отелло все
+правильно
+понял"]
+	node [color=red fontcolor=black]
+	"--0--" [label="--0--
+Дездемона
+не изменяла
+Отелло"]
+	node [color=red fontcolor=black]
+	"--1--" [label="--1--
+Эмилия говорит,
+что не изменяла"]
+	node [color=red fontcolor=black]
+	"--2--" [label="--2--
+Дездемона говорит,
+что не изменяла"]
+	node [color=red fontcolor=black]
+	"--3--" [label="--3--
+Дездемона
+любит Отелло"]
+	node [color=red fontcolor=black]
+	"--4--" [label="--4--
+Кассио
+лжет"]
+	node [color=red fontcolor=black]
+	"--5--" [label="--5--
+Эмилия говорит,
+что Дездемона
+любит Отелло"]
+	node [color=red fontcolor=black]
+	"--6--" [label="--6--
+Отелло слышал только
+часть диалога и неправильно
+его интерпретировал.
+Речь шла о другом"]
+	node [color=red fontcolor=black]
+	"--7--" [label="--7--
+Это ложь, не
+было этого
+разговора"]
+	node [color=red fontcolor=black]
+	"--8--" [label="--8--
+Это был другой платок
+или платок, потерянный
+случайно или украденный
+и подкинутый"]
+	node [color=red fontcolor=black]
+	"--9--" [label="--9--
+Дездемона обрадовалась
+возвращению
+в Венецию"]
+	node [color=red fontcolor=black]
+	"--10--" [label="--10--
+У Дездемоны
+добрая и чистая
+душа"]
+	node [color=red fontcolor=black]
+	"--11--" [label="--11--
+Дездемона
+не умеет лгать"]
+	node [color=red fontcolor=black]
+	"--12--" [label="--12--
+Дездемона
+говорит правду"]
+	node [color=red fontcolor=black]
+	"--13--" [label="--13--
+Эмилия говорит
+правду"]
+	node [color=red fontcolor=black]
+	"--14--" [label="--14--
+Яго лжет"]
+	node [color=red fontcolor=black]
+	"--15--" [label="--15--
+Яго обижен, что
+не он, а Кассио
+стал заместителем
+Отелло"]
+	node [color=red fontcolor=black]
+	"--16--" [label="--16--
+У Яго есть мотив
+совершить преступление"]
+	node [color=red fontcolor=black]
+	"--17--" [label="--17--
+Дездемона говорит,
+что любит Отелло"]
+	node [color=red fontcolor=black]
+	"--18--" [label="--18--
+Дездемона
+не любит Кассио"]
+	node [color=red fontcolor=black]
+	"--19--" [label="--19--
+Яго - злой и
+порочный человек"]
+	"++0++" -> "--2--"
+	"++0++" -> "--1--"
+	"++0++" -> "--3--" [style=dotted]
+	"++0++" -> "--0--" [color=red dir=both]
+	"++1++" -> "--5--" [style=dotted]
+	"++1++" -> "--17--" [style=dotted]
+	"++2++" -> "--3--"
+	"++2++" -> "--18--" [color=red dir=both]
+	"++3++" -> "--4--"
+	"++3++" -> "--6--"
+	"++5++" -> "--7--"
+	"++6++" -> "--8--"
+	"++7++" -> "--9--"
+	"++9++" -> "--10--" [style=dotted]
+	"++10++" -> "--11--"
+	"++10++" -> "--10--" [style=dotted]
+	"++10++" -> "--12--" [color=red dir=both]
+	"++12++" -> "--13--" [color=red dir=both]
+	"++13++" -> "--14--"
+	"++14++" -> "--14--"
+	"++15++" -> "--14--"
+	"++20++" -> "--15--"
+	"++20++" -> "--19--"
+	"++20++" -> "--16--" [color=red dir=both]
+	"++21++" -> "--19--" [style=dotted]
+	"++24++" -> "--19--" [color=red dir=both]
+	"--0--" -> "++3++"
+	"--0--" -> "++6++" [style=dotted]
+	"--0--" -> "++5++" [style=dotted]
+	"--1--" -> "++11++"
+	"--1--" -> "++12++"
+	"--2--" -> "++10++"
+	"--3--" -> "++2++"
+	"--3--" -> "++1++" [color=red dir=both]
+	"--4--" -> "++6++" [style=dotted]
+	"--4--" -> "++5++" [style=dotted]
+	"--4--" -> "++4++" [color=red dir=both]
+	"--5--" -> "++12++"
+	"--5--" -> "++11++" [style=dotted]
+	"--6--" -> "++13++"
+	"--6--" -> "++25++" [color=red dir=both]
+	"--7--" -> "++14++" [style=dotted]
+	"--8--" -> "++15++"
+	"--8--" -> "++22++" [color=red dir=both]
+	"--9--" -> "++7++"
+	"--10--" -> "++16++" [color=red dir=both]
+	"--11--" -> "++17++"
+	"--11--" -> "++18++" [style=dotted]
+	"--13--" -> "++18++" [style=dotted]
+	"--13--" -> "++19++" [style=dotted]
+	"--14--" -> "++20++" [style=dotted]
+	"--14--" -> "++23++" [color=red dir=both]
+	"--15--" -> "++21++" [color=red dir=both]
+	"--17--" -> "++10++" [style=dotted]
+	"--18--" -> "++6++"
+	"--18--" -> "++7++" [style=dotted]
+	"--18--" -> "++8++" [style=dotted]
+	"--18--" -> "++9++" [style=dotted]
+}

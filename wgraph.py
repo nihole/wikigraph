@@ -79,18 +79,12 @@ if __name__ == "__main__":
    ######### take data from YAML file ####################
 
     my_config=''
-    f = open( "%s" % yaml_file )
+    f = open( "%s" % yaml_file, encoding='utf-8')
     data1 = f.read()
     f.close()
 
-    yaml_version = yaml.__version__
-    m = re.match('(\d(\.\d)?)', yaml_version)
-    yaml_ver = m.group(1)
-
-    if (float(yaml_ver) < 5.1):
-        yaml_data = yaml.load(data1)
-    else:
-        yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
+    
+    yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
 
     (root_id, rdict, reverse_rdict, phase,  paths_dict ) = wlib.check_structure(yaml_data)
 
