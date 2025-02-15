@@ -83,6 +83,6 @@ if __name__ == "__main__":
     data1 = f.read()
     f.close()
 
-    (root_id, rdict, reverse_rdict, phase,  paths_dict ) = wlib.check_structure(yaml_data)
+    (root_id, rdict, reverse_rdict, phase,  paths_dict ) = wlib.check_structure(data1)
 
     wgraph(yaml_data, {}, phase, graph_file)
